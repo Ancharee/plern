@@ -1,0 +1,26 @@
+.burger {
+  position: relative;
+  z-index: 1;
+  margin-left: 15px;
+  display: inline-block;
+  width: 21px;
+  height: 21px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  color: $white;
+
+  &__item {
+    display: block;
+    width: 21px;
+    height: 3px;
+    border-radius: 1px;
+    transition: transform .2s;
+    background-color: $white;
+    transform-origin: 21px;
+
+    & + .burger__item {
+      margin-top: 4px;
+    }
+  }
+}

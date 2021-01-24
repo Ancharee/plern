@@ -1,6 +1,13 @@
 // Load CSS Reset from NPM
 @import "~normalize.css";
 // Base
+@import "./base/reset";
+@import "./base/font";
 @import "./base/variables";
 // Helpers
 @import "./helpers/mixin";
+// Layout
+@import "./layout/header";
+// components
+@import "./components/button";
+@import "./components/burger";

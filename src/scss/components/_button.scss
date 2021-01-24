@@ -1,0 +1,14 @@
+.btn {
+  display: inline-block;
+  font-family: $font-family;
+  font-size: 10px;
+  vertical-align: middle;
+  text-align: center;
+  border-radius: 500px;
+}
+
+.btn-primary {
+  background-color: $vermilion;
+  color: $white;
+  padding: 5px;
+}

@@ -1,0 +1,20 @@
+.section {
+  &__home1 {
+    article {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    img {
+      @include tablet {
+        width: 396px;
+      }
+
+      @include desktop {
+        width: 532px;
+      }
+    }
+  }
+}

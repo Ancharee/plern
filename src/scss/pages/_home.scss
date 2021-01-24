@@ -7,13 +7,22 @@
       align-items: center;
     }
 
-    img {
+    .section__image-wrapper {
+      overflow: hidden;
+    }
+
+    .section__image {
+      transform: translateY(calc(100% + 226px));
+      will-change: transform;
+
       @include tablet {
         width: 396px;
+        transform: translateY(calc(100% + 396px));
       }
 
       @include desktop {
         width: 532px;
+        transform: translateY(calc(100% + 532px));
       }
     }
   }

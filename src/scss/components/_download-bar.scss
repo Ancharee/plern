@@ -9,6 +9,8 @@
   justify-content: center;
   align-items: center;
   background-color: rgba($dodger-blue, 0.5);
+  transform: translateY(120%);
+  will-change: transform;
 
   .nav-active & {
     z-index: 0;

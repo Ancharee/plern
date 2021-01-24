@@ -165,7 +165,8 @@
       }
     }
 
-    &:hover:not(.btn-primary) {
+    &:hover:not(.btn-primary),
+    &.active {
       font-weight: 600;
     }
 

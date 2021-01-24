@@ -1,0 +1,10 @@
+.section {
+  background-size: cover;
+  background-position: center;
+
+  @for $i from 1 through 8 {
+    &__home#{$i} {
+      background-image: url('../images/bgs/Plern_background_home#{$i}.png');
+    }
+  }
+}

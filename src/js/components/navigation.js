@@ -35,7 +35,6 @@ export class Navigation {
 
   handleNav() {
     const links = document.querySelectorAll('.nav__link');
-    console.log(links);
     for (let index = 0; index < links.length; index++) {
       const element = links[index];
       this.addActiveClass(element);

@@ -10,6 +10,10 @@
   align-items: center;
   background-color: rgba($dodger-blue, 0.5);
 
+  .nav-active & {
+    z-index: 0;
+  }
+
   @include tablet {
     height: 60px;
   }

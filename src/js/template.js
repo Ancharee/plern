@@ -2,7 +2,9 @@
 import fullpage from 'fullpage.js/dist/fullpage.extensions.min';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-gsap.registerPlugin(ScrollTrigger);
+// import { SplitText } from 'gsap/utils';
+import SplitText from 'gsap/all';
+gsap.registerPlugin(ScrollTrigger, SplitText);
 
 export class Template {
   constructor() {
@@ -30,13 +32,29 @@ export class Template {
         fitToSection: false,
         // scrollBar: true,
         afterRender: () => {
-          this.animationToFirstSection();
+          this.animationFirstSection();
+          this.setTextPosition();
+        },
+        afterLoad: (origin, destination, direction) => {
+          console.log(origin, direction);
+          const { index } = destination;
+          if (index > 0) {
+            this.animationText(index);
+          }
         },
       });
     }
   }
 
-  animationToFirstSection() {
+  hasDownloadBarVisible() {
+    return this.downloadBar.offsetHeight !== 0 && this.downloadBar.offsetWidth !== 0;
+  }
+
+  hasImageVisible() {
+    return this.image;
+  }
+
+  animationFirstSection() {
     const tl = gsap.timeline({ repeat: 0, repeatDelay: 0, defaults: { ease: 'easeOut', y: 0 } });
     tl.to(this.header, { duration: 1, delay: 2 });
     if (this.hasDownloadBarVisible) {
@@ -47,11 +65,18 @@ export class Template {
     }
   }
 
-  hasDownloadBarVisible() {
-    return this.downloadBar.offsetHeight !== 0 && this.downloadBar.offsetWidth !== 0;
+  setTextPosition() {
+    gsap.set('.js-section-content-inner', { yPercent: 100 });
   }
 
-  hasImageVisible() {
-    return this.image;
+  animationText(index) {
+    const section = document.querySelectorAll('section')[index];
+    const content = section.getElementsByClassName('js-section-content-inner');
+    gsap.to(content, {
+      ease: 'easeOut',
+      yPercent: 0,
+      delay: 0.5,
+      duration: 1.2
+    });
   }
 }

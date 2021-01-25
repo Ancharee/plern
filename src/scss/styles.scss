@@ -5,8 +5,10 @@
 @import "./base/reset";
 @import "./base/font";
 @import "./base/variables";
+@import "./base/base";
 // Helpers
 @import "./helpers/mixin";
+@import "./base/typography";
 // Layout
 @import "./layout/header";
 @import "./layout/section";

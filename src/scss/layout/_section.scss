@@ -1,10 +1,45 @@
+.fp-section,
+.fp-slide,
+.fp-section.fp-table,
+.fp-slide.fp-table,
+.fp-section .fp-tableCell,
+.fp-slide .fp-tableCell {
+  position: relative;
+  overflow: hidden;
+}
+
+.fp-slide,
+.fp-section {
+  transition: background-position 1000ms ease;
+}
+
+.fp-bg-animate {
+  transition: all 1000ms ease
+}
+
 .section {
-  background-size: cover;
-  background-position: center;
+  .fp-bg {
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
+    background-size: cover;
+    transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    /* Chrome, Safari, Opera */
+    backface-visibility: hidden;
+    transition: transform 1000ms ease;
+  }
 
   @for $i from 1 through 8 {
     &__home#{$i} {
-      background-image: url('../images/bgs/Plern_background_home#{$i}.png');
+      .fp-bg {
+        background-image: url('../images/bgs/Plern_background_home#{$i}.png');
+      }
     }
   }
 }

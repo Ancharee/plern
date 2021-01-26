@@ -11,3 +11,35 @@
   color: $white;
   padding: 5px;
 }
+
+.btn-text-with-arrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $vermilion;
+  font-size: 23px;
+
+  @include desktop {
+    font-size: 35px;
+  }
+
+  span {
+    display: block;
+    margin-bottom: 24px;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    height: 14px;
+    width: 28px;
+    background-image: url('../images/Plern_orange_arrow.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include desktop {
+      height: 30px;
+      width: 64px;
+    }
+  }
+}

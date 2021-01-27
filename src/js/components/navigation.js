@@ -16,7 +16,6 @@ export class Navigation {
   }
 
   onWindowsResize() {
-    console.log('on windows resize');
     if (window.screen.width > 768) {
       document.querySelector('html').classList.remove('nav-active');
     }

@@ -18,11 +18,16 @@
 }
 
 .section {
+  position: relative;
+  min-height: 100vh;
+  height: 100%;
+
   .fp-bg {
     top: 0;
     bottom: 0;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+    height: 100%;
     position: absolute;
     z-index: -1;
     background-size: cover;

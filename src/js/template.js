@@ -1,13 +1,11 @@
-// import fullpage from 'fullpage.js';
 import fullpage from 'fullpage.js/dist/fullpage.extensions.min';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-// import { SplitText } from 'gsap/utils';
-import SplitText from 'gsap/all';
-gsap.registerPlugin(ScrollTrigger, SplitText);
+gsap.registerPlugin(ScrollTrigger);
 
 export class Template {
   constructor() {
+    this.fullpageApi = null;
     this.container = document.getElementById('fullpage');
     this.header = document.getElementsByClassName('js-header');
     this.image = document.getElementsByClassName('js-section-image-1');
@@ -15,12 +13,14 @@ export class Template {
   }
 
   init() {
+    this.width = window.innerWidth;
     this.initFullPage();
+    this.handleWindowResize();
   }
 
   initFullPage() {
-    if (this.container) {
-      new fullpage('#fullpage', {
+    if (this.container && this.isDesktop) {
+      this.fullpageApi = new fullpage('#fullpage', {
         parallax: true,
         parallaxOptions: {
           type: 'reveal',
@@ -32,8 +32,8 @@ export class Template {
         fitToSection: false,
         // scrollBar: true,
         afterRender: () => {
-          this.animationFirstSection();
           this.setTextPosition();
+          this.animationFirstSection();
         },
         afterLoad: (origin, destination, direction) => {
           console.log(origin, direction);
@@ -55,7 +55,7 @@ export class Template {
   }
 
   animationFirstSection() {
-    const tl = gsap.timeline({ repeat: 0, repeatDelay: 0, defaults: { ease: 'easeOut', y: 0 } });
+    const tl = gsap.timeline({ repeat: 0, repeatDelay: 0, defaults: { ease: 'easeOut', yPercent: 0 } });
     tl.to(this.header, { duration: 1, delay: 2 });
     if (this.hasDownloadBarVisible) {
       tl.to(this.downloadBar, { duration: 1 }, '-=1');
@@ -66,6 +66,11 @@ export class Template {
   }
 
   setTextPosition() {
+    gsap.set(this.header, { yPercent: -100 });
+    if (this.hasImageVisible) {
+      gsap.set(this.image, { yPercent: 100 });
+    }
+    // gsap.set(this.downloadBar, { yPercent: 100 });
     gsap.set('.js-section-content-inner', { yPercent: 100 });
   }
 
@@ -78,5 +83,24 @@ export class Template {
       delay: 0.5,
       duration: 1.2
     });
+  }
+
+  handleWindowResize() {
+    this.width = window.innerWidth;
+    window.addEventListener('resize', this.handleFullPage);
+  }
+
+  handleFullPage() {
+    if (this.isDesktop) {
+      console.log('desktop');
+    } else {
+      if (this.fullpageApi) {
+        this.fullpageApi.destroy();
+      }
+    }
+  }
+
+  get isDesktop() {
+    return this.width > 1336;
   }
 }

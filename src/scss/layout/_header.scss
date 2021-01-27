@@ -4,7 +4,6 @@
   top: 0;
   left: 0;
   width: 100%;
-  transform: translateY(-120%);
   will-change: transform;
 
   &__wrapper {
@@ -213,6 +212,11 @@
 }
 
 .nav-active {
+  .header {
+    height: 100vh;
+    max-height: -webkit-fill-available;
+  }
+
   .nav {
     transform: translateX(0);
     opacity: 1;

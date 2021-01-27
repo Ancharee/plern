@@ -23,8 +23,8 @@
     }
 
     @include desktop {
-      height: 100%;
-      margin: 175px auto 0;
+      height: auto;
+      margin: 115px auto 0;
       padding: 188px 0 102px;
     }
   }
@@ -268,6 +268,7 @@
         margin: auto;
         text-align: left;
         justify-content: flex-start;
+        height: auto;
       }
     }
 
@@ -305,6 +306,22 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+      }
+    }
+
+    .section__mobile {
+      display: block;
+
+      @include desktop {
+        display: none;
+      }
+    }
+
+    .section__desktop {
+      display: none;
+
+      @include desktop {
+        display: block;
       }
     }
   }

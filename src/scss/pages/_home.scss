@@ -186,6 +186,10 @@
       @include tablet {
         width: 392px;
       }
+
+      @include desktop {
+        width: 493px;
+      }
     }
   }
 

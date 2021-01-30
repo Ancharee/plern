@@ -55,6 +55,11 @@
 
 .section--faq {
   background-color: $black;
+
+  article {
+    align-items: center;
+    margin: auto;
+  }
 }
 
 .section--footer {

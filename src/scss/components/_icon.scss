@@ -2,7 +2,7 @@
   display: inline-block;
   width: 12px;
   height: 9px;
-  background-image: url('../images/Plern_black_tick.png');
+  background-image: url('../images/Plern_black_tick.svg');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 100%;
@@ -13,6 +13,6 @@
   }
 
   &--blue {
-    background-image: url('../images/Plern_blue_tick.png');
+    background-image: url('../images/Plern_blue_tick.svg');
   }
 }

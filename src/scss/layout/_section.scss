@@ -64,4 +64,8 @@
 
 .section--footer {
   background-color: $azure-radian;
+
+  &.section article {
+    max-width: 100%;
+  }
 }

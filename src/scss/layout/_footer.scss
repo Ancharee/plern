@@ -1,0 +1,95 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 73px;
+  padding-left: 32px;
+  padding-right: 30px;
+  color: $white;
+
+  @include desktop {
+    padding: 63px 66px 0;
+  }
+
+  &__wrapper {
+    flex: 1;
+
+    @include desktop {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__logo {
+    margin-bottom: 99px;
+    display: block;
+    width: 90px;
+    height: 24px;
+
+    @include tablet {
+      width: 116px;
+      height: 31px;
+    }
+
+    @include desktop {
+      width: 208px;
+      height: 56px;
+    }
+  }
+
+  &__links {
+    li {
+      padding-bottom: 21px;
+
+      @include desktop {
+        padding-bottom: 14px;
+      }
+    }
+  }
+
+  &__links a,
+  &__lang-name {
+    font-size: 23px;
+    line-height: 27px;
+
+    @include desktop {
+      font-size: 35px;
+      line-height: 42px;
+    }
+  }
+
+  &__flag {
+    margin-left: 24px;
+    display: inline-block;
+    width: 50px;
+    height: 34px;
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 60px;
+  }
+
+  &__copyright,
+  &__go-top {
+    font-size: 16px;
+
+    @include tablet {
+      font-size: 23px;
+    }
+
+    @include desktop {
+      font-size: 35px;
+    }
+  }
+
+  &__go-top {
+    img {
+      margin-left: 14px;
+      width: 28px;
+      height: 24px;
+    }
+  }
+}

@@ -47,4 +47,16 @@
       }
     }
   }
+
+  &__content {
+    width: 100%;
+  }
+}
+
+.section--faq {
+  background-color: $black;
+}
+
+.section--footer {
+  background-color: $azure-radian;
 }

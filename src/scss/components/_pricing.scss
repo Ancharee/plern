@@ -3,6 +3,12 @@
     display: block;
     text-align: center;
 
+    @include tablet {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 55px;
+    }
+
     @include desktop {
       display: none;
     }
@@ -11,7 +17,7 @@
   &__freemium {
     margin-bottom: 40px;
 
-    @include desktop {
+    @include tablet {
       margin-bottom: 0;
     }
   }
@@ -19,8 +25,18 @@
   &__premium {
     margin-bottom: 95px;
 
-    @include desktop {
+    @include tablet {
       margin-bottom: 0;
+    }
+
+    .pricing__sub-header {
+      max-width: 150px;
+      margin-left: auto;
+      margin-right: auto;
+
+      @include tablet {
+        max-width: 100%;
+      }
     }
   }
 

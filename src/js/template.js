@@ -36,12 +36,21 @@ export class Template {
           this.animationFirstSection();
         },
         afterLoad: (origin, destination, direction) => {
-          console.log(origin, direction);
+          console.log(origin);
+          console.log(destination);
+          console.log(direction);
           const { index } = destination;
           if (index > 0) {
             this.animationText(index);
           }
         },
+        onLeave: (origin, destination, direction) => {
+          console.log('-----onLeave------');
+          console.log(origin);
+          console.log(destination);
+          console.log(direction);
+          this.toggleHeader(destination);
+        }
       });
     }
   }
@@ -98,6 +107,23 @@ export class Template {
         this.fullpageApi.destroy();
       }
     }
+  }
+
+  toggleHeader(destination) {
+    const { item } = destination;
+    let yPercent = 0;
+    if (item && item.classList.contains('section--footer')) {
+      yPercent = -100;
+    }
+    gsap.to(this.header, {
+      ease: 'easeOut',
+      yPercent: yPercent,
+      duration: 1.2
+    });
+  }
+
+  handleScrollTrigger() {
+
   }
 
   get isDesktop() {

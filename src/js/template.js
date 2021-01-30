@@ -1,7 +1,9 @@
 import fullpage from 'fullpage.js/dist/fullpage.extensions.min';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-gsap.registerPlugin(ScrollTrigger);
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
+
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 export class Template {
   constructor() {
@@ -16,6 +18,9 @@ export class Template {
     this.width = window.innerWidth;
     this.initFullPage();
     this.handleWindowResize();
+    this.handleScrollTrigger();
+    this.handleDownloadBar();
+    this.handleScrollTop();
   }
 
   initFullPage() {
@@ -30,6 +35,7 @@ export class Template {
         scrollingSpeed: 1000,
         autoScrolling: true,
         fitToSection: false,
+        anchors: ['section1'],
         // scrollBar: true,
         afterRender: () => {
           this.setTextPosition();
@@ -45,7 +51,6 @@ export class Template {
           }
         },
         onLeave: (origin, destination, direction) => {
-          console.log('-----onLeave------');
           console.log(origin);
           console.log(destination);
           console.log(direction);
@@ -79,7 +84,6 @@ export class Template {
     if (this.hasImageVisible) {
       gsap.set(this.image, { yPercent: 100 });
     }
-    // gsap.set(this.downloadBar, { yPercent: 100 });
     gsap.set('.js-section-content-inner', { yPercent: 100 });
   }
 
@@ -96,7 +100,10 @@ export class Template {
 
   handleWindowResize() {
     this.width = window.innerWidth;
-    window.addEventListener('resize', this.handleFullPage);
+    window.addEventListener('resize', () => {
+      console.log('window resize');
+      this.handleFullPage();
+    });
   }
 
   handleFullPage() {
@@ -123,10 +130,44 @@ export class Template {
   }
 
   handleScrollTrigger() {
+    gsap.to(this.header, {
+      scrollTrigger: {
+        trigger: '.footer__logo',
+        start: 'top center',
+        scrub: true,
+        // markers: true,
+      },
+      ease: 'easeOut',
+      yPercent: -100,
+      duration: 1.2,
+    });
+  }
 
+  handleDownloadBar() {
+    if (this.isMobile) {
+      gsap.timeline().to(this.downloadBar, {
+        scrollTrigger: {
+          trigger: '.section__home7',
+          toggleActions: 'play none none reset',
+        },
+        ease: 'easeOut',
+        yPercent: 100,
+        duration: 1,
+      });
+    }
+  }
+
+  handleScrollTop() {
+    document.getElementById('go-top').addEventListener('click', () => {
+      gsap.to('body', { duration: 2, scrollTo: 0 });
+    });
   }
 
   get isDesktop() {
     return this.width > 1336;
+  }
+
+  get isMobile() {
+    return this.width < 1336;
   }
 }

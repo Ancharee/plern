@@ -17,6 +17,7 @@
     @include desktop {
       display: flex;
       justify-content: space-between;
+      align-items: flex-start;
     }
   }
 
@@ -70,6 +71,11 @@
     align-items: center;
     justify-content: space-between;
     padding-bottom: 60px;
+  }
+
+  &__lang {
+    display: flex;
+    align-items: center;
   }
 
   &__copyright,

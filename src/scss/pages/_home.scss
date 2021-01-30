@@ -33,6 +33,10 @@
     .fp-section & {
       margin-top: 98px;
     }
+
+    &--large {
+      padding: 31px 26px 45px;
+    }
   }
 
   &__action {
@@ -337,6 +341,12 @@
       @include desktop {
         display: block;
       }
+    }
+  }
+
+  &__home8 {
+    article {
+      margin: auto;
     }
   }
 }

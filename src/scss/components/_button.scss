@@ -4,6 +4,13 @@
   vertical-align: middle;
   text-align: center;
   border-radius: 500px;
+
+  &--small {
+    padding: 0;
+    width: 99px;
+    line-height: 32px;
+    font-size: 16px;
+  }
 }
 
 .btn-primary {

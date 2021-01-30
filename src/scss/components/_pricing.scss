@@ -1,0 +1,121 @@
+.pricing {
+  &__type {
+    display: block;
+    text-align: center;
+
+    @include desktop {
+      display: none;
+    }
+  }
+
+  &__freemium {
+    margin-bottom: 40px;
+
+    @include desktop {
+      margin-bottom: 0;
+    }
+  }
+
+  &__premium {
+    margin-bottom: 95px;
+
+    @include desktop {
+      margin-bottom: 0;
+    }
+  }
+
+  &__header {
+    margin-bottom: 5px;
+  }
+
+  &__sub-header {
+    margin-bottom: 9px;
+    font-size: 23px;
+    line-height: 27px;
+  }
+
+  &__mo {
+    display: block;
+
+    @include desktop {
+      display: none;
+    }
+  }
+
+  &__des {
+    display: none;
+
+    @include desktop {
+      display: block;
+    }
+  }
+
+  .btn--small {
+    @include desktop {
+      width: 145px;
+      line-height: 47px;
+      font-size: 23px;
+    }
+  }
+}
+
+.pricing__premium {
+  .pricing__header {
+    color: $azure-radian;
+  }
+}
+
+.table {
+  width: 100%;
+
+  tr {
+    th,
+    td {
+      &:not(:last-child) {
+        padding-right: 17px;
+      }
+    }
+
+    th {
+      padding-bottom: 12px;
+      font-weight: 600;
+
+      .pricing__sub-header {
+        font-weight: normal;
+      }
+    }
+
+    td {
+      padding-bottom: 30px;
+      color: $azure-radian;
+
+      @include desktop {
+        font-size: 23px;
+      }
+
+      &:not(:first-child) {
+        text-align: center;
+
+        @include desktop {
+          width: 250px;
+        }
+      }
+
+      &:first-child {
+        @include desktop {
+          padding-right: 206px;
+        }
+      }
+    }
+
+    &:last-child {
+      td {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  .premium {
+    color: $azure-radian;
+  }
+}

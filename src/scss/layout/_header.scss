@@ -164,11 +164,7 @@
     }
 
     &.btn-primary {
-      padding: 5px 15px;
-
-      @include desktop {
-        padding: 17px 33px;
-      }
+      padding: 17px 33px;
     }
 
     &:hover:not(.btn-primary),

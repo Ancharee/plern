@@ -106,6 +106,18 @@
       }
     }
   }
+
+  &__premium4 {
+    .section__content-wrapper {
+      .card:last-child {
+        margin-bottom: 80px;
+
+        @include desktop {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
 }
 
 .card {

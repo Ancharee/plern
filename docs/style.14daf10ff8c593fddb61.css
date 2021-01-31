@@ -736,10 +736,7 @@ h3 {
         align-items: center;
         font-size: 23px; } }
     .nav__link.btn-primary {
-      padding: 5px 15px; }
-      @media (min-width: 1336px) {
-        .nav__link.btn-primary {
-          padding: 17px 33px; } }
+      padding: 17px 33px; }
     .nav__link:hover:not(.btn-primary), .nav__link.active {
       font-weight: 600; }
     @media (min-width: 1336px) {
@@ -1624,6 +1621,12 @@ a.btn-text-with-arrow {
   @media (min-width: 1336px) {
     .section__premium3 .card, .section__premium4 .card {
       margin-top: 0; } }
+
+.section__premium4 .section__content-wrapper .card:last-child {
+  margin-bottom: 80px; }
+  @media (min-width: 1336px) {
+    .section__premium4 .section__content-wrapper .card:last-child {
+      margin-bottom: 0; } }
 
 .card {
   max-width: 391px;

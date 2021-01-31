@@ -2,6 +2,12 @@
   &__premium2 {
     color: $white;
 
+    article {
+      @include desktop {
+        padding-top: 133px;
+      }
+    }
+
     .section__content-inner {
       @include desktop {
         justify-content: space-between;

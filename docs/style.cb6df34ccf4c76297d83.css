@@ -1550,6 +1550,9 @@ a.btn-text-with-arrow {
 .section__premium2 {
   color: #fff; }
   @media (min-width: 1336px) {
+    .section__premium2 article {
+      padding-top: 133px; } }
+  @media (min-width: 1336px) {
     .section__premium2 .section__content-inner {
       justify-content: space-between;
       align-items: center; } }

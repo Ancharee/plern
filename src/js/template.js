@@ -103,18 +103,19 @@ export class Template {
   }
 
   handleWindowResize() {
-    this.width = window.innerWidth;
     window.addEventListener('resize', () => {
-      this.handleFullPage();
+      this.width = window.innerWidth;
+      // this.handleFullPage();
     });
   }
 
   handleFullPage() {
-    if (this.isDesktop) {
-      console.log('desktop');
+    if (this.isDesktop && !this.fullPageApi) {
+      this.initFullPage();
     } else {
       if (this.fullPageApi) {
-        this.fullPageApi.destroy();
+        console.log('destroy');
+        this.fullPageApi.destroy('all');
       }
     }
   }

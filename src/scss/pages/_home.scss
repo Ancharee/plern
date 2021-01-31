@@ -221,11 +221,25 @@
     }
   }
 
+  &__home3 {
+    article {
+      @include desktop {
+        padding-top: 133px;
+      }
+    }
+  }
+
   &__home4 {
     color: $white;
 
     .section__content {
       overflow: visible;
+    }
+
+    .section__content-inner {
+      @include desktop {
+        position: relative;
+      }
     }
 
     .section__info-wrapper {
@@ -242,7 +256,9 @@
       }
 
       @include desktop {
-        margin-top: 220px;
+        position: absolute;
+        right: 0;
+        margin-top: 200px;
       }
 
       img {

@@ -101,7 +101,6 @@ export class Template {
   handleWindowResize() {
     this.width = window.innerWidth;
     window.addEventListener('resize', () => {
-      console.log('window resize');
       this.handleFullPage();
     });
   }
@@ -144,23 +143,34 @@ export class Template {
   }
 
   handleDownloadBar() {
-    if (this.isMobile) {
-      gsap.timeline().to(this.downloadBar, {
-        scrollTrigger: {
-          trigger: '.section__home7',
-          toggleActions: 'play none none reset',
+    if (this.isMobile && this.downloadBar) {
+      ScrollTrigger.create({
+        trigger: '.section__home7',
+        onEnter: () => {
+          gsap.to(this.downloadBar, {
+            ease: 'easeOut',
+            yPercent: 100,
+            duration: 1,
+          });
         },
-        ease: 'easeOut',
-        yPercent: 100,
-        duration: 1,
+        onLeaveBack: () => {
+          gsap.to(this.downloadBar, {
+            ease: 'easeOut',
+            yPercent: 0,
+            duration: 1,
+          });
+        }
       });
     }
   }
 
   handleScrollTop() {
-    document.getElementById('go-top').addEventListener('click', () => {
-      gsap.to('body', { duration: 2, scrollTo: 0 });
-    });
+    const goTopButton = document.getElementById('go-top');
+    if (goTopButton) {
+      goTopButton.addEventListener('click', () => {
+        gsap.to('body', { duration: 2, scrollTo: 0 });
+      });
+    }
   }
 
   get isDesktop() {

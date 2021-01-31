@@ -48,6 +48,14 @@
     }
   }
 
+  @for $ii from 1 through 4 {
+    &__premium#{$ii} {
+      .fp-bg {
+        background-image: url('../images/bgs/Plern_background_premium#{$ii}.png');
+      }
+    }
+  }
+
   &__content {
     width: 100%;
   }

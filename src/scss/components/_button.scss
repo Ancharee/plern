@@ -19,6 +19,18 @@
   padding: 5px;
 }
 
+.btn-register {
+  display: none;
+  padding: 0;
+
+  @include desktop{
+    display: block;
+    width: 185px;
+    line-height: 60px;
+    font-size: 30px;
+  }
+}
+
 button.btn-text-with-arrow,
 a.btn-text-with-arrow {
   display: flex;

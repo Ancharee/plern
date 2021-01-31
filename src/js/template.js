@@ -170,7 +170,7 @@ export class Template {
 
   handleScrollTop() {
     const goTopButton = document.getElementById('go-top');
-    if (goTopButton) {
+    if (goTopButton && goTopButton.length) {
       goTopButton.addEventListener('click', () => {
         if (this.isFullPage) {
           this.fullPageApi.moveTo('page1');
@@ -183,7 +183,7 @@ export class Template {
 
   handleGoToPricing() {
     const button = document.getElementsByClassName('js-go-to-pricing');
-    if (button) {
+    if (button && button.length) {
       button[0].addEventListener('click', (e) => {
         e.preventDefault();
         if (this.isFullPage) {

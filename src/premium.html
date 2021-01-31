@@ -5,7 +5,54 @@
     <title>Plern</title>
     <meta name="description" content="" />
 </head>
-<body style="background-color: black;">
+<body>
     ${require('./partial/header.html')}
+    <main>
+        <div id="fullpage" class="fullpage-wrapper">
+            <section class="section section__home1 section__premium1">
+                <div class="fp-bg"></div>
+                <article>
+                    <div class="section__content">
+                        <div class="section__content-inner js-section-content-inner-1">
+                            <img class="section__image" src="./images/Plern_Premium.png" alt="Plern">
+                            <a class="btn btn-primary btn-register" href="#">สมัครสมาชิก</a>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <section class="section section__home3 section__premium2 js-section">
+                <div class="fp-bg"></div>
+                <article>
+                    <div class="section__content">
+                        <div class="section__content-inner">
+                            <div class="section__info-wrapper">
+                                <div class="js-section-content-inner">
+                                    <div class="section__headline">
+                                        <div>‘เพลิน’</div>
+                                        <div>ไปด้วยกันกับแอพ</div>
+                                        <div>ที่ตอบโจทย์คนไทย</div>
+                                    </div>
+                                    <div class="section__info">
+                                        <p>ฟังเพลินไม่มีโฆษณาคั่น</p>
+                                        <p>ฟังเพลงผ่านไฟล์เสียง คุณภาพสูง</p>
+                                        <p>โหลดเพื่อฟังตอนไม่มี เน็ตได้ก่อนใคร</p>
+                                        <p>เข้าถึง Exclusive Content ได้ก่อนใคร</p>
+                                        <p class="section__action">
+                                            <a href="#" class="btn btn-primary btn-register">สมัครสมาชิก</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section__image">
+                                <img src="./images/plern_iphone.png" alt="iphone">
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            ${require('./partial/footer.html')}
+        </div>
+    </main>
+    ${require('./components/download-bar.html')}
 </body>
 </html>

@@ -7,10 +7,10 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 export class Template {
   constructor() {
-    this.fullpageApi = null;
+    this.fullPageApi = null;
     this.container = document.getElementById('fullpage');
     this.header = document.getElementsByClassName('js-header');
-    this.image = document.getElementsByClassName('js-section-image-1');
+    this.content1 = document.getElementsByClassName('js-section-content-inner-1');
     this.downloadBar = document.getElementsByClassName('js-download-bar');
   }
 
@@ -25,7 +25,7 @@ export class Template {
 
   initFullPage() {
     if (this.container && this.isDesktop) {
-      this.fullpageApi = new fullpage('#fullpage', {
+      this.fullPageApi = new fullpage('#fullpage', {
         parallax: true,
         parallaxOptions: {
           type: 'reveal',
@@ -35,7 +35,7 @@ export class Template {
         scrollingSpeed: 1000,
         autoScrolling: true,
         fitToSection: false,
-        anchors: ['section1'],
+        // anchors: ['section1'],
         // scrollBar: true,
         afterRender: () => {
           this.setTextPosition();
@@ -64,8 +64,8 @@ export class Template {
     return this.downloadBar.offsetHeight !== 0 && this.downloadBar.offsetWidth !== 0;
   }
 
-  hasImageVisible() {
-    return this.image;
+  hasContent1Visible() {
+    return this.content1;
   }
 
   animationFirstSection() {
@@ -74,15 +74,15 @@ export class Template {
     if (this.hasDownloadBarVisible) {
       tl.to(this.downloadBar, { duration: 1 }, '-=1');
     }
-    if (this.hasImageVisible) {
-      tl.to(this.image, { duration: 3 });
+    if (this.hasContent1Visible) {
+      tl.to(this.content1, { duration: 3 });
     }
   }
 
   setTextPosition() {
     gsap.set(this.header, { yPercent: -100 });
-    if (this.hasImageVisible) {
-      gsap.set(this.image, { yPercent: 100 });
+    if (this.hasContent1Visible) {
+      gsap.set(this.content1, { yPercent: 100 });
     }
     gsap.set('.js-section-content-inner', { yPercent: 100 });
   }
@@ -110,8 +110,8 @@ export class Template {
     if (this.isDesktop) {
       console.log('desktop');
     } else {
-      if (this.fullpageApi) {
-        this.fullpageApi.destroy();
+      if (this.fullPageApi) {
+        this.fullPageApi.destroy();
       }
     }
   }

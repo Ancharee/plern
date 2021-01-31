@@ -149,7 +149,7 @@ export class Template {
   handleDownloadBar() {
     if (this.isMobile && this.downloadBar) {
       ScrollTrigger.create({
-        trigger: '.section__home7',
+        trigger: '.js-trigger-download-bar',
         onEnter: () => {
           gsap.to(this.downloadBar, {
             ease: 'easeOut',
@@ -170,7 +170,7 @@ export class Template {
 
   handleScrollTop() {
     const goTopButton = document.getElementById('go-top');
-    if (goTopButton && goTopButton.length) {
+    if (goTopButton) {
       goTopButton.addEventListener('click', () => {
         if (this.isFullPage) {
           this.fullPageApi.moveTo('page1');

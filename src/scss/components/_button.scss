@@ -31,6 +31,18 @@
   }
 }
 
+.btn-start {
+  width: 71px;
+  line-height: 32px;
+  padding: 0;
+
+  @include desktop {
+    width: 130px;
+    line-height: 60px;
+    font-size: 23px;
+  }
+}
+
 button.btn-text-with-arrow,
 a.btn-text-with-arrow {
   display: flex;

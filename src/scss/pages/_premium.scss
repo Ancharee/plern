@@ -55,4 +55,161 @@
       }
     }
   }
+
+  &__premium3,
+  &__premium4 {
+    article {
+      padding-left: 32px;
+      padding-right: 30px;
+      margin: auto;
+
+      @include desktop {
+        padding: 0;
+      }
+    }
+
+    .section__content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @include desktop {
+        margin-top: 120px;
+      }
+    }
+
+    .section__content-wrapper {
+      @include desktop {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+
+    .card {
+      margin-top: 80px;
+
+      &:first-child {
+        margin-top: calc(80px + 51px);
+
+        @include tablet {
+          margin-top: calc(80px + 60px);
+        }
+
+        @include desktop {
+          margin-top: 0;
+          margin-right: 40px;
+        }
+      }
+
+      @include desktop {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+.card {
+  max-width: 391px;
+  padding: 16px 16px 26px;
+  background: #F2F2F2 0% 0% no-repeat padding-box;
+  box-shadow: 7px 7px 5px #00000066;
+  border: 11px solid #000000;
+  border-radius: 30px;
+  opacity: 1;
+
+  @include desktop {
+    max-width: 540px;
+    padding: 14px 49px;
+  }
+
+  &__headline {
+    margin-bottom: 20px;
+    font-size: 23px;
+    line-height: 27px;
+    font-weight: 600;
+    color: $azure-radian;
+
+    @include tablet {
+      font-size: 35px;
+      line-height: 42px;
+    }
+
+    @include desktop {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__sub-headline,
+  &__info li,
+  &__price,
+  &__month {
+    @include desktop {
+      font-size: 23px;
+      line-height: 27px;
+    }
+  }
+
+  &__sub-headline {
+    color: #A0A0A0;
+
+    @include desktop {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__info {
+    margin-top: 27px;
+
+    @include desktop {
+      margin-top: 55px;
+    }
+
+    li {
+      position: relative;
+      padding-left: 18px;
+      padding-bottom: 15px;
+
+      &.active {
+        color: #2975FF;
+      }
+
+      &::before {
+        content: '▶';
+        position: absolute;
+        left: 0;
+      }
+    }
+  }
+
+  &__price {
+    margin-bottom: 16px;
+  }
+
+  &__action {
+    text-align: center;
+  }
+}
+
+.card--freemium-student {
+  .card__headline {
+    margin-bottom: 5px;
+
+    @include desktop {
+      margin-bottom: 15px;
+    }
+  }
+
+  .card__info {
+    margin-top: 15px;
+
+    @include desktop {
+      margin-top: 35px;
+    }
+  }
+
+  .card__price {
+    @include desktop {
+      margin-bottom: 10px;
+    }
+  }
 }

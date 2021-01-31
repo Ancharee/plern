@@ -19,7 +19,8 @@
   padding: 5px;
 }
 
-.btn-text-with-arrow {
+button.btn-text-with-arrow,
+a.btn-text-with-arrow {
   display: flex;
   flex-direction: column;
   align-items: center;

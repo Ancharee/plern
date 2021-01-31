@@ -21,10 +21,12 @@ export class Template {
     this.handleScrollTrigger();
     this.handleDownloadBar();
     this.handleScrollTop();
+    this.handleGoToPricing();
   }
 
   initFullPage() {
     if (this.container && this.isDesktop) {
+      const sections = this.getSections;
       this.fullPageApi = new fullpage('#fullpage', {
         parallax: true,
         parallaxOptions: {
@@ -35,7 +37,9 @@ export class Template {
         scrollingSpeed: 1000,
         autoScrolling: true,
         fitToSection: false,
-        // anchors: ['section1'],
+        anchors: sections,
+        animateAnchor: false,
+        lockAnchors: true,
         // scrollBar: true,
         afterRender: () => {
           this.setTextPosition();
@@ -168,7 +172,25 @@ export class Template {
     const goTopButton = document.getElementById('go-top');
     if (goTopButton) {
       goTopButton.addEventListener('click', () => {
+        if (this.isFullPage) {
+          this.fullPageApi.moveTo('page1');
+          return;
+        }
         gsap.to('body', { duration: 2, scrollTo: 0 });
+      });
+    }
+  }
+
+  handleGoToPricing() {
+    const button = document.getElementsByClassName('js-go-to-pricing');
+    if (button) {
+      button[0].addEventListener('click', (e) => {
+        e.preventDefault();
+        if (this.isFullPage) {
+          this.fullPageApi.moveTo('page8');
+          return;
+        }
+        gsap.to('body', { duration: 2, scrollTo: '.section__home8' });
       });
     }
   }
@@ -179,5 +201,17 @@ export class Template {
 
   get isMobile() {
     return this.width < 1336;
+  }
+
+  get getSections() {
+    const sections = document.querySelectorAll('.section');
+    const array = [];
+    sections.forEach((e, i) => array.push('page' + (i + 1)));
+    return array;
+  }
+
+  get isFullPage() {
+    const html = document.querySelector('html');
+    return html.classList.contains('fp-enabled');
   }
 }

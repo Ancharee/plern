@@ -1,0 +1,39 @@
+.ui-tabs-nav {
+  display: flex;
+  justify-content: center;
+  padding: 44px 0 40px;
+
+  @include tablet {
+    padding: 93px 0;
+  }
+
+  @include desktop {
+    padding: 50px 0;
+  }
+}
+
+.ui-tabs-tab {
+  &:not(:last-child) {
+    margin-right: 9px;
+
+    @include tablet {
+      margin-right: 50px;
+    }
+  }
+}
+
+.ui-tabs-anchor {
+  color: $white;
+  font-weight: 600;
+  opacity: 0.5;
+  transition: opacity 0.3s ease-out;
+
+  @include tablet {
+    font-size: 23px;
+    line-height: 27px;
+  }
+
+  .ui-tabs-active & {
+    opacity: 1;
+  }
+}

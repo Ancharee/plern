@@ -1,7 +1,7 @@
 .section {
-  &__faq1 {
-    color: $white;
 
+  &__faq1,
+  &__faq2 {
     article {
       margin: auto;
       max-width: 1180px;
@@ -15,6 +15,10 @@
         padding: 0;
       }
     }
+  }
+
+  &__faq1 {
+    color: $white;
 
     .section__content {
       display: flex;
@@ -49,6 +53,32 @@
 
       @include tablet {
         padding-top: 71px;
+      }
+    }
+  }
+
+  &__faq2 {
+    .section__headline {
+      text-align: center;
+    }
+
+    .faq {
+      padding: 176px 0 0;
+
+      @include tablet {
+        padding-top: 200px;
+      }
+
+      @include desktop {
+        padding-top: 150px;
+      }
+    }
+
+    .fag__accordion .accordion__title {
+      color: $white;
+
+      &::after {
+        background-image: url('../images/Plern_white_arrow.svg');
       }
     }
   }

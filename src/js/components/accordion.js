@@ -3,6 +3,6 @@ import 'jquery-ui/ui/widgets/accordion';
 
 export class Accordion {
   init() {
-    $('#accordion').accordion();
+    $('.js-accordion').accordion();
   }
 }

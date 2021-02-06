@@ -44,6 +44,7 @@
   .accordion__title {
     position: relative;
     color: $azure-radian;
+    cursor: pointer;
 
     &:not(.ui-state-active) {
       margin-bottom: 15px;
@@ -69,15 +70,18 @@
       background-size: contain;
       transform: rotate(180deg);
       transition: transform 0.1s ease-in;
+      transform-origin: 9px 0;
 
       @include tablet {
         width: 44px;
         height: 22px;
+        transform-origin: 21px 0;
       }
 
       @include desktop {
         width: 46px;
         height: 23px;
+        transform-origin: 22px 0;
       }
     }
 

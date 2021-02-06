@@ -73,7 +73,7 @@ export class Template {
   }
 
   animationFirstSection() {
-    const tl = gsap.timeline({ repeat: 0, repeatDelay: 0, defaults: { ease: 'easeOut', yPercent: 0 } });
+    const tl = gsap.timeline({ repeat: 0, repeatDelay: 0, defaults: { ease: 'easeOut', yPercent: 0, opacity: 1 } });
     tl.to(this.header, { duration: 1, delay: 2 });
     if (this.hasDownloadBarVisible) {
       tl.to(this.downloadBar, { duration: 1 }, '-=1');
@@ -84,9 +84,9 @@ export class Template {
   }
 
   setTextPosition() {
-    gsap.set(this.header, { yPercent: -100 });
+    gsap.set(this.header, { yPercent: -100, opacity: 0 });
     if (this.hasContent1Visible) {
-      gsap.set(this.content1, { yPercent: 100 });
+      gsap.set(this.content1, { yPercent: 100, opacity: 0 });
     }
     gsap.set('.js-section-content-inner', { yPercent: 100 });
   }
@@ -97,6 +97,7 @@ export class Template {
     gsap.to(content, {
       ease: 'easeOut',
       yPercent: 0,
+      opacity: 1,
       delay: 0.5,
       duration: 1.2
     });

@@ -3,7 +3,8 @@ import $ from 'jquery';
 import { Template } from './template';
 import {
   Navigation,
-  Accordion
+  Accordion,
+  Tab
 } from './components/index';
 
 window.jQuery = $;
@@ -13,4 +14,5 @@ document.addEventListener('DOMContentLoaded', () => {
   new Template().init();
   new Navigation().init();
   new Accordion().init();
+  new Tab().init();
 });

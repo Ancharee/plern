@@ -38,6 +38,16 @@
     }
   }
 
+  &__list {
+    @include desktop {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 80%;
+      max-width: calc(1920px - 404px);
+    }
+  }
+
   &__links {
     li {
       padding-bottom: 21px;

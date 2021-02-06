@@ -347,6 +347,22 @@
         justify-content: space-between;
       }
     }
+
+    .section__mobile {
+      display: block;
+
+      @include desktop {
+        display: none;
+      }
+    }
+
+    .section__desktop {
+      display: none;
+
+      @include desktop {
+        display: block;
+      }
+    }
   }
 
   &__home8 {

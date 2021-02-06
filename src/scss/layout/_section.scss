@@ -57,22 +57,6 @@
     overflow: hidden;
   }
 
-  .section__mobile {
-    display: block;
-
-    @include desktop {
-      display: none;
-    }
-  }
-
-  .section__desktop {
-    display: none;
-
-    @include desktop {
-      display: block;
-    }
-  }
-
   @for $i from 1 through 8 {
     &__home#{$i} {
       .fp-bg {

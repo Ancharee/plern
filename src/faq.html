@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Plern</title>
+    <meta name="description" content="" />
+</head>
+<body>
+    ${require('./partial/header.html')}
+    <main>
+        <div id="fullpage" class="fullpage-wrapper">
+            <section class="section section__faq1">
+                <div class="fp-bg"></div>
+                <article>
+                    <div class="section__content">
+                        <div class="section__content-inner">
+                          <div class="js-section-content-inner-1">
+                            <h2 class="section__mobile">ค้นหาสิ่งที่คุณ <br> ต้องการความช่วยเหลือ</h2>
+                            <h2 class="section__desktop">ค้นหาสิ่งที่คุณต้องการความช่วยเหลือ</h2>
+                            <div class="form-group">
+                              <input type="search" class="form-control form-control--search" placeholder="ค้นหาสิ่งที่คุณต้องการความช่วยเหลือ">
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            ${require('./partial/footer.html')}
+        </div>
+    </main>
+    ${require('./components/download-bar.html')}
+</body>
+</html>

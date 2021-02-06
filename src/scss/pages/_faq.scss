@@ -1,0 +1,55 @@
+.section {
+  &__faq1 {
+    color: $white;
+
+    article {
+      margin: auto;
+      max-width: 1180px;
+      padding: 0 20px;
+
+      @include tablet {
+        padding: 0 40px;
+      }
+
+      @include desktop {
+        padding: 0;
+      }
+    }
+
+    .section__content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .section__content-inner {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .section__mobile {
+      display: block;
+
+      @include tablet {
+        display: none;
+      }
+    }
+
+    .section__desktop {
+      display: none;
+
+      @include tablet {
+        display: block;
+      }
+    }
+
+    .form-group {
+      padding-top: 98px;
+
+      @include tablet {
+        padding-top: 71px;
+      }
+    }
+  }
+}

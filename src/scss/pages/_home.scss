@@ -1,20 +1,4 @@
 .section {
-  article {
-    max-width: 1130px;
-    height: 100%;
-    display: flex;
-  }
-
-  &:not(.fp-section) {
-    article {
-      min-height: 100vh;
-    }
-  }
-
-  &__content {
-    overflow: hidden;
-  }
-
   &__helper {
     max-width: 1475px;
     padding: 35px 32px;
@@ -361,22 +345,6 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-      }
-    }
-
-    .section__mobile {
-      display: block;
-
-      @include desktop {
-        display: none;
-      }
-    }
-
-    .section__desktop {
-      display: none;
-
-      @include desktop {
-        display: block;
       }
     }
   }

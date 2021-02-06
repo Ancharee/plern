@@ -19,6 +19,11 @@
   padding: 5px;
 }
 
+.btn-second {
+  background-color: #808080;
+  color: $white;
+}
+
 .btn-register {
   display: none;
   padding: 0;
@@ -73,5 +78,25 @@ a.btn-text-with-arrow {
       height: 30px;
       width: 64px;
     }
+  }
+}
+
+.btn-file {
+  display: block;
+  padding: 0;
+  width: 150px;
+  line-height: 32px;
+  cursor: pointer;
+
+  @include tablet {
+    width: 218px;
+    font-size: 23px;
+    line-height: 46px;
+  }
+
+  @include desktop {
+    width: 328px;
+    font-size: 35px;
+    line-height: 70px;
   }
 }

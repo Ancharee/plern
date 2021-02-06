@@ -32,3 +32,13 @@ h3 {
   font-size: 35px;
   line-height: 42px;
 }
+
+h4 {
+  font-size: 23px;
+  line-height: 27px;
+
+  @include desktop {
+    font-size: 45px;
+    line-height: 54px;
+  }
+}

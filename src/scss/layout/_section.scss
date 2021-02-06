@@ -80,6 +80,12 @@
       }
     }
   }
+
+  &__register {
+    .fp-bg {
+      background-image: url('../images/bgs/Plern_background_register.png');
+    }
+  }
 }
 
 .section--faq {
@@ -96,5 +102,21 @@
 
   &.section article {
     max-width: 100%;
+  }
+}
+
+.section__register {
+  article {
+    margin: auto;
+    padding: calc(52px + 27px) 20px;
+
+    @include tablet {
+      padding-top: 100px;
+    }
+
+    @include desktop {
+      max-width: 1090;
+      padding-top: 140px;
+    }
   }
 }

@@ -29,11 +29,11 @@
     min-height: 100vh;
     height: 100%;
     position: absolute;
-    z-index: -1;
+    // z-index: -1;
     background-size: cover;
     background-position: center;
     background-size: cover;
-    transform: translate3d(0, 0, 0);
+    // transform: translate3d(0, 0, 0);
     -webkit-backface-visibility: hidden;
     /* Chrome, Safari, Opera */
     backface-visibility: hidden;
@@ -41,6 +41,7 @@
   }
 
   article {
+    position: relative;
     max-width: 1130px;
     height: 100%;
     display: flex;
@@ -60,7 +61,7 @@
   @for $i from 1 through 8 {
     &__home#{$i} {
       .fp-bg {
-        background-image: url('../images/bgs/Plern_background_home#{$i}.png');
+        background-image: url('../images/bgs/Plern_background_home#{$i}.jpg');
       }
     }
   }
@@ -68,7 +69,7 @@
   @for $ii from 1 through 4 {
     &__premium#{$ii} {
       .fp-bg {
-        background-image: url('../images/bgs/Plern_background_premium#{$ii}.png');
+        background-image: url('../images/bgs/Plern_background_premium#{$ii}.jpg');
       }
     }
   }
@@ -76,14 +77,14 @@
   @for $ii from 1 through 2 {
     &__faq#{$ii} {
       .fp-bg {
-        background-image: url('../images/bgs/Plern_background_FAQ#{$ii}.png');
+        background-image: url('../images/bgs/Plern_background_FAQ#{$ii}.jpg');
       }
     }
   }
 
   &__register {
     .fp-bg {
-      background-image: url('../images/bgs/Plern_background_register.png');
+      background-image: url('../images/bgs/Plern_background_register.jpg');
     }
   }
 }
@@ -106,6 +107,8 @@
 }
 
 .section__register {
+  background-color: #cabc93;
+
   article {
     margin: auto;
     padding: calc(52px + 27px) 20px;
@@ -115,8 +118,20 @@
     }
 
     @include desktop {
-      max-width: 1090;
+      max-width: 1090px;
       padding-top: 140px;
     }
   }
+}
+
+.section__home1 {
+  background-color: $dodger-blue;
+}
+
+.section__premium1 {
+  background-color: #4ab2f1;
+}
+
+.section__faq1 {
+  background-color: #f6c52d;
 }

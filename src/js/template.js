@@ -12,6 +12,7 @@ export class Template {
     this.header = document.getElementsByClassName('js-header');
     this.content1 = document.getElementsByClassName('js-section-content-inner-1');
     this.downloadBar = document.getElementsByClassName('js-download-bar');
+    this.sectionBackground = document.getElementsByClassName('fp-bg');
   }
 
   init() {
@@ -25,9 +26,12 @@ export class Template {
   }
 
   initFullPage() {
+    console.log('production', this.production);
     if (this.container && this.isDesktop) {
       const sections = this.getSections;
       this.fullPageApi = new fullpage('#fullpage', {
+        // licenseKey: '74ED3D42-843248CC-935A616C-ED1D0476',
+        // parallaxKey: '6E904BAD-568A42AA-99C7D7F3-347D68EA',
         parallax: true,
         parallaxOptions: {
           type: 'reveal',
@@ -73,22 +77,29 @@ export class Template {
   }
 
   animationFirstSection() {
-    const tl = gsap.timeline({ repeat: 0, repeatDelay: 0, defaults: { ease: 'easeOut', yPercent: 0, opacity: 1 } });
-    tl.to(this.header, { duration: 1, delay: 2 });
+    const tl = gsap.timeline({ repeat: 0, repeatDelay: 0 });
+    tl.to(this.header, { duration: 1, delay: 0.5, ease: 'easeOut', yPercent: 0, opacity: 1 });
     if (this.hasDownloadBarVisible) {
-      tl.to(this.downloadBar, { duration: 1 }, '-=1');
+      tl.to(this.downloadBar, { ease: 'easeOut', yPercent: 0, opacity: 1, duration: 1 }, '-=1');
     }
     if (this.hasContent1Visible) {
-      tl.to(this.content1, { duration: 3 });
+      tl.to(this.content1, { ease: 'easeOut', yPercent: 0, opacity: 1, duration: 2, }, '-=0.9');
+    }
+    if (this.sectionBackground) {
+      tl.to(this.sectionBackground, { duration: 0.75, opacity: 1, ease: 'easeOut' }, '-=1.8');
     }
   }
 
   setTextPosition() {
     gsap.set(this.header, { yPercent: -100, opacity: 0 });
+    gsap.set('.js-section-content-inner', { yPercent: 100 });
+
     if (this.hasContent1Visible) {
       gsap.set(this.content1, { yPercent: 100, opacity: 0 });
     }
-    gsap.set('.js-section-content-inner', { yPercent: 100 });
+    if (this.sectionBackground) {
+      gsap.set(this.sectionBackground, { opacity: 0 });
+    }
   }
 
   animationText(index) {

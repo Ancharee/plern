@@ -1,6 +1,6 @@
 .section {
   &__register {
-    h4 {
+    .form-headline {
       color: $white;
 
       @include desktop {
@@ -37,7 +37,7 @@
   }
 
   &__content {
-    h4 {
+    .form-headline {
       padding-left: 10px;
       margin-bottom: 5px;
       color: $black;

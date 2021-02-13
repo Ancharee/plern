@@ -1,0 +1,148 @@
+.section__credit {
+  article {
+    margin: auto;
+  }
+
+  .section__content {
+    padding-top: 200px;
+
+    @include desktop {
+      padding-top: calc(118px + 50px);
+    }
+  }
+
+  .section__content-inner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .section__content {
+    overflow: visible;
+  }
+}
+
+.credit {
+  width: 100%;
+  max-width: 320px;
+  padding: 23px 20px 35px;
+  background: #F2F2F2 0% 0% no-repeat padding-box;
+  box-shadow: 3px 4px 5px #00000033;
+  border-radius: 15px;
+
+  @include tablet {
+    max-width: 540px;
+    padding: 48px 62px;
+    box-shadow: 7px 7px 5px #00000066;
+    border-radius: 20px;
+  }
+
+  @include desktop {
+    max-width: 800px;
+    padding: 25px 70px;
+    border-radius: 30px;
+  }
+
+  &__headline,
+  &__detail {
+    padding-left: 10px;
+
+    @include tablet {
+      padding-left: 20px;
+    }
+
+    @include desktop {
+      padding-left: 29px;
+    }
+  }
+
+  &__detail {
+    margin: 26px 0 14px;
+    font-size: 14px;
+    line-height: 17px;
+
+    @include tablet {
+      margin: 30px 0 40px;
+      font-size: 18px;
+      line-height: 21px;
+    }
+
+    @include desktop {
+      margin: 20px 0;
+      font-size: 23px;
+      line-height: 27px;
+    }
+  }
+
+  .form-action {
+    @include desktop {
+      flex-direction: row-reverse;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .btn {
+      @include tablet {
+        font-size: 23px;
+      }
+
+      @include desktop {
+        max-width: 180px;
+        line-height: 60px;
+      }
+
+      &+ .btn {
+        @include desktop {
+          margin-right: 42px;
+        }
+      }
+    }
+  }
+}
+
+.credit-card {
+  margin-bottom: 28px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+
+  @include tablet {
+    padding-left: 20px;
+  }
+
+  @include desktop {
+    padding-left: 29px;
+  }
+
+  &__item {
+    width: 100%;
+
+    &+ .credit-card__item {
+      margin-left: 22px;
+    }
+  }
+
+  &__visa {
+    max-width: 68px;
+
+    @include desktop {
+      max-width: 70px;
+    }
+  }
+
+  &__master {
+    max-width: 45px;
+
+    @include desktop {
+      max-width: 50px;
+    }
+  }
+
+  &__jcb {
+    max-width: 50px;
+
+    @include desktop {
+      max-width: 54px;
+    }
+  }
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Plern</title>
+  <meta name="description" content="" />
+</head>
+
+<body>
+  ${require('./partial/header.html')}
+  <main>
+    <div id="fullpage" class="fullpage-wrapper">
+      <section class="section section__credit">
+        <div class="fp-bg"></div>
+        <article>
+          <div class="section__content">
+            <div class="section__content-inner">
+              <div class="credit">
+                <form action="#" class="js-form">
+                  <h4 class="credit__headline">การชำระเงิน</h4>
+                  <p class="credit__detail">ชำระด้วยบัตรเครดิต/บัตรเดบิต</p>
+                  <div class="credit-card">
+                    <div class="credit-card__item credit-card__visa"><img src="./images/visa.svg" alt="visa"></div>
+                    <div class="credit-card__item credit-card__master"><img src="./images/mastercard.svg" alt="mastercard"></div>
+                    <div class="credit-card__item credit-card__jcb"><img src="./images/jcb.svg" alt="jcb"></div>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="credit">หมายเลขบัตรเครดิต/เดบิต</label>
+                    <input class="form-control" id="credit" type="text" placeholder="0000-0000-0000-0000">
+                    <span class="form-error">กรุณาใส่หมายเลขบัตรเครดิต/เดบิต</span>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="expire">วันหมดอายุ</label>
+                    <input class="form-control" id="expire" type="text" placeholder="MM-YY">
+                    <span class="form-error">กรุณาใส่วันหมดอายุ</span>
+                  </div>
+                  <div class="form-group">
+                    <label for="cvv" class="form-label">CVV</label>
+                    <input class="form-control" id="cvv" type="password" placeholder="CVV1/CVC2">
+                    <span class="form-error">กรุณาใส่ CVV</span>
+                  </div>
+                  <div class="form-action form-action--full">
+                    <button class="btn btn-primary js-submit" type="button">ชำระเงิน</button>
+                    <button class="btn btn-second" type="button">ยกเลิก</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+      ${require('./partial/footer.html')}
+    </div>
+  </main>
+</body>
+</html>

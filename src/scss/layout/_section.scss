@@ -101,6 +101,12 @@
       background-image: url('../images/bgs/Plern_background_FAQ1.jpg');
     }
   }
+
+  &__credit {
+    .fp-bg {
+      background-image: url('../images/bgs/Plern_background_premium3.jpg');
+    }
+  }
 }
 
 .section--faq {
@@ -139,4 +145,8 @@
 
 .section__contact {
   background-color: #f5c52c;
+}
+
+.section__credit {
+  background-color: #824E9F;
 }

@@ -1,9 +1,12 @@
 import MicroModal from 'micromodal';
+import * as $ from 'jquery';
+import 'jquery-mask-plugin';
 
 export class Form {
   constructor() {
     this.form = document.getElementsByClassName('js-submit');
     this.modal = document.getElementsByClassName('js-modal-confirm');
+    this.initMask();
   }
 
   init() {
@@ -55,5 +58,11 @@ export class Form {
   openModalDone() {
     MicroModal.close('modal-otp');
     MicroModal.show('modal-done');
+  }
+
+  initMask() {
+    $('#credit').mask('0000-0000-0000-0000');
+    $('#expire').mask('00-00');
+    $('#cvv').mask('000');
   }
 }

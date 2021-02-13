@@ -35,4 +35,21 @@
       width: 100%;
     }
   }
+
+  &__content {
+    h4 {
+      padding-left: 10px;
+      margin-bottom: 5px;
+      color: $black;
+
+      @include tablet {
+        padding-left: 20px;
+        margin-bottom: 12px;
+      }
+
+      @include desktop {
+        padding-left: 29px;
+      }
+    }
+  }
 }

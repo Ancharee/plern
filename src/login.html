@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Plern</title>
+  <meta name="description" content="" />
+</head>
+
+<body>
+  ${require('./partial/header.html')}
+  <main>
+    <div id="fullpage" class="fullpage-wrapper">
+      <section class="section section__register section__login">
+        <div class="fp-bg"></div>
+        <article>
+          <div class="section__content">
+            <div class="section__content-inner">
+              <div class="section__form">
+                <form class="login" action="#" class="js-form">
+                  <h4 class="form-headline">ลงชื่อเข้าใช้งาน</h4>
+                  <div class="form-group">
+                    <label class="form-label" for="email">อีเมล</label>
+                    <input class="form-control" id="email" type="email" placeholder="user@mail.com">
+                    <span class="form-error">กรุณาใส่อีเมล</span>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="password">รหัสผ่านใหม่</label>
+                    <input class="form-control" id="password" type="password" placeholder="****************">
+                    <span class="form-error">กรุณาใส่รหัสผ่านใหม่</span>
+                  </div>
+                  <div class="form-action form-action--full">
+                    <button class="btn btn-primary js-submit" type="button">เข้าสู่ระบบ</button>
+                    <button class="btn btn-second" type="button">ยกเลิก</button>
+                  </div>
+                  <div class="text-center"> <p>หรือ</p></div>
+                  <div class="form-action form-action--full">
+                    <button class="btn btn--icon btn-fb">
+                      <img src="./images/fb.svg" alt="fb">
+                      Log in With Facebook
+                    </button>
+                    <button class="btn btn--icon btn-gg">
+                      <img src="./images/gg.svg" alt="gg">
+                      Sign in With Google
+                    </button>
+                  </div>
+                  <div class="text-center">
+                    <a class="login__link" href="register.html">หรือลงทะเบียนด้วยอีเมล</a>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+      ${require('./partial/footer.html')}
+    </div>
+  </main>
+</body>
+</html>

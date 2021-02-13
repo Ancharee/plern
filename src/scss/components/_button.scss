@@ -48,6 +48,51 @@
   }
 }
 
+.btn--icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    margin-right: 30px;
+  }
+}
+
+.btn-fb {
+  background-color: #1877f2;
+  color: $white;
+
+  img {
+    max-width: 22px;
+
+    @include tablet {
+      max-width: 30px;
+    }
+
+    @include desktop {
+      max-width: 48px;
+    }
+  }
+}
+
+.btn-gg {
+  background-color: $white;
+  color: #4c4c4c;
+  border-radius: 4px;
+
+  img {
+    max-width: 15px;
+
+    @include tablet {
+      max-width: 20px;
+    }
+
+    @include desktop {
+      max-width: 35px;
+    }
+  }
+}
+
 button.btn-text-with-arrow,
 a.btn-text-with-arrow {
   display: flex;

@@ -1,0 +1,28 @@
+.login {
+  @include desktop {
+    font-size: 23px;
+  }
+
+  .form-headline {
+    color: $white;
+  }
+
+  &__link {
+    color: #1877f2;
+    text-decoration: underline;
+
+    @include tablet {
+      font-size: 18px;
+    }
+
+    @include desktop {
+      font-size: 30px;
+    }
+  }
+
+  .form-action {
+    @include desktop {
+      padding: 22px 0 22px;
+    }
+  }
+}

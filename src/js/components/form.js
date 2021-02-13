@@ -24,8 +24,7 @@ export class Form {
   }
 
   submit() {
-    const form = document.getElementsByClassName('js-form')[0];
-    const controls = form.getElementsByClassName('form-control');
+    const controls = document.getElementsByClassName('form-control');
     let errors = 0;
     for (let index = 0; index < controls.length; index++) {
       const control = controls[index];

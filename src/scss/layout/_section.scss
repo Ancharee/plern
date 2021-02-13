@@ -82,7 +82,8 @@
     }
   }
 
-  &__register {
+  &__register,
+  &__login {
     .fp-bg {
       background-image: url('../images/bgs/Plern_background_register.jpg');
     }
@@ -127,7 +128,8 @@
 }
 
 .section__profile,
-.section__register {
+.section__register,
+.section__login {
   background-color: #cabc93;
 }
 

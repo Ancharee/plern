@@ -61,8 +61,11 @@ export class Form {
   }
 
   initMask() {
-    $('#credit').mask('0000-0000-0000-0000');
-    $('#expire').mask('00-00');
-    $('#cvv').mask('000');
+    const form = document.getElementsByClassName('js-form-credit');
+    if (form.length) {
+      $('#credit').mask('0000-0000-0000-0000');
+      $('#expire').mask('00-00');
+      $('#cvv').mask('000');
+    }
   }
 }

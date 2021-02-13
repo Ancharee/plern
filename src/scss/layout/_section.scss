@@ -87,6 +87,14 @@
       background-image: url('../images/bgs/Plern_background_register.jpg');
     }
   }
+
+  &__about {
+    background-color: #319478;
+
+    .fp-bg {
+      background-image: url('../images/bgs/Plern_background_FAQ2.jpg');
+    }
+  }
 }
 
 .section--faq {

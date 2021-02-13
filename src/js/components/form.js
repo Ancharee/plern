@@ -3,16 +3,17 @@ import MicroModal from 'micromodal';
 export class Form {
   init() {
     MicroModal.init();
-    document
-      .getElementsByClassName('js-submit')[0]
-      .addEventListener('click', () => {
+    const form = document.getElementsByClassName('js-submit');
+    if (form.length) {
+      form[0].addEventListener('click', () => {
         this.submit();
       });
-    document
-      .getElementsByClassName('js-modal-confirm')[0]
-      .addEventListener('click', () => {
-        this.openModalDone();
-      });
+      document
+        .getElementsByClassName('js-modal-confirm')[0]
+        .addEventListener('click', () => {
+          this.openModalDone();
+        });
+    }
   }
 
   submit() {

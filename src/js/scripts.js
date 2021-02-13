@@ -4,7 +4,8 @@ import { Template } from './template';
 import {
   Navigation,
   Accordion,
-  Tab
+  Tab,
+  Form
 } from './components/index';
 
 window.jQuery = $;
@@ -15,4 +16,5 @@ document.addEventListener('DOMContentLoaded', () => {
   new Navigation().init();
   new Accordion().init();
   new Tab().init();
+  new Form().init();
 });

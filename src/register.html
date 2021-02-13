@@ -1,63 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <title>Plern</title>
-    <meta name="description" content="" />
+  <meta charset="utf-8">
+  <title>Plern</title>
+  <meta name="description" content="" />
 </head>
+
 <body>
-    ${require('./partial/header.html')}
-    <main>
-        <div id="fullpage" class="fullpage-wrapper">
-          <section class="section section__register">
-              <div class="fp-bg"></div>
-              <article>
-                  <div class="section__content">
-                      <div class="section__content-inner">
-                        <div class="">
-                          <form action="#">
-                            <div class="profile">
-                              <div class="profile__avatar-wrapper">
-                                <div class="profile__avatar" style="background-image: url('./images/photo-1559260932-f447fa88b894.jpg');"></div>
-                                <label class="btn btn-primary btn-file" for="file-upload">อัพโหลดรูปโปรไฟล์</label>
-                                <input class="form-control-file" type="file" id="file-upload" name="file-upload">
-                              </div>
-                              <div class="profile__form">
-                                <h4 class="profile__headline">แก้ไขบัญชีผู้ใช้</h4>
-                                <div class="form-group">
-                                  <label class="form-label" for="username">ชื่อผู้ใช้งาน</label>
-                                  <input class="form-control" id="username" type="text" placeholder="Name Lastname">
-                                </div>
-                                <div class="form-group">
-                                  <label class="form-label" for="email">อีเมล</label>
-                                  <input class="form-control" id="email" type="email" placeholder="user@mail.com">
-                                </div>
-                                <div class="form-group">
-                                  <label class="form-label" for="phone">เบอร์โทรศัพท์</label>
-                                  <input class="form-control" id="phone" type="tel" placeholder="+6681-999-9999">
-                                </div>
-                                <div class="form-group">
-                                  <label class="form-label" for="password">รหัสผ่านใหม่</label>
-                                  <input class="form-control" id="password" type="password" placeholder="****************">
-                                </div>
-                                <div class="form-group">
-                                  <label class="form-label" for="password_confirm">ยืนยันรหัสผ่านใหม่</label>
-                                  <input class="form-control" id="password_confirm" type="password" placeholder="****************">
-                                </div>
-                                <div class="form-action">
-                                  <button class="btn btn-second">ยกเลิก</button>
-                                  <button class="btn btn-primary">บันทึก</button>
-                                </div>
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div>
+  ${require('./partial/header.html')}
+  <main>
+    <div id="fullpage" class="fullpage-wrapper">
+      <section class="section section__register">
+        <div class="fp-bg"></div>
+        <article>
+          <div class="section__content">
+            <div class="section__content-inner">
+              <div class="section__form">
+                <form action="#" class="js-form">
+                  <h4 class="form-headline">ลงทะเบียนฟรี</h4>
+                  <div class="form-group">
+                    <label class="form-label" for="email">อีเมล</label>
+                    <input class="form-control" id="email" type="email" placeholder="user@mail.com">
+                    <span class="form-error">กรุณาใส่อีเมล</span>
                   </div>
-              </article>
-          </section>
-          ${require('./partial/footer.html')}
-        </div>
-    </main>
+                  <div class="form-group">
+                    <label class="form-label" for="phone">เบอร์โทรศัพท์</label>
+                    <input class="form-control" id="phone" type="tel" placeholder="+6681-999-9999">
+                    <span class="form-error">กรุณาใส่เบอร์โทรศัพท์</span>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="password">รหัสผ่านใหม่</label>
+                    <input class="form-control" id="password" type="password" placeholder="****************">
+                    <span class="form-error">กรุณาใส่รหัสผ่านใหม่</span>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="password_confirm">ยืนยันรหัสผ่านใหม่</label>
+                    <input class="form-control" id="password_confirm" type="password" placeholder="****************">
+                    <span class="form-error">กรุณาใส่ยืนยันรหัสผ่านใหม่</span>
+                  </div>
+                  <span class="form-warning">**กรุณากรอกอีเมลตามจริงเนื่องจากจะต้องยืนยันอีเมลในการลงทะเบียนด้วย</span>
+                  <div class="form-action form-action--full">
+                    <button class="btn btn-primary js-submit" type="button">สมัครสมาชิก</button>
+                    <button class="btn btn-second" type="button">ยกเลิก</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+      ${require('./partial/footer.html')}
+    </div>
+  </main>
+  ${require('./components/modal-otp.html')}
+  ${require('./components/modal-done.html')}
 </body>
+
 </html>

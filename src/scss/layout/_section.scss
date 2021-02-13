@@ -106,22 +106,9 @@
   }
 }
 
+.section__profile,
 .section__register {
   background-color: #cabc93;
-
-  article {
-    margin: auto;
-    padding: calc(52px + 27px) 20px;
-
-    @include tablet {
-      padding-top: 100px;
-    }
-
-    @include desktop {
-      max-width: 1090px;
-      padding-top: 140px;
-    }
-  }
 }
 
 .section__home1 {

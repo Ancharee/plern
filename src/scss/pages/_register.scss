@@ -1,0 +1,38 @@
+.section {
+  &__register {
+    h4 {
+      color: $white;
+
+      @include desktop {
+        margin-bottom: 16px;
+      }
+    }
+
+    article {
+      margin: auto;
+      max-width: 400px;
+      padding: 0 20px;
+
+      @include tablet {
+        padding: 0;
+        max-width: 420px;
+      }
+
+      @include desktop {
+        max-width: 664px;
+      }
+    }
+
+    .section__content {
+      padding-top: 200px;
+
+      @include desktop {
+        padding-top: calc(118px + 50px);
+      }
+    }
+
+    .section__content-inner {
+      width: 100%;
+    }
+  }
+}

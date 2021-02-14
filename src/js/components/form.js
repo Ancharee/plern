@@ -43,11 +43,13 @@ export class Form {
   }
 
   showErrorMessage(element) {
-    element.nextSibling.nextSibling.style.display = 'block';
+    $(element).next().show();
+    // element.nextSibling.nextSibling.style.display = 'block';
   }
 
   hideErrorMessage(element) {
-    element.nextSibling.nextSibling.style.display = 'none';
+    // element.nextSibling.nextSibling.style.display = 'none';
+    $(element).next().hide();
   }
 
   openModalOTP() {

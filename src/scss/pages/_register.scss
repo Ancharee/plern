@@ -24,10 +24,12 @@
     }
 
     .section__content {
-      padding-top: 200px;
+      padding-top: 20vh;
+      padding-bottom: 20vh;
 
       @include desktop {
         padding-top: calc(118px + 50px);
+        padding-bottom: 0;
       }
     }
 

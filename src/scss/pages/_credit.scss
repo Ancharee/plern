@@ -4,10 +4,12 @@
   }
 
   .section__content {
-    padding-top: 200px;
+    padding-top: 20vh;
+    padding-bottom: 20vh;
 
     @include desktop {
       padding-top: calc(118px + 50px);
+      padding-bottom: 0;
     }
   }
 
@@ -23,12 +25,16 @@
 }
 
 .credit {
-  width: 100%;
+  width: 90%;
   max-width: 320px;
   padding: 23px 20px 35px;
   background: #F2F2F2 0% 0% no-repeat padding-box;
   box-shadow: 3px 4px 5px #00000033;
   border-radius: 15px;
+
+  @include mobile {
+    width: 100%;
+  }
 
   @include tablet {
     max-width: 540px;

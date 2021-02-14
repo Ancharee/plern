@@ -370,4 +370,11 @@
       margin: auto;
     }
   }
+
+  &__home8,
+  &__home9 {
+    .fp-bg {
+      z-index: -1;
+    }
+  }
 }

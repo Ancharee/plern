@@ -181,20 +181,13 @@ textarea.form-control {
 }
 
 .form-error {
-  padding-left: 10px;
+  @include formPadding();
   display: none;
   color: $warning;
-
-  @include tablet {
-    padding-left: 20px;
-  }
-
-  @include desktop {
-    padding-left: 29px;
-  }
 }
 
 .form-warning {
+  @include formPadding();
   display: block;
   font-size: 11px;
   color: $warning;

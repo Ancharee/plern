@@ -27,3 +27,15 @@
     @content;
   }
 }
+
+@mixin formPadding {
+  padding-left: 10px;
+
+  @include tablet {
+    padding-left: 20px;
+  }
+
+  @include desktop {
+    padding-left: 29px;
+  }
+}

@@ -19,6 +19,7 @@ module.exports = {
   globals: {
     'document': false,
     'body': false,
-    'jquery': true
+    'jquery': true,
+    'fullpage_api': true
   }
 };

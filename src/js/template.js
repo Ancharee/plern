@@ -1,3 +1,4 @@
+import './vendors/fullpage.parallax.min.js';
 import fullpage from 'fullpage.js/dist/fullpage.extensions.min';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -26,12 +27,11 @@ export class Template {
   }
 
   initFullPage() {
-    console.log('production', this.production);
-    if (this.container && this.isDesktop) {
+    if (this.container && !this.isTablet) {
       const sections = this.getSections;
       this.fullPageApi = new fullpage('#fullpage', {
-        // licenseKey: '74ED3D42-843248CC-935A616C-ED1D0476',
-        // parallaxKey: '6E904BAD-568A42AA-99C7D7F3-347D68EA',
+        licenseKey: '74ED3D42-843248CC-935A616C-ED1D0476',
+        parallaxKey: 'cGxlcm4uY29fM0NLY0dGeVlXeHNZWGc9RUlB',
         parallax: true,
         parallaxOptions: {
           type: 'reveal',
@@ -44,7 +44,7 @@ export class Template {
         anchors: sections,
         animateAnchor: false,
         lockAnchors: true,
-        // scrollBar: true,
+        responsiveWidth: 1335,
         afterRender: () => {
           this.setTextPosition();
           this.animationFirstSection();
@@ -117,18 +117,15 @@ export class Template {
   handleWindowResize() {
     window.addEventListener('resize', () => {
       this.width = window.innerWidth;
-      // this.handleFullPage();
+      this.handleParallax();
     });
   }
 
-  handleFullPage() {
-    if (this.isDesktop && !this.fullPageApi) {
-      this.initFullPage();
+  handleParallax() {
+    if (this.isTablet && this.fullPageApi) {
+      this.fullPageApi = this.fullPageApi.destroy('all');
     } else {
-      if (this.fullPageApi) {
-        console.log('destroy');
-        this.fullPageApi.destroy('all');
-      }
+      this.initFullPage();
     }
   }
 
@@ -160,7 +157,7 @@ export class Template {
   }
 
   handleDownloadBar() {
-    if (this.isMobile && this.downloadBar) {
+    if (this.isTablet && this.downloadBar) {
       ScrollTrigger.create({
         trigger: '.js-trigger-download-bar',
         onEnter: () => {
@@ -185,11 +182,12 @@ export class Template {
     const goTopButton = document.getElementById('go-top');
     if (goTopButton) {
       goTopButton.addEventListener('click', () => {
-        if (this.isFullPage) {
+        console.log(this.isTablet);
+        if (this.isTablet) {
+          gsap.to('body', { duration: 2, scrollTo: 0 });
+        } else {
           this.fullPageApi.moveTo('page1');
-          return;
         }
-        gsap.to('body', { duration: 2, scrollTo: 0 });
       });
     }
   }
@@ -199,20 +197,16 @@ export class Template {
     if (button && button.length) {
       button[0].addEventListener('click', (e) => {
         e.preventDefault();
-        if (this.isFullPage) {
+        if (this.isTablet) {
+          gsap.to('body', { duration: 2, scrollTo: '.section__home8' });
+        } else {
           this.fullPageApi.moveTo('page8');
-          return;
         }
-        gsap.to('body', { duration: 2, scrollTo: '.section__home8' });
       });
     }
   }
 
-  get isDesktop() {
-    return this.width > 1336;
-  }
-
-  get isMobile() {
+  get isTablet() {
     return this.width < 1336;
   }
 
@@ -221,10 +215,5 @@ export class Template {
     const array = [];
     sections.forEach((e, i) => array.push('page' + (i + 1)));
     return array;
-  }
-
-  get isFullPage() {
-    const html = document.querySelector('html');
-    return html.classList.contains('fp-enabled');
   }
 }

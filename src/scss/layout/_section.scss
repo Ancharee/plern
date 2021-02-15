@@ -152,3 +152,11 @@
 .section__credit {
   background-color: #824E9F;
 }
+
+.section__home1,
+.section__premium1,
+.section__faq1,
+.section__register,
+.section__contact {
+  z-index: -1;
+}

@@ -27,3 +27,5 @@ http://localhost:8000/
 ```bash
  npm run build:dist
  ```
+ 
+ user files in `docs` to deploy production.

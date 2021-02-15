@@ -125,7 +125,9 @@ export class Template {
     if (this.isTablet && this.fullPageApi) {
       this.fullPageApi = this.fullPageApi.destroy('all');
     } else {
-      this.initFullPage();
+      if (!this.fullPageApi) {
+        this.initFullPage();
+      }
     }
   }
 
@@ -182,7 +184,6 @@ export class Template {
     const goTopButton = document.getElementById('go-top');
     if (goTopButton) {
       goTopButton.addEventListener('click', () => {
-        console.log(this.isTablet);
         if (this.isTablet) {
           gsap.to('body', { duration: 2, scrollTo: 0 });
         } else {

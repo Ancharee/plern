@@ -128,10 +128,10 @@
   &__home5 {
     article {
       justify-content: center;
-      padding-top: calc(51px + 10px);
+      padding-top: calc(51px + 28px);
 
       @include tablet {
-        padding-top: calc(60px + 27px);
+        padding-top: calc(60px + 63px);
       }
 
       @include desktop {
@@ -260,6 +260,25 @@
 
     .section__info {
       white-space: nowrap;
+    }
+  }
+
+  &__home5 {
+    .section__image {
+      position: absolute;
+      bottom: 0;
+      right: -140px;
+      width: 640px;
+
+      @include tablet {
+        right: 0;
+        width: 800px;
+      }
+
+      @include desktop {
+        right: -100px;
+        width: 800px;
+      }
     }
   }
 

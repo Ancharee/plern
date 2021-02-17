@@ -1,7 +1,9 @@
 .section {
 
   &__faq1,
-  &__faq2 {
+  &__faq2,
+  &__term,
+  &__privacy {
     article {
       margin: auto;
       max-width: 1180px;
@@ -69,7 +71,9 @@
     }
   }
 
-  &__faq2 {
+  &__faq2,
+  &__term,
+  &__privacy {
     .section__headline {
       text-align: center;
     }

@@ -88,7 +88,9 @@
     }
   }
 
-  &__about {
+  &__about,
+  &__term,
+  &__privacy {
     background-color: #319478;
 
     .fp-bg {
@@ -161,7 +163,10 @@
 
 .section__register,
 .section__login,
-.section__profile {
+.section__profile,
+.section__term,
+.section__privacy,
+.section__about {
   .fp-bg {
     z-index: 0 !important;
   }

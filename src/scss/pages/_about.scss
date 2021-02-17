@@ -54,3 +54,32 @@
     }
   }
 }
+
+.section__term,
+.section__privacy {
+  color: $white;
+
+  article {
+    padding-top: 20vh;
+
+    @include desktop {
+      padding-top: 10vh;
+    }
+  }
+
+  .section__headline {
+    margin-bottom: 30px;
+    color: $white;
+    font-size: 28px;
+
+    @include tablet {
+      margin-bottom: 44px;
+      font-size: 35px;
+    }
+
+    @include desktop {
+      margin-bottom: 87px;
+      font-size: 45px;
+    }
+  }
+}

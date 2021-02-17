@@ -16,36 +16,37 @@
                       <div class="section__content-inner">
                         <div class="">
                           <form action="#">
-                            <div class="profile">
+                            <div class="profile js-profile">
                               <div class="profile__avatar-wrapper">
                                 <div class="profile__avatar" style="background-image: url('images/photo-1559260932-f447fa88b894.jpg');"></div>
-                                <label class="btn btn-primary btn-file" for="file-upload">อัพโหลดรูปโปรไฟล์</label>
-                                <input class="form-control-file" type="file" id="file-upload" name="file-upload">
+                                <label class="btn btn-primary btn-file js-upload" for="file-upload">อัพโหลดรูปโปรไฟล์</label>
+                                <input class="form-control-file js-upload" type="file" id="file-upload" name="file-upload">
+                                <button class="btn btn-primary btn-edit js-edit" type="button">แก้ไขบัญชีผู้ใช้</button>
                               </div>
                               <div class="profile__form">
-                                <h4 class="profile__headline">แก้ไขบัญชีผู้ใช้</h4>
+                                <h4 class="profile__headline">บัญชีผู้ใช้</h4>
                                 <div class="form-group">
                                   <label class="form-label" for="username">ชื่อผู้ใช้งาน</label>
-                                  <input class="form-control" id="username" type="text" placeholder="Name Lastname">
+                                  <input class="form-control" id="username" type="text" placeholder="Name Lastname" value="Name Lastname">
                                 </div>
                                 <div class="form-group">
                                   <label class="form-label" for="email">อีเมล</label>
-                                  <input class="form-control" id="email" type="email" placeholder="user@mail.com">
+                                  <input class="form-control" id="email" type="email" placeholder="user@mail.com" value="user@mail.com">
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group form-group--last">
                                   <label class="form-label" for="phone">เบอร์โทรศัพท์</label>
-                                  <input class="form-control" id="phone" type="tel" placeholder="+6681-999-9999">
+                                  <input class="form-control" id="phone" type="tel" placeholder="+6681-999-9999" value="+6681-999-9999">
                                 </div>
-                                <div class="form-group">
+                                <!-- <div class="form-group">
                                   <label class="form-label" for="password">รหัสผ่านใหม่</label>
                                   <input class="form-control" id="password" type="password" placeholder="****************">
                                 </div>
                                 <div class="form-group">
                                   <label class="form-label" for="password_confirm">ยืนยันรหัสผ่านใหม่</label>
                                   <input class="form-control" id="password_confirm" type="password" placeholder="****************">
-                                </div>
-                                <div class="form-action">
-                                  <button class="btn btn-second">ยกเลิก</button>
+                                </div> -->
+                                <div class="form-action js-form-action">
+                                  <button class="btn btn-second js-cancel">ยกเลิก</button>
                                   <button class="btn btn-primary">บันทึก</button>
                                 </div>
                               </div>

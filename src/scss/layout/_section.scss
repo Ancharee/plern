@@ -81,7 +81,8 @@
   }
 
   &__register,
-  &__login {
+  &__login,
+  &__profile {
     .fp-bg {
       background-image: url('../images/bgs/Plern_background_register.jpg');
     }
@@ -154,7 +155,14 @@
 .section__home1,
 .section__premium1,
 .section__faq1,
-.section__register,
 .section__contact {
   z-index: -1;
+}
+
+.section__register,
+.section__login,
+.section__profile {
+  .fp-bg {
+    z-index: 0 !important;
+  }
 }

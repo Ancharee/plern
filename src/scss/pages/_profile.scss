@@ -5,12 +5,12 @@
       padding: calc(52px + 27px) 20px;
 
       @include tablet {
-        padding-top: 100px;
+        padding-top: calc(60px + 92px);
       }
 
       @include desktop {
         max-width: 1090px;
-        padding-top: 140px;
+        padding-top: 198px;
       }
     }
   }
@@ -83,5 +83,94 @@
     @include desktop {
       margin: 30px 0 0;
     }
+  }
+}
+
+.section__profile {
+  .profile {
+    margin: auto;
+    padding: 38px 32px;
+    max-width: 320px;
+    background-color: $white;
+
+    @include tablet {
+      padding: 58px 60px;
+      max-width: 500px;
+    }
+
+    @include desktop {
+      max-width: 1000px;
+    }
+
+    &__headline {
+      color: $black;
+
+      @include desktop {
+        margin-bottom: 35px;
+      }
+    }
+  }
+
+  .form-label,
+  .form-control {
+    padding: 0;
+  }
+
+  .form-group {
+    @include desktop {
+      padding-bottom: 30px;
+    }
+  }
+
+  .form-group--last {
+    padding-bottom: 0;
+  }
+
+  .form-label {
+    @include desktop {
+      margin-bottom: 27px;
+    }
+  }
+
+  .btn-edit {
+    margin: 13px 0;
+    padding: 0;
+    width: 150px;
+    line-height: 32px;
+
+    @include tablet {
+      margin: 16px 0 24px;
+      width: 218px;
+      line-height: 46px;
+      font-size: 23px;
+    }
+
+    @include desktop {
+      margin-top: 25px;
+      width: 328px;
+      line-height: 70px;
+      font-size: 35px;
+    }
+  }
+}
+
+.js-upload,
+.js-form-action {
+  display: none;
+
+  &.is-active {
+    display: block;
+  }
+}
+
+.js-edit {
+  &.is-active {
+    display: none;
+  }
+}
+
+.js-form-action {
+  &.is-active {
+    display: flex;
   }
 }

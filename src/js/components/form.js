@@ -21,6 +21,7 @@ export class Form {
         this.openModalDone();
       });
     }
+    this.handleProfileForm();
   }
 
   submit() {
@@ -68,5 +69,44 @@ export class Form {
       $('#expire').mask('00-00');
       $('#cvv').mask('000');
     }
+  }
+
+  handleProfileForm() {
+    const profile = document.getElementsByClassName('js-profile');
+    if (profile && profile.length) {
+      this.toggleDisableForm();
+      document.getElementsByClassName('js-edit')[0].addEventListener('click', () => this.onEditProfile());
+      document.getElementsByClassName('js-cancel')[0].addEventListener('click', () => this.onCancelEditProfile());
+    }
+  }
+
+  toggleDisableForm(isDisabled = true) {
+    const inputs = document.getElementsByTagName('input');
+    for (let index = 0; index < inputs.length; index++) {
+      const element = inputs[index];
+      element.disabled = isDisabled;
+    }
+  }
+
+  onEditProfile() {
+    this.addActive('js-upload');
+    this.addActive('js-form-action');
+    this.addActive('js-edit');
+    this.toggleDisableForm(false);
+  }
+
+  onCancelEditProfile() {
+    this.removeActive('js-upload');
+    this.removeActive('js-form-action');
+    this.removeActive('js-edit');
+    this.toggleDisableForm();
+  }
+
+  addActive(name) {
+    document.getElementsByClassName(name)[0].classList.add('is-active');
+  }
+
+  removeActive(name) {
+    document.getElementsByClassName(name)[0].classList.remove('is-active');
   }
 }

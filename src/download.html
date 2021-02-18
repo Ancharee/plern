@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Plern</title>
+  <meta name="description" content="" />
+</head>
+
+<body>
+  ${require('./partial/header.html')}
+  <main>
+    <div id="fullpage" class="fullpage-wrapper">
+      <section class="section section__download">
+        <div class="fp-bg"></div>
+        <article>
+          <div class="section__content">
+            <div class="section__content-inner">
+              <div class="download">
+                <h4 class="download__headline">ดาวน์โหลดแอพพลิเคชั่นเพลิน</h4>
+                <div class="download__info">รองรับการใช้งานบนมือถือ<br>และแท็บเล็ตรุ่นต่างๆ</div>
+                <div>
+                  <button class="btn btn-primary">ดาวน์โหลด</button>
+                </div>
+                <div class="download__images">
+                  <a class="download__link" href="#"><img src="./images/App-Store.png" alt="App store"></a>
+                  <a class="download__link" href="#"><img src="./images/Google-Play.png" alt="Google play"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+      ${require('./partial/footer.html')}
+    </div>
+  </main>
+  ${require('./components/download-bar.html')}
+</body>
+
+</html>

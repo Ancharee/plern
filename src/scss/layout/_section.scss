@@ -109,6 +109,14 @@
       background-image: url('../images/bgs/Plern_background_premium3.jpg');
     }
   }
+
+  &__download {
+    background-color: #E6D4C1;
+
+    .fp-bg {
+      background-image: url('../images/bgs/Plern_background_home3.jpg');
+    }
+  }
 }
 
 .section--faq {
@@ -166,7 +174,8 @@
 .section__profile,
 .section__term,
 .section__privacy,
-.section__about {
+.section__about,
+.section__download {
   .fp-bg {
     z-index: 0 !important;
   }

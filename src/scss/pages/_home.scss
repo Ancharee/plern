@@ -303,8 +303,29 @@
   }
 
   &__home7 {
+    min-height: auto;
+
+    @include desktop {
+      min-height: 100vh;
+    }
+
     &:not(.fp-section) {
-      padding-top: 98px;
+      padding-top: calc(51px + 47px);
+      padding-bottom: 50px;
+
+      @include tablet {
+        padding-top: calc(60px + 44px);
+        padding-bottom: 84px;
+      }
+
+      @include desktop {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+
+      article {
+        min-height: auto;
+      }
     }
 
     article {
@@ -327,6 +348,18 @@
       @include desktop {
         font-size: 90px;
         line-height: 108px;
+      }
+    }
+
+    .section__helper {
+      min-height: 365px;
+
+      @include tablet {
+        min-height: 461px;
+      }
+
+      @include desktop {
+        min-height: auto;
       }
     }
 
@@ -385,13 +418,19 @@
   }
 
   &__home8 {
+    padding-bottom: 104px;
+
+    @include desktop {
+      padding-bottom: 0;
+    }
+
     article {
       margin: auto;
     }
   }
 
-  &__home8,
-  &__home9 {
+  &__home7,
+  &__home8 {
     .fp-bg {
       z-index: -1;
     }

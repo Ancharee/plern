@@ -1,6 +1,28 @@
 .section {
+  &__premium1 {
+    .home-intro4 {
+      font-size: 27px;
+      line-height: 33px;
+      color: $white;
+
+      @include tablet {
+        font-size: 34px;
+        line-height: 41px;
+      }
+
+      @include desktop {
+        font-size: 46px;
+        line-height: 56px;
+      }
+    }
+  }
+
   &__premium2 {
     color: $white;
+
+    article {
+      margin: auto;
+    }
 
     .section__content-inner {
       @include desktop {
@@ -10,18 +32,25 @@
     }
 
     .section__headline {
-      margin-bottom: 10px;
+      padding-bottom: 0;
       font-size: 35px;
       line-height: 42px;
 
       @include tablet {
-        margin-bottom: 20px;
         font-size: 45px;
         line-height: 54px;
       }
 
-      @include desktop {
-        margin-bottom: 43px;
+      &+ .section__info {
+        margin-top: 10px;
+
+        @include tablet {
+          margin-top: 20px;
+        }
+
+        @include desktop {
+          margin-top: 43px;
+        }
       }
     }
 
@@ -40,10 +69,8 @@
         white-space: nowrap;
       }
 
-      p {
-        &:not(:only-child) {
-          margin-bottom: 42px;
-        }
+      &:not(:last-child) {
+        margin-bottom: 42px;
       }
     }
 

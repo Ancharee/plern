@@ -76,15 +76,15 @@ export class Template {
 
   setAnimationFirstSection() {
     gsap.set(this.header, { yPercent: -100, opacity: 0 });
-    if (this.textWrapper1) {
+    if (this.textWrapper1 && this.textWrapper1.length) {
       gsap.set(this.textWrapper1, { opacity: 0 });
       const textLines = this.textWrapper1[0].querySelectorAll('*');
       gsap.to(textLines, { y: 50, opacity: 0 });
     }
-    if (this.buttonWrapper1) {
+    if (this.buttonWrapper1 && this.buttonWrapper1.length) {
       gsap.set(this.buttonWrapper1, { y: 50, opacity: 0 });
     }
-    if (this.sectionBackground) {
+    if (this.sectionBackground && this.sectionBackground.length) {
       gsap.set(this.sectionBackground, { opacity: 0 });
     }
   }
@@ -99,12 +99,12 @@ export class Template {
     if (this.hasDownloadBarVisible) {
       tl.to(this.downloadBar, { yPercent: 0, opacity: 1 }, '-=1');
     }
-    if (this.textWrapper1) {
+    if (this.textWrapper1 && this.textWrapper1.length) {
       tl.to(this.textWrapper1, { opacity: 1, duration: 0, }, '-=0.9');
       const textLines = this.textWrapper1[0].querySelectorAll('*');
       tl.to(textLines, { y: 0, opacity: 1, stagger: 0.09  }, '-=1');
     }
-    if (this.buttonWrapper1) {
+    if (this.buttonWrapper1 && this.textWrapper1.length) {
       tl.to(this.buttonWrapper1, { y: 0, opacity: 1 }, '-=0.9');
     }
     if (this.sectionBackground) {

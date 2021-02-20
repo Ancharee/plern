@@ -11,7 +11,8 @@ export class Template {
     this.fullPageApi = null;
     this.container = document.getElementById('fullpage');
     this.header = document.getElementsByClassName('js-header');
-    this.content1 = document.getElementsByClassName('js-section-content-inner-1');
+    this.textWrapper1 = document.getElementsByClassName('text-wrapper-1');
+    this.buttonWrapper1 = document.getElementsByClassName('button-wrapper-1');
     this.downloadBar = document.getElementsByClassName('js-download-bar');
     this.sectionBackground = document.getElementsByClassName('fp-bg');
   }
@@ -46,8 +47,9 @@ export class Template {
         lockAnchors: true,
         responsiveWidth: 1335,
         afterRender: () => {
-          this.setTextPosition();
+          this.setAnimationFirstSection();
           this.animationFirstSection();
+          this.setTextWrapper();
         },
         afterLoad: (origin, destination, direction) => {
           console.log(origin);
@@ -55,7 +57,7 @@ export class Template {
           console.log(direction);
           const { index } = destination;
           if (index > 0) {
-            this.animationText(index);
+            this.animationTextWrapper(index);
           }
         },
         onLeave: (origin, destination, direction) => {
@@ -72,46 +74,85 @@ export class Template {
     return this.downloadBar.offsetHeight !== 0 && this.downloadBar.offsetWidth !== 0;
   }
 
-  hasContent1Visible() {
-    return this.content1;
-  }
-
-  animationFirstSection() {
-    const tl = gsap.timeline({ repeat: 0, repeatDelay: 0 });
-    tl.to(this.header, { duration: 1, delay: 0.5, ease: 'easeOut', yPercent: 0, opacity: 1 });
-    if (this.hasDownloadBarVisible) {
-      tl.to(this.downloadBar, { ease: 'easeOut', yPercent: 0, opacity: 1, duration: 1 }, '-=1');
-    }
-    if (this.hasContent1Visible) {
-      tl.to(this.content1, { ease: 'easeOut', yPercent: 0, opacity: 1, duration: 2, }, '-=0.9');
-    }
-    if (this.sectionBackground) {
-      tl.to(this.sectionBackground, { duration: 0.75, opacity: 1, ease: 'easeOut' }, '-=1.8');
-    }
-  }
-
-  setTextPosition() {
+  setAnimationFirstSection() {
     gsap.set(this.header, { yPercent: -100, opacity: 0 });
-    gsap.set('.js-section-content-inner', { yPercent: 100 });
-
-    if (this.hasContent1Visible) {
-      gsap.set(this.content1, { yPercent: 100, opacity: 0 });
+    if (this.textWrapper1) {
+      gsap.set(this.textWrapper1, { opacity: 0 });
+      const textLines = this.textWrapper1[0].querySelectorAll('*');
+      gsap.to(textLines, { y: 50, opacity: 0 });
+    }
+    if (this.buttonWrapper1) {
+      gsap.set(this.buttonWrapper1, { y: 50, opacity: 0 });
     }
     if (this.sectionBackground) {
       gsap.set(this.sectionBackground, { opacity: 0 });
     }
   }
 
-  animationText(index) {
-    const section = document.querySelectorAll('section')[index];
-    const content = section.getElementsByClassName('js-section-content-inner');
-    gsap.to(content, {
-      ease: 'easeOut',
-      yPercent: 0,
-      opacity: 1,
-      delay: 0.5,
-      duration: 1.2
+  animationFirstSection() {
+    const tl = gsap.timeline({
+      repeat: 0,
+      repeatDelay: 0,
+      defaults: { ease: 'power2.inOut', duration: 1 }
     });
+    tl.to(this.header, { delay: 0.5, yPercent: 0, opacity: 1 });
+    if (this.hasDownloadBarVisible) {
+      tl.to(this.downloadBar, { yPercent: 0, opacity: 1 }, '-=1');
+    }
+    if (this.textWrapper1) {
+      tl.to(this.textWrapper1, { opacity: 1, duration: 0, }, '-=0.9');
+      const textLines = this.textWrapper1[0].querySelectorAll('*');
+      tl.to(textLines, { y: 0, opacity: 1, stagger: 0.09  }, '-=1');
+    }
+    if (this.buttonWrapper1) {
+      tl.to(this.buttonWrapper1, { y: 0, opacity: 1 }, '-=0.9');
+    }
+    if (this.sectionBackground) {
+      tl.to(this.sectionBackground, { duration: 0.75, opacity: 1 }, '-=1.8');
+    }
+  }
+
+  setTextWrapper() {
+    const sections = document.querySelectorAll('section');
+    for (let index = 0; index < sections.length; index++) {
+      const section = sections[index];
+      const textHeadline = section.getElementsByClassName('text-headline');
+      if (textHeadline && textHeadline.length) {
+        gsap.to(textHeadline, { y: 50, opacity: 0 });
+      }
+      const textWrapper = section.getElementsByClassName('text-wrapper');
+      if (textWrapper && textWrapper.length) {
+        const textLines = textWrapper[0].querySelectorAll('*');
+        gsap.to(textLines, { y: 50, opacity: 0 });
+      }
+      const buttonWrapper = section.getElementsByClassName('button-wrapper');
+      if (buttonWrapper && buttonWrapper.length) {
+        gsap.set(buttonWrapper, { y: 50, opacity: 0 });
+      }
+    }
+  }
+
+  animationTextWrapper(index) {
+    const section = document.querySelectorAll('section')[index];
+    const textWrapper = section.getElementsByClassName('text-wrapper');
+    const buttonWrapper = section.getElementsByClassName('button-wrapper');
+    const textHeadline = section.getElementsByClassName('text-headline');
+
+    const tl = gsap.timeline({ repeat: 0, repeatDelay: 0,
+      defaults: { ease: 'power2.inOut', duration: 1, opacity: 1 }
+    });
+    let time = '';
+    if (textHeadline && textHeadline.length) {
+      tl.to(textHeadline, { y: 0, opacity: 1, stagger: 0.09 });
+      time = '-=0.9';
+    }
+    if (textWrapper && textWrapper.length) {
+      const textLines = textWrapper[0].querySelectorAll('*');
+      tl.to(textLines, { y: 0, opacity: 1, stagger: 0.09 }, time);
+    }
+    if (buttonWrapper && buttonWrapper.length) {
+      tl.to(buttonWrapper, { y: 0, opacity: 1, stagger: 0.09 }, '-=0.9');
+    }
   }
 
   handleWindowResize() {

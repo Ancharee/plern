@@ -180,3 +180,9 @@
     z-index: 0 !important;
   }
 }
+
+.text-wrapper1 > div,
+.text-wrapper > div,
+.button-wrapper {
+  will-change: transform;
+}

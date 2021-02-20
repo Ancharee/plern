@@ -48,25 +48,62 @@
     }
 
     .section__content {
-      overflow: hidden;
-    }
-
-    .section__content-inner {
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
+      padding: 0 30px;
     }
 
-    .section__image {
-      will-change: transform;
+    .home-intro1,
+    .home-intro2,
+    .home-intro3 {
+      color: $white;
+    }
+
+    .home-intro1 {
+      font-size: 59px;
+      line-height: 78px;
+      font-weight: 500;
 
       @include tablet {
-        width: 396px;
+        font-size: 74px;
+        line-height: 89px;
       }
 
       @include desktop {
-        width: 532px;
+        font-size: 99px;
+        line-height: 119px;
+      }
+    }
+
+    .home-intro2 {
+      font-size: 90px;
+      line-height: 107px;
+      font-weight: 600;
+
+      @include tablet {
+        font-size: 112px;
+        line-height: 135px;
+      }
+
+      @include desktop {
+        font-size: 151px;
+        line-height: 181px;
+      }
+    }
+
+    .home-intro3 {
+      font-size: 32px;
+      line-height: 39px;
+
+      @include tablet {
+        font-size: 41px;
+        line-height: 49px;
+      }
+
+      @include desktop {
+        font-size: 55px;
+        line-height: 66px;
       }
     }
 
@@ -74,7 +111,8 @@
       display: none;
       padding: 0;
 
-      @include desktop{
+      @include desktop {
+        margin-top: 26px;
         display: block;
         width: 185px;
         line-height: 60px;
@@ -101,10 +139,6 @@
         padding-left: 0;
         padding-bottom: 192px;
       }
-    }
-
-    .section__content-inner {
-      will-change: transform;
     }
 
     .section__headline,
@@ -154,7 +188,7 @@
 
     .section__info-wrapper {
       text-align: center;
-      overflow: hidden;
+      // overflow: hidden;
 
       @include desktop {
         text-align: left;

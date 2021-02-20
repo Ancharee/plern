@@ -63,14 +63,16 @@
     padding-top: 20vh;
 
     @include desktop {
-      padding-top: 10vh;
+      padding-top: 18vh;
     }
   }
 
   .section__headline {
+    margin-top: 0;
     margin-bottom: 30px;
     color: $white;
     font-size: 28px;
+    line-height: 1;
 
     @include tablet {
       margin-bottom: 44px;

@@ -75,38 +75,58 @@ export class Template {
   }
 
   setAnimationFirstSection() {
+    // Header
     gsap.set(this.header, { yPercent: -100, opacity: 0 });
+    // Headline
+    const textHeadline = document.getElementsByClassName('text-headline-1');
+    if (textHeadline && textHeadline.length) {
+      gsap.set(textHeadline, { y: 50, opacity: 0 });
+    }
+    // Text content
     if (this.textWrapper1 && this.textWrapper1.length) {
       gsap.set(this.textWrapper1, { opacity: 0 });
       const textLines = this.textWrapper1[0].querySelectorAll('*');
       gsap.to(textLines, { y: 50, opacity: 0 });
     }
+    // Button
     if (this.buttonWrapper1 && this.buttonWrapper1.length) {
       gsap.set(this.buttonWrapper1, { y: 50, opacity: 0 });
     }
+    // Background
     if (this.sectionBackground && this.sectionBackground.length) {
       gsap.set(this.sectionBackground, { opacity: 0 });
     }
   }
 
   animationFirstSection() {
+    // Create timeline
     const tl = gsap.timeline({
       repeat: 0,
       repeatDelay: 0,
       defaults: { ease: 'power2.inOut', duration: 1 }
     });
+    // Header
     tl.to(this.header, { delay: 0.5, yPercent: 0, opacity: 1 });
+    // Button download
     if (this.hasDownloadBarVisible) {
       tl.to(this.downloadBar, { yPercent: 0, opacity: 1 }, '-=1');
     }
+    // Headline
+    const textHeadline = document.getElementsByClassName('text-headline-1');
+    if (textHeadline && textHeadline.length) {
+      tl.to(textHeadline, { y: 0, opacity: 1, stagger: 0.09 }, '-=0.9');
+    }
+    // Text content
     if (this.textWrapper1 && this.textWrapper1.length) {
       tl.to(this.textWrapper1, { opacity: 1, duration: 0, }, '-=0.9');
       const textLines = this.textWrapper1[0].querySelectorAll('*');
       tl.to(textLines, { y: 0, opacity: 1, stagger: 0.09  }, '-=1');
     }
+    // Button
     if (this.buttonWrapper1 && this.textWrapper1.length) {
       tl.to(this.buttonWrapper1, { y: 0, opacity: 1 }, '-=0.9');
     }
+    // Background
     if (this.sectionBackground) {
       tl.to(this.sectionBackground, { duration: 0.75, opacity: 1 }, '-=1.8');
     }
@@ -116,15 +136,18 @@ export class Template {
     const sections = document.querySelectorAll('section');
     for (let index = 0; index < sections.length; index++) {
       const section = sections[index];
+      // Headline
       const textHeadline = section.getElementsByClassName('text-headline');
       if (textHeadline && textHeadline.length) {
         gsap.to(textHeadline, { y: 50, opacity: 0 });
       }
+      // Text content
       const textWrapper = section.getElementsByClassName('text-wrapper');
       if (textWrapper && textWrapper.length) {
         const textLines = textWrapper[0].querySelectorAll('*');
         gsap.to(textLines, { y: 50, opacity: 0 });
       }
+      // Button
       const buttonWrapper = section.getElementsByClassName('button-wrapper');
       if (buttonWrapper && buttonWrapper.length) {
         gsap.set(buttonWrapper, { y: 50, opacity: 0 });
@@ -137,19 +160,22 @@ export class Template {
     const textWrapper = section.getElementsByClassName('text-wrapper');
     const buttonWrapper = section.getElementsByClassName('button-wrapper');
     const textHeadline = section.getElementsByClassName('text-headline');
-
+    // create timeline
     const tl = gsap.timeline({ repeat: 0, repeatDelay: 0,
       defaults: { ease: 'power2.inOut', duration: 1, opacity: 1 }
     });
     let time = '';
+    // Headline
     if (textHeadline && textHeadline.length) {
       tl.to(textHeadline, { y: 0, opacity: 1, stagger: 0.09 });
       time = '-=0.9';
     }
+    // Text content
     if (textWrapper && textWrapper.length) {
       const textLines = textWrapper[0].querySelectorAll('*');
       tl.to(textLines, { y: 0, opacity: 1, stagger: 0.09 }, time);
     }
+    // Button
     if (buttonWrapper && buttonWrapper.length) {
       tl.to(buttonWrapper, { y: 0, opacity: 1, stagger: 0.09 }, '-=0.9');
     }

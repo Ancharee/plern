@@ -1,3 +1,4 @@
+import * as $ from 'jquery';
 import './vendors/fullpage.parallax.min.js';
 import fullpage from 'fullpage.js/dist/fullpage.extensions.min';
 import { gsap } from 'gsap';
@@ -25,6 +26,7 @@ export class Template {
     this.handleDownloadBar();
     this.handleScrollTop();
     this.handleGoToPricing();
+    this.setHeightToBG();
   }
 
   initFullPage() {
@@ -185,6 +187,7 @@ export class Template {
     window.addEventListener('resize', () => {
       this.width = window.innerWidth;
       this.handleParallax();
+      this.setHeightToBG();
     });
   }
 
@@ -271,6 +274,14 @@ export class Template {
           this.fullPageApi.moveTo('page8');
         }
       });
+    }
+  }
+
+  setHeightToBG() {
+    const bg$ = $('.js-bg');
+    if (bg$ && bg$.length) {
+      const next$ = bg$.next();
+      bg$.find('.fp-bg').css('height', next$[0].offsetHeight);
     }
   }
 

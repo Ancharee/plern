@@ -41,7 +41,7 @@ export class Template {
           percentage: 62,
           property: 'translate'
         },
-        scrollingSpeed: 1000,
+        scrollingSpeed: 1200,
         autoScrolling: true,
         fitToSection: false,
         anchors: sections,

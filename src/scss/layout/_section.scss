@@ -29,7 +29,6 @@
     min-height: 100vh;
     height: 100%;
     position: absolute;
-    // z-index: -1;
     -webkit-backface-visibility: hidden;
     /* Chrome, Safari, Opera */
     backface-visibility: hidden;
@@ -91,8 +90,6 @@
   &__about,
   &__term,
   &__privacy {
-    background-color: #319478;
-
     .fp-bg {
       background-image: url('../images/bgs/Plern_background_FAQ2.jpg');
     }
@@ -111,8 +108,6 @@
   }
 
   &__download {
-    background-color: #E6D4C1;
-
     .fp-bg {
       background-image: url('../images/bgs/Plern_background_home3.jpg');
     }
@@ -120,7 +115,9 @@
 }
 
 .section--faq {
-  background-color: $black;
+  .fp-bg {
+    background-color: $black;
+  }
 
   article {
     align-items: center;
@@ -129,55 +126,12 @@
 }
 
 .section--footer {
-  background-color: $azure-radian;
+  .fp-bg {
+    background-color: $azure-radian;
+  }
 
   &.section article {
     max-width: 100%;
-  }
-}
-
-.section__profile,
-.section__register,
-.section__login {
-  background-color: #cabc93;
-}
-
-.section__home1 {
-  background-color: $dodger-blue;
-}
-
-.section__premium1 {
-  background-color: #4ab2f1;
-}
-
-.section__faq1 {
-  background-color: #f6c52d;
-}
-
-.section__contact {
-  background-color: #f5c52c;
-}
-
-.section__credit {
-  background-color: #824E9F;
-}
-
-.section__home1,
-.section__premium1,
-.section__faq1,
-.section__contact {
-  z-index: -1;
-}
-
-.section__register,
-.section__login,
-.section__profile,
-.section__term,
-.section__privacy,
-.section__about,
-.section__download {
-  .fp-bg {
-    z-index: 0 !important;
   }
 }
 

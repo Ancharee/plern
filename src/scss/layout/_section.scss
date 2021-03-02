@@ -35,6 +35,7 @@
     transition: transform 1000ms ease;
     background-position: center;
     background-size: cover;
+    z-index: -1;
   }
 
   article {

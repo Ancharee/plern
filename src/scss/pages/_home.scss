@@ -10,7 +10,7 @@
     }
 
     @include desktop {
-      margin: 115px auto 0;
+      margin: 0 auto 0;
       padding: 188px 0 102px;
     }
 
@@ -165,6 +165,7 @@
       padding-top: calc(51px + 28px);
 
       @include tablet {
+        margin: auto;
         padding-top: calc(60px + 63px);
       }
 
@@ -462,4 +463,8 @@
       margin: auto;
     }
   }
+}
+
+.js-bg {
+  overflow: hidden;
 }

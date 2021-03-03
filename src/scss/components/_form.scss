@@ -33,7 +33,11 @@
       padding: 15px 0;
     }
 
-    @include desktop {
+    @include desktop-landscape-s {
+      max-width: vh(386px);
+    }
+
+    @include desktop-landscape {
       max-width: 386px;
     }
   }
@@ -53,7 +57,14 @@
     padding: 11px 20px;
   }
 
-  @include desktop {
+  @include desktop-landscape-s {
+    padding: vh(18px) vh(29px);
+    border-radius: vh(36px);
+    font-size: vh(23px);
+    line-height: vh(27px);
+  }
+
+  @include desktop-landscape {
     padding: 18px 29px;
     border-radius: 36px;
     font-size: 23px;
@@ -91,7 +102,12 @@ textarea.form-control {
     border-radius: 21px;
   }
 
-  @include desktop {
+  @include desktop-landscape-s {
+    max-height: vh(180px);
+    border-radius: vh(36px);
+  }
+
+  @include desktop-landscape {
     max-height: 180px;
     border-radius: 36px;
   }
@@ -107,7 +123,13 @@ textarea.form-control {
     padding-left: 20px;
   }
 
-  @include desktop {
+  @include desktop-landscape-s {
+    font-size: vh(23px);
+    line-height: vh(27px);
+    padding-left: vh(29px);
+  }
+
+  @include desktop-landscape {
     font-size: 23px;
     line-height: 27px;
     padding-left: 29px;
@@ -123,9 +145,13 @@ textarea.form-control {
   justify-content: center;
   padding: 17px 0;
 
-  @include desktop {
-    padding: 22px 0 0;
+  @include desktop-landscape {
+    padding: vh(22px) 0 0;
     justify-content: flex-start;
+  }
+
+  @include desktop-landscape {
+    padding: 22px 0 0;
   }
 
   .btn {
@@ -139,7 +165,13 @@ textarea.form-control {
       line-height: 46px;
     }
 
-    @include desktop {
+    @include desktop-landscape-s {
+      width: vh(154px);
+      font-size: vh(35px);
+      line-height: vh(70px);
+    }
+
+    @include desktop-landscape {
       width: 154px;
       font-size: 35px;
       line-height: 70px;
@@ -173,7 +205,11 @@ textarea.form-control {
         line-height: 47px;
       }
 
-      @include desktop {
+      @include desktop-landscape-s {
+        line-height: vh(70px);
+      }
+
+      @include desktop-landscape {
         line-height: 70px;
       }
     }

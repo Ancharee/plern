@@ -10,7 +10,7 @@
         line-height: 41px;
       }
 
-      @include desktop {
+      @include desktop-landscape {
         font-size: 46px;
         line-height: 56px;
       }

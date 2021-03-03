@@ -186,11 +186,11 @@ export class Template {
   handleWindowResize() {
     window.addEventListener('resize', () => {
       this.width = window.innerWidth;
-      // this.handleParallax();
-      // this.setHeightToBG();
+      this.handleParallax();
+      this.setHeightToBG();
       // setTimeout(() => {
       //   location.reload();
-      // }, 500);
+      // }, 1000);
     });
   }
 

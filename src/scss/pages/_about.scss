@@ -34,7 +34,11 @@
       margin-bottom: 40px;
     }
 
-    @include desktop {
+    @include desktop-landscape-s {
+      margin-bottom: vh(80px);
+    }
+
+    @include desktop-landscape {
       margin-bottom: 94px;
     }
   }
@@ -45,10 +49,24 @@
       line-height: 27px;
     }
 
+    @include desktop-landscape-s {
+      font-size: vh(23px);
+      line-height: vh(27px);
+    }
+
+    @include desktop-landscape {
+      font-size: 23px;
+      line-height: 27px;
+    }
+
     &:not(:last-child) {
       margin-bottom: 25px;
 
-      @include desktop {
+      @include desktop-landscape-s {
+        margin-bottom: vh(88px);
+      }
+
+      @include desktop-landscape {
         margin-bottom: 88px;
       }
     }
@@ -79,7 +97,12 @@
       font-size: 35px;
     }
 
-    @include desktop {
+    @include desktop-landscape-s {
+      margin-bottom: vh(87px);
+      font-size: vh(45px);
+    }
+
+    @include desktop-landscape {
       margin-bottom: 87px;
       font-size: 45px;
     }

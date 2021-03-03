@@ -114,11 +114,11 @@
       }
 
       @include desktop-landscape-s {
-        margin-bottom: 6vh;
+        margin-bottom: vh(40px);
       }
 
       @include desktop-landscape {
-        margin-bottom: 60px;
+        margin-bottom: 40px;
       }
     }
   }

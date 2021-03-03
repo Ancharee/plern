@@ -188,9 +188,9 @@ export class Template {
       this.width = window.innerWidth;
       // this.handleParallax();
       // this.setHeightToBG();
-      setTimeout(() => {
-        location.reload();
-      }, 500);
+      // setTimeout(() => {
+      //   location.reload();
+      // }, 500);
     });
   }
 

@@ -77,11 +77,11 @@
     .section__image {
       display: none;
 
-      @include desktop-landscape {
+      @include desktop-landscape-s {
         max-width: 36vh;
       }
 
-      @media (min-width: $desktop) and (min-height: 1080px) {
+      @include desktop-landscape {
         max-width: 48vh;
       }
 

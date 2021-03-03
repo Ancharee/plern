@@ -9,13 +9,13 @@
       margin-right: 99px;
     }
 
-    @include desktop {
+    @include desktop-landscape-s {
       margin: 0 auto 0;
       padding: 18vh 20px 10vh;
       width: 80%;
     }
 
-    @include desktop-l {
+    @include desktop-landscape {
       padding: 188px 20px 102px;
       width: 100%;
     }
@@ -395,13 +395,14 @@
       font-size: 35px;
       line-height: 44px;
 
-      @include desktop {
-        font-size: 4.6875vw;
-        line-height: 108px;
+      @include desktop-landscape-s {
+        font-size: 8.9vh;
+        line-height: 10.7vh;
       }
 
-      @include desktop-l {
+      @include desktop-landscape {
         font-size: 90px;
+        line-height: 108px;
       }
     }
 

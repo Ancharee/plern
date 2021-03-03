@@ -16,6 +16,18 @@
   }
 }
 
+@mixin desktop-landscape-s {
+  @media (min-width: $desktop) and (min-height: $tablet) {
+    @content;
+  }
+}
+
+@mixin desktop-landscape {
+  @media (min-width: $desktop) and (min-height: 1080px) {
+    @content;
+  }
+}
+
 @mixin desktop {
   @media (min-width: $desktop) {
     @content;

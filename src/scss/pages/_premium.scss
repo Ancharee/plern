@@ -77,6 +77,14 @@
     .section__image {
       display: none;
 
+      @include desktop-landscape {
+        max-width: 36vh;
+      }
+
+      @media (min-width: $desktop) and (min-height: 1080px) {
+        max-width: 48vh;
+      }
+
       @include desktop {
         display: block;
       }

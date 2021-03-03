@@ -11,7 +11,13 @@
 
     @include desktop {
       margin: 0 auto 0;
-      padding: 188px 0 102px;
+      padding: 18vh 20px 10vh;
+      width: 80%;
+    }
+
+    @include desktop-l {
+      padding: 188px 20px 102px;
+      width: 100%;
     }
 
     .fp-section & {
@@ -228,14 +234,22 @@
     }
 
     .section__image {
-      width: 281px;
+      max-width: 281px;
 
       @include tablet {
-        width: 392px;
+        max-width: 392px;
       }
 
-      @include desktop {
-        width: 493px;
+      @include desktop-landscape-s {
+        max-width: 40vh;
+      }
+
+      @include desktop-landscape {
+        max-width: 48vh;
+      }
+
+      img {
+        width: 100%;
       }
     }
   }
@@ -304,6 +318,7 @@
       bottom: 0;
       right: -140px;
       width: 640px;
+      max-width: inherit;
 
       @include tablet {
         right: 0;
@@ -381,8 +396,12 @@
       line-height: 44px;
 
       @include desktop {
-        font-size: 90px;
+        font-size: 4.6875vw;
         line-height: 108px;
+      }
+
+      @include desktop-l {
+        font-size: 90px;
       }
     }
 

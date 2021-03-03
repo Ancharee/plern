@@ -104,9 +104,21 @@
     td {
       padding-bottom: 30px;
       color: $azure-radian;
+      line-height: 1;
 
-      @include desktop {
+      @include desktop-landscape-s {
+        padding-bottom: 0;
+        font-size: 10px;
+      }
+
+      @include desktop-landscape {
+        padding-bottom: 1.5vh;
+        font-size: 2.9vh;
+      }
+
+      @include desktop-l {
         font-size: 23px;
+        padding-bottom: 30px;
       }
 
       &:not(:first-child) {

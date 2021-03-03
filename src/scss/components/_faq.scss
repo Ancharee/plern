@@ -16,6 +16,10 @@
     }
 
     @include desktop {
+      margin-bottom: 7vh;
+    }
+
+    @include desktop-l {
       margin-bottom: 70px;
     }
   }
@@ -35,6 +39,11 @@
     }
 
     @include desktop {
+      font-size: 3vh;
+      line-height: 4vh;
+    }
+
+    @include desktop-l {
       padding-right: calc(168px + 46px);
       font-size: 35px;
       line-height: 42px;
@@ -53,7 +62,11 @@
         margin-bottom: 20px;
       }
 
-      @include desktop {
+      @include desktop-landscape-s {
+        margin-bottom: 6vh;
+      }
+
+      @include desktop-l {
         margin-bottom: 60px;
       }
     }
@@ -100,7 +113,11 @@
         margin-bottom: 30px;
       }
 
-      @include desktop {
+      @include desktop-landscape-s {
+        margin-bottom: 6vh;
+      }
+
+      @include desktop-landscape {
         margin-bottom: 60px;
       }
     }

@@ -19,10 +19,14 @@
       height: 60px;
     }
 
-    @include desktop {
-      padding: 63px 66px 0;
+    @include desktop-landscape-s {
+      padding: vh(63px) 66px 0;
       height: auto;
       background-color: transparent;
+    }
+
+    @include desktop-landscape {
+      padding: 63px 66px 0;
     }
   }
 

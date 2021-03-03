@@ -589,6 +589,14 @@ h2 {
 h3 {
   font-size: 35px;
   line-height: 42px; }
+  @media (min-width: 1336px) and (min-height: 700px) {
+    h3 {
+      font-size: 3.24074vh;
+      line-height: 3.88889vh; } }
+  @media (min-width: 1336px) and (min-height: 1079px) {
+    h3 {
+      font-size: 35px;
+      line-height: 42px; } }
 
 h4 {
   font-size: 23px;
@@ -620,11 +628,14 @@ h4 {
     @media (min-width: 768px) {
       .header__wrapper {
         height: 60px; } }
-    @media (min-width: 1336px) {
+    @media (min-width: 1336px) and (min-height: 700px) {
       .header__wrapper {
-        padding: 63px 66px 0;
+        padding: 5.83333vh 66px 0;
         height: auto;
         background-color: transparent; } }
+    @media (min-width: 1336px) and (min-height: 1079px) {
+      .header__wrapper {
+        padding: 63px 66px 0; } }
   .header__wrapper-nav {
     display: flex;
     flex-grow: 1;
@@ -1255,7 +1266,13 @@ a.btn-text-with-arrow {
     .pricing__des {
       display: block; } }
 
-@media (min-width: 1336px) {
+@media (min-width: 1336px) and (min-height: 700px) {
+  .pricing .btn--small {
+    width: 13.42593vh;
+    line-height: 4.35185vh;
+    font-size: 2.12963vh; } }
+
+@media (min-width: 1336px) and (min-height: 1079px) {
   .pricing .btn--small {
     width: 145px;
     line-height: 47px;

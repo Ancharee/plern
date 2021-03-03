@@ -31,6 +31,16 @@ h2 {
 h3 {
   font-size: 35px;
   line-height: 42px;
+
+  @include desktop-landscape-s {
+    font-size: vh(35px);
+    line-height: vh(42px);
+  }
+
+  @include desktop-landscape {
+    font-size: 35px;
+    line-height: 42px;
+  }
 }
 
 h4 {

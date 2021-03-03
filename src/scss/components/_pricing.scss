@@ -67,7 +67,13 @@
   }
 
   .btn--small {
-    @include desktop {
+    @include desktop-landscape-s {
+      width: vh(145px);
+      line-height: vh(47px);
+      font-size: vh(23px);
+    }
+
+    @include desktop-landscape {
       width: 145px;
       line-height: 47px;
       font-size: 23px;

@@ -17,13 +17,13 @@
 }
 
 @mixin desktop-landscape-s {
-  @media (min-width: $desktop) and (min-height: $tablet) {
+  @media (min-width: $desktop) and (min-height: 700px) {
     @content;
   }
 }
 
 @mixin desktop-landscape {
-  @media (min-width: $desktop) and (min-height: 1080px) {
+  @media (min-width: $desktop) and (min-height: 1079px) {
     @content;
   }
 }

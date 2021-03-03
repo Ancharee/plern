@@ -41,6 +41,16 @@
         line-height: 54px;
       }
 
+      @include desktop-landscape-s {
+        font-size: 4.5vh;
+        line-height: 5.3vh;
+      }
+
+      @include desktop-landscape {
+        font-size: 45px;
+        line-height: 54px;
+      }
+
       &+ .section__info {
         margin-top: 10px;
 
@@ -157,6 +167,8 @@
 
 .card {
   max-width: 391px;
+  display: flex;
+  flex-direction: column;
   padding: 16px 16px 26px;
   background: #F2F2F2 0% 0% no-repeat padding-box;
   box-shadow: 7px 7px 5px #00000066;
@@ -181,8 +193,16 @@
       line-height: 42px;
     }
 
-    @include desktop {
+    @include desktop-landscape-s {
+      margin-bottom: 1.9vh;
+      font-size: 3.4vh;
+      line-height: 4.1vh;
+    }
+
+    @include desktop-landscape {
       margin-bottom: 30px;
+      font-size: 35px;
+      line-height: 42px;
     }
   }
 
@@ -190,7 +210,12 @@
   &__info li,
   &__price,
   &__month {
-    @include desktop {
+    @include desktop-landscape-s {
+      font-size: 1.5vh;
+      line-height: 2vh;
+    }
+
+    @include desktop-landscape {
       font-size: 23px;
       line-height: 27px;
     }
@@ -207,7 +232,11 @@
   &__info {
     margin-top: 27px;
 
-    @include desktop {
+    @include desktop-landscape-s {
+      margin-top: 4vh;
+    }
+
+    @include desktop-landscape {
       margin-top: 55px;
     }
 
@@ -233,6 +262,7 @@
   }
 
   &__action {
+    margin-top: auto;
     text-align: center;
   }
 }

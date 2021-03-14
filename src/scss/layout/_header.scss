@@ -25,7 +25,7 @@
       background-color: transparent;
     }
 
-    @include desktop {
+    @include only-desktop {
       padding: 63px 66px 0;
     }
   }
@@ -48,7 +48,7 @@
       max-height: 31px;
     }
 
-    @include desktop {
+    @include only-desktop {
       max-width: 208px;
       max-height: 56px;
     }
@@ -67,7 +67,7 @@
         font-size: 16px
       }
 
-      @include desktop {
+      @include only-desktop {
         display: none;
       }
     }
@@ -98,7 +98,7 @@
   opacity: 0;
   visibility: hidden;
 
-  @include desktop {
+  @include only-desktop {
     position: relative;
     flex-direction: row;
     width: 100%;
@@ -119,7 +119,7 @@
     justify-content: space-between;
     align-items: center;
 
-    @include desktop {
+    @include only-desktop {
       flex-direction: row;
       justify-content: flex-end;
       width: 100%;
@@ -132,7 +132,7 @@
     padding: 0 0 25px;
     transition: margin-left 0.5s ease-in;
 
-    @include desktop {
+    @include only-desktop {
       padding: 0 25px;
       width: auto;
       transition: none;
@@ -142,14 +142,14 @@
       &:nth-child(1n + #{$i}) {
         margin-left: calc(40px * #{$i});
 
-        @include desktop {
+        @include only-desktop {
           margin-left: 0;
         }
       }
     }
 
     &:last-child {
-      @include desktop {
+      @include only-desktop {
         padding: 0;
       }
     }
@@ -161,7 +161,7 @@
     font-size: 30px;
     transition: font-weight 0.1s ease-in;
 
-    @include desktop {
+    @include only-desktop {
       display: inline-flex;
       flex-direction: column;
       align-items: center;
@@ -178,7 +178,7 @@
     }
 
     &:after {
-      @include desktop {
+      @include only-desktop {
         content: attr(data-text);
         content: attr(data-text) / "";
         height: 0;
@@ -197,7 +197,7 @@
     width: 0;
     transition: margin-left 0.5s ease-in;
 
-    @include desktop {
+    @include only-desktop {
       display: none;
     }
   }

@@ -15,7 +15,7 @@
     height: 30px;
   }
 
-  @include desktop {
+  @include only-desktop {
     display: none;
   }
 

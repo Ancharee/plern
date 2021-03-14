@@ -17,7 +17,7 @@
 }
 
 @mixin desktop-vertical-supper-shot {
-  @media (min-width: $desktop) and (min-height: 0) {
+  @media (min-width: $desktop) and (max-height: 599px) {
     @content;
   }
 }
@@ -29,8 +29,14 @@
 }
 
 @mixin desktop {
-  @media (min-width: $desktop) and (min-height: 0),
+  @media (min-width: $desktop) and (max-height: 599px),
   (min-width: $desktop) and (min-height: 1080px) {
+    @content;
+  }
+}
+
+@mixin only-desktop {
+  @media (min-width: $desktop) {
     @content;
   }
 }

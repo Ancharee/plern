@@ -87,6 +87,11 @@
       background-size: 37px;
     }
 
+    @include desktop-vertical-shot {
+      min-width: 500px;
+      padding: 18px 53px 18px 22px;
+    }
+
     @include desktop {
       padding: 18px 53px 18px 22px;
     }

@@ -16,23 +16,23 @@
   }
 }
 
+@mixin desktop-vertical-supper-shot {
+  @media (min-width: $desktop) and (max-height: 600px) {
+    @content;
+  }
+}
+
 @mixin desktop-vertical-shot {
-  @media (min-width: $desktop) and (min-height: 600px) {
+  @media (min-width: $desktop) and (min-height: 600px) and (max-height: 1079px){
     @content;
   }
 }
 
 @mixin desktop {
-  @media (min-width: $desktop) and (min-height: 1079px) {
+  @media (min-width: $desktop) {
     @content;
   }
 }
-
-// @mixin desktop {
-//   @media (min-width: $desktop) {
-//     @content;
-//   }
-// }
 
 @mixin desktop-l {
   @media (min-width: $desktop-l) {

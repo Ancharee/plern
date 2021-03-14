@@ -5,8 +5,8 @@
     background-color: $white;
 
     @include tablet {
-      margin-left: 99px;
-      margin-right: 99px;
+      width: 80%;
+      margin: 0 auto 0;
     }
 
     @include desktop-vertical-shot {
@@ -15,7 +15,7 @@
       width: 80%;
     }
 
-    @include desktop {
+    @include desktop-l {
       padding: 188px 20px 102px;
       width: 100%;
     }
@@ -149,6 +149,11 @@
         padding-bottom: calc(60px + 87px);
       }
 
+      @include desktop-vertical-shot {
+        padding-left: 0;
+        padding-bottom: vh(192px);
+      }
+
       @include desktop {
         padding-left: 0;
         padding-bottom: 192px;
@@ -214,7 +219,6 @@
 
     .section__info-wrapper {
       text-align: center;
-      // overflow: hidden;
 
       @include desktop-vertical-shot {
         text-align: left;
@@ -276,11 +280,11 @@
       }
 
       @include desktop-vertical-shot {
-        max-width: 40vh;
+        max-width: vh(493px);
       }
 
       @include desktop {
-        max-width: 48vh;
+        max-width: 493px;
       }
 
       img {
@@ -320,6 +324,10 @@
 
       @include tablet {
         margin-top: 68px;
+      }
+
+      @include desktop-vertical-supper-shot {
+        position: relative !important;
       }
 
       @include desktop-vertical-shot {
@@ -364,12 +372,12 @@
 
       @include tablet {
         right: 0;
-        width: 800px;
+        width: vh(800px);
       }
 
       @include desktop {
         right: -100px;
-        width: 800px;
+        width: vh(800px);
       }
     }
   }
@@ -411,6 +419,11 @@
       padding-bottom: 50px;
 
       @include tablet {
+        padding-top: calc(60px + 44px);
+        padding-bottom: 84px;
+      }
+
+      @include desktop-vertical-supper-shot {
         padding-top: calc(60px + 44px);
         padding-bottom: 84px;
       }
@@ -536,11 +549,11 @@
     .section__desktop {
       display: none;
 
-      @include desktop {
+      @include desktop-vertical-shot {
         display: block;
       }
 
-      @include desktop-vertical-shot {
+      @include desktop {
         display: block;
       }
     }
@@ -563,6 +576,11 @@
 
     @include desktop-vertical-shot {
       padding-bottom: 0;
+    }
+
+    @include desktop-vertical-supper-shot {
+      padding-top: calc(60px + 44px);
+      padding-bottom: 84px !important;
     }
 
     @include desktop {

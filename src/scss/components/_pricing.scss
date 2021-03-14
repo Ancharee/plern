@@ -11,12 +11,10 @@
 
     @include desktop-vertical-shot {
       display: none;
-      margin-bottom: vh(55px);
     }
 
     @include desktop {
       display: none;
-      margin-bottom: 55px;
     }
   }
 

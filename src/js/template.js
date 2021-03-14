@@ -20,6 +20,7 @@ export class Template {
 
   init() {
     this.width = window.innerWidth;
+    this.height = window.innerHeight;
     this.initFullPage();
     this.handleWindowResize();
     this.handleScrollTrigger();
@@ -30,7 +31,7 @@ export class Template {
   }
 
   initFullPage() {
-    if (this.container && !this.isTablet) {
+    if (this.container && !this.isTablet && !this.isVerticalShot) {
       const sections = this.getSections;
       this.fullPageApi = new fullpage('#fullpage', {
         licenseKey: '74ED3D42-843248CC-935A616C-ED1D0476',
@@ -186,6 +187,7 @@ export class Template {
   handleWindowResize() {
     window.addEventListener('resize', () => {
       this.width = window.innerWidth;
+      this.height = window.innerHeight;
       this.handleParallax();
       this.setHeightToBG();
       // setTimeout(() => {
@@ -290,6 +292,10 @@ export class Template {
 
   get isTablet() {
     return this.width < 1336;
+  }
+
+  get isVerticalShot() {
+    return this.height < 600;
   }
 
   get getSections() {

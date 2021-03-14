@@ -9,13 +9,13 @@
       margin-right: 99px;
     }
 
-    @include desktop-landscape-s {
+    @include desktop-vertical-shot {
       margin: 0 auto 0;
       padding: 18vh 20px 10vh;
       width: 80%;
     }
 
-    @include desktop-landscape {
+    @include desktop {
       padding: 188px 20px 102px;
       width: 100%;
     }
@@ -26,6 +26,14 @@
 
     &--large {
       padding: 31px 26px 45px;
+
+      @include desktop-vertical-shot {
+        padding: vh(31px) vh(26px) vh(45px);
+      }
+
+      @include desktop {
+        padding: 31px 26px 45px;
+      }
     }
   }
 
@@ -76,7 +84,7 @@
         line-height: 89px;
       }
 
-      @include desktop-landscape {
+      @include desktop {
         font-size: 99px;
         line-height: 119px;
       }
@@ -92,7 +100,7 @@
         line-height: 135px;
       }
 
-      @include desktop-landscape {
+      @include desktop {
         font-size: 151px;
         line-height: 181px;
       }
@@ -107,7 +115,7 @@
         line-height: 49px;
       }
 
-      @include desktop-landscape {
+      @include desktop {
         font-size: 55px;
         line-height: 66px;
       }
@@ -175,6 +183,12 @@
         padding-top: calc(60px + 63px);
       }
 
+      @include desktop-vertical-shot {
+        justify-content: flex-start;
+        padding-top: vh(143px);
+        margin: 0 auto;
+      }
+
       @include desktop {
         justify-content: flex-start;
         padding-top: 143px;
@@ -187,6 +201,11 @@
       flex-direction: column;
       align-items: center;
 
+      @include desktop-vertical-shot {
+        flex-direction: row;
+        align-items: flex-start;
+      }
+
       @include desktop {
         flex-direction: row;
         align-items: flex-start;
@@ -196,6 +215,10 @@
     .section__info-wrapper {
       text-align: center;
       // overflow: hidden;
+
+      @include desktop-vertical-shot {
+        text-align: left;
+      }
 
       @include desktop {
         text-align: left;
@@ -213,6 +236,12 @@
         font-size: 60px;
         line-height: 72px;
       }
+
+      @include desktop-vertical-shot {
+        padding-bottom: vh(19px);
+        font-size: vh(60px);
+        line-height: vh(72px);
+      }
     }
 
     .section__info {
@@ -224,6 +253,12 @@
       @include tablet {
         font-size: 23px;
         line-height: 27px;
+      }
+
+      @include desktop-vertical-shot {
+        font-size: vh(45px);
+        line-height: vh(54px);
+        text-align: left;
       }
 
       @include desktop {
@@ -240,11 +275,11 @@
         max-width: 392px;
       }
 
-      @include desktop-landscape-s {
+      @include desktop-vertical-shot {
         max-width: 40vh;
       }
 
-      @include desktop-landscape {
+      @include desktop {
         max-width: 48vh;
       }
 
@@ -275,17 +310,20 @@
       }
     }
 
-    .section__info-wrapper {
-      width: 100%;
-    }
+    // .section__info-wrapper {
+    //   width: 100%;
+    // }
 
     .section__image {
       width: auto;
-
       margin-top: 70px;
 
       @include tablet {
         margin-top: 68px;
+      }
+
+      @include desktop-vertical-shot {
+        margin-top: vh(200px);
       }
 
       @include desktop {
@@ -299,6 +337,10 @@
 
         @include tablet {
           max-width: 481px;
+        }
+
+        @include desktop-vertical-shot {
+          max-width: vh(599px);
         }
 
         @include desktop {
@@ -345,12 +387,12 @@
       font-size: 45px;
       line-height: 54px;
 
-      @include desktop-landscape-s {
+      @include desktop-vertical-shot {
         font-size: vh(90px);
         line-height: vh(108px);
       }
 
-      @include desktop-landscape {
+      @include desktop {
         font-size: 90px;
         line-height: 108px;
       }
@@ -400,12 +442,12 @@
       font-size: 35px;
       line-height: 44px;
 
-      @include desktop-landscape-s {
-        font-size: 8.9vh;
-        line-height: 10.7vh;
+      @include desktop-vertical-shot {
+        font-size: vh(90px);
+        line-height: vh(108px);
       }
 
-      @include desktop-landscape {
+      @include desktop {
         font-size: 90px;
         line-height: 108px;
       }
@@ -432,6 +474,11 @@
       margin-top: 26px;
       margin-bottom: 24px;
 
+      @include desktop-vertical-shot {
+        margin-top: vh(26px);
+        margin-bottom: vh(24px);
+      }
+
       .btn {
         padding: 0;
         width: 99px;
@@ -442,6 +489,12 @@
           width: 185px;
           line-height: 60px;
           font-size: 30px;
+        }
+
+        @include desktop-vertical-shot {
+          width: vh(185px);
+          line-height: vh(60px);
+          font-size: vh(30px);
         }
       }
     }
@@ -479,6 +532,10 @@
 
   &__home8 {
     padding-bottom: 104px;
+
+    @include desktop-vertical-shot {
+      padding-bottom: 0;
+    }
 
     @include desktop {
       padding-bottom: 0;

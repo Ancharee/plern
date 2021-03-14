@@ -7,11 +7,11 @@
     padding: 93px 0;
   }
 
-  @include desktop-landscape-s {
+  @include desktop-vertical-shot {
     padding: 4.9vh 0;
   }
 
-  @include desktop-landscape {
+  @include desktop {
     padding: 50px 0;
   }
 }

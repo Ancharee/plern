@@ -33,11 +33,11 @@
       padding: 15px 0;
     }
 
-    @include desktop-landscape-s {
+    @include desktop-vertical-shot {
       max-width: vh(386px);
     }
 
-    @include desktop-landscape {
+    @include desktop {
       max-width: 386px;
     }
   }
@@ -57,14 +57,14 @@
     padding: 11px 20px;
   }
 
-  @include desktop-landscape-s {
+  @include desktop-vertical-shot {
     padding: vh(18px) vh(29px);
     border-radius: vh(36px);
     font-size: vh(23px);
     line-height: vh(27px);
   }
 
-  @include desktop-landscape {
+  @include desktop {
     padding: 18px 29px;
     border-radius: 36px;
     font-size: 23px;
@@ -102,12 +102,12 @@ textarea.form-control {
     border-radius: 21px;
   }
 
-  @include desktop-landscape-s {
+  @include desktop-vertical-shot {
     max-height: vh(180px);
     border-radius: vh(36px);
   }
 
-  @include desktop-landscape {
+  @include desktop {
     max-height: 180px;
     border-radius: 36px;
   }
@@ -123,13 +123,13 @@ textarea.form-control {
     padding-left: 20px;
   }
 
-  @include desktop-landscape-s {
+  @include desktop-vertical-shot {
     font-size: vh(23px);
     line-height: vh(27px);
     padding-left: vh(29px);
   }
 
-  @include desktop-landscape {
+  @include desktop {
     font-size: 23px;
     line-height: 27px;
     padding-left: 29px;
@@ -145,12 +145,12 @@ textarea.form-control {
   justify-content: center;
   padding: 17px 0;
 
-  @include desktop-landscape {
+  @include desktop {
     padding: vh(22px) 0 0;
     justify-content: flex-start;
   }
 
-  @include desktop-landscape {
+  @include desktop {
     padding: 22px 0 0;
   }
 
@@ -165,13 +165,13 @@ textarea.form-control {
       line-height: 46px;
     }
 
-    @include desktop-landscape-s {
+    @include desktop-vertical-shot {
       width: vh(154px);
       font-size: vh(35px);
       line-height: vh(70px);
     }
 
-    @include desktop-landscape {
+    @include desktop {
       width: 154px;
       font-size: 35px;
       line-height: 70px;
@@ -205,11 +205,11 @@ textarea.form-control {
         line-height: 47px;
       }
 
-      @include desktop-landscape-s {
+      @include desktop-vertical-shot {
         line-height: vh(70px);
       }
 
-      @include desktop-landscape {
+      @include desktop {
         line-height: 70px;
       }
     }

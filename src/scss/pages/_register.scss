@@ -27,6 +27,11 @@
       padding-top: 20vh;
       padding-bottom: 20vh;
 
+      @include desktop-vertical-shot {
+        padding-top: vh(200px);
+        padding-bottom: vh(20px);
+      }
+
       @include desktop {
         padding-top: calc(118px + 50px);
         padding-bottom: 0;

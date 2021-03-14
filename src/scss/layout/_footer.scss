@@ -32,6 +32,11 @@
       height: 31px;
     }
 
+    @include desktop-vertical-shot {
+      height: 100%;
+      max-height: vh(56px);
+    }
+
     @include desktop {
       width: 208px;
       height: 56px;

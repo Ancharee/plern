@@ -2,6 +2,10 @@
   padding: 30px;
   color: $white;
 
+  @include desktop-vertical-shot {
+    padding: vh(30px) 0 0;
+  }
+
   @include desktop {
     padding: 30px 0 0;
   }
@@ -15,12 +19,16 @@
       line-height: 62px;
     }
 
-    @include desktop-landscape-s {
-      margin-bottom: 7vh;
+    @include desktop-vertical-shot {
+      margin-bottom: vh(70px);
+      font-size: vh(52px);
+      line-height: vh(62px);
     }
 
-    @include desktop-landscape {
+    @include desktop {
       margin-bottom: 70px;
+      font-size: 52px;
+      line-height: 62px;
     }
   }
 }
@@ -38,12 +46,12 @@
       line-height: 26px;
     }
 
-    @include desktop-landscape-s {
-      font-size: 3vh;
-      line-height: 4vh;
+    @include desktop-vertical-shot {
+      font-size: vh(35px);
+      line-height: vh(35px);
     }
 
-    @include desktop-landscape {
+    @include desktop {
       padding-right: calc(168px + 46px);
       font-size: 35px;
       line-height: 42px;
@@ -62,11 +70,11 @@
         margin-bottom: 20px;
       }
 
-      @include desktop-landscape-s {
-        margin-bottom: 6vh;
+      @include desktop-vertical-shot {
+        margin-bottom: vh(60px);
       }
 
-      @include desktop-landscape {
+      @include desktop {
         margin-bottom: 60px;
       }
     }
@@ -113,11 +121,11 @@
         margin-bottom: 30px;
       }
 
-      @include desktop-landscape-s {
+      @include desktop-vertical-shot {
         margin-bottom: vh(40px);
       }
 
-      @include desktop-landscape {
+      @include desktop {
         margin-bottom: 40px;
       }
     }

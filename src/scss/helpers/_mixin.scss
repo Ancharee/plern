@@ -16,23 +16,23 @@
   }
 }
 
-@mixin desktop-landscape-s {
-  @media (min-width: $desktop) and (min-height: 700px) {
-    @content;
-  }
-}
-
-@mixin desktop-landscape {
-  @media (min-width: $desktop) and (min-height: 1079px) {
+@mixin desktop-vertical-shot {
+  @media (min-width: $desktop) and (min-height: 600px) {
     @content;
   }
 }
 
 @mixin desktop {
-  @media (min-width: $desktop) {
+  @media (min-width: $desktop) and (min-height: 1079px) {
     @content;
   }
 }
+
+// @mixin desktop {
+//   @media (min-width: $desktop) {
+//     @content;
+//   }
+// }
 
 @mixin desktop-l {
   @media (min-width: $desktop-l) {

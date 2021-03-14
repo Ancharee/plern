@@ -429,6 +429,14 @@
       text-align: center;
       justify-content: center;
       min-height: auto;
+      width: 100%;
+
+      @include desktop-vertical-shot {
+        margin: auto;
+        text-align: left;
+        justify-content: flex-start;
+        height: auto;
+      }
 
       @include desktop {
         margin: auto;
@@ -516,6 +524,10 @@
     .section__mobile {
       display: block;
 
+      @include desktop-vertical-shot {
+        display: none;
+      }
+
       @include desktop {
         display: none;
       }
@@ -526,6 +538,22 @@
 
       @include desktop {
         display: block;
+      }
+
+      @include desktop-vertical-shot {
+        display: block;
+      }
+    }
+
+    .section__flex {
+      @include desktop-vertical-shot {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      @include desktop {
+        display: flex;
+        justify-content: space-between;
       }
     }
   }
@@ -543,6 +571,7 @@
 
     article {
       margin: auto;
+      width: 100%;
     }
   }
 }

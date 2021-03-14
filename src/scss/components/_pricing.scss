@@ -10,6 +10,7 @@
     }
 
     @include desktop-vertical-shot {
+      display: none;
       margin-bottom: vh(55px);
     }
 

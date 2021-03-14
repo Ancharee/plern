@@ -27,6 +27,11 @@
     padding-bottom: 100px;
   }
 
+  @include desktop {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
   .fp-bg {
     top: 0;
     bottom: 0;

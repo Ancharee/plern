@@ -423,11 +423,6 @@
         padding-bottom: 84px;
       }
 
-      @include desktop-vertical-supper-shot {
-        padding-top: calc(60px + 44px);
-        padding-bottom: 84px;
-      }
-
       @include desktop {
         padding-top: 0;
         padding-bottom: 0;
@@ -576,11 +571,6 @@
 
     @include desktop-vertical-shot {
       padding-bottom: 0;
-    }
-
-    @include desktop-vertical-supper-shot {
-      padding-top: calc(60px + 44px);
-      padding-bottom: 84px !important;
     }
 
     @include desktop {

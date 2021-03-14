@@ -17,19 +17,20 @@
 }
 
 @mixin desktop-vertical-supper-shot {
-  @media (min-width: $desktop) and (max-height: 600px) {
+  @media (min-width: $desktop) and (min-height: 0) {
     @content;
   }
 }
 
 @mixin desktop-vertical-shot {
-  @media (min-width: $desktop) and (min-height: 600px) and (max-height: 1079px){
+  @media (min-width: $desktop) and (min-height: 600px) {
     @content;
   }
 }
 
 @mixin desktop {
-  @media (min-width: $desktop) {
+  @media (min-width: $desktop) and (min-height: 0),
+  (min-width: $desktop) and (min-height: 1080px) {
     @content;
   }
 }

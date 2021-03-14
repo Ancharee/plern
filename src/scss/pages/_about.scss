@@ -9,6 +9,12 @@
         padding: calc(60px + 40px) 40px 83px;
       }
 
+      @include desktop-vertical-shot {
+        margin: auto;
+        padding: vh(100px) 0 0;
+        max-width: 1110px;
+      }
+
       @include desktop {
         margin: auto;
         padding: 100px 0 0;

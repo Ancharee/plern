@@ -245,6 +245,7 @@ export class Template {
           });
         },
         onLeaveBack: () => {
+          console.log('back');
           gsap.to(this.downloadBar, {
             ease: 'easeOut',
             yPercent: 0,
@@ -284,6 +285,7 @@ export class Template {
 
   setHeightToBG() {
     const bg$ = $('.js-bg');
+    console.log(bg$);
     if (bg$ && bg$.length) {
       const next$ = bg$.next();
       bg$.find('.fp-bg').css('height', next$[0].offsetHeight);

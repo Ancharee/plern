@@ -52,9 +52,10 @@ export class Template {
         afterRender: () => {
           this.setAnimationFirstSection();
           this.animationFirstSection();
-          this.setTextWrapper();
         },
         afterLoad: (origin, destination, direction) => {
+          // this.setTextWrapper1();
+          this.setTextWrapper();
           console.log(origin);
           console.log(destination);
           console.log(direction);
@@ -62,11 +63,17 @@ export class Template {
           if (index > 0) {
             this.animationTextWrapper(index);
           }
+
+          if (direction && direction === 'down') {
+            this.setTextWrapper1();
+          } else if (direction && direction === 'up' && index === 0) {
+            this.animationTextWrapper1();
+          }
         },
         onLeave: (origin, destination, direction) => {
-          console.log(origin);
+          // console.log(origin);
           // console.log(destination);
-          console.log(direction);
+          // console.log(direction);
           this.toggleHeader(destination);
           this.toggleDownloadBar(origin, destination, direction);
         }
@@ -127,12 +134,54 @@ export class Template {
       tl.to(textLines, { y: 0, opacity: 1, stagger: 0.09  }, '-=1');
     }
     // Button
-    if (this.buttonWrapper1 && this.textWrapper1.length) {
+    if (this.buttonWrapper1 && this.buttonWrapper1.length) {
       tl.to(this.buttonWrapper1, { y: 0, opacity: 1 }, '-=0.9');
     }
     // Background
     if (this.sectionBackground) {
       tl.to(this.sectionBackground, { duration: 0.75, opacity: 1 }, '-=1.8');
+    }
+  }
+
+  setTextWrapper1() {
+    // Headline
+    const textHeadline = document.getElementsByClassName('text-headline-1');
+    if (textHeadline && textHeadline.length) {
+      gsap.set(textHeadline, { y: 50, opacity: 0 });
+    }
+    // Text content
+    const textWrapper = document.getElementsByClassName('text-wrapper-1');
+    if (textWrapper && textWrapper.length) {
+      const textLines = textWrapper[0].querySelectorAll('*');
+      gsap.to(textLines, { y: 50, opacity: 0 });
+    }
+    // Button
+    if (this.buttonWrapper1 && this.buttonWrapper1.length) {
+      gsap.set(this.buttonWrapper1, { y: 50, opacity: 0 });
+    }
+  }
+
+  animationTextWrapper1() {
+    // Create timeline
+    const tl = gsap.timeline({ repeat: 0, repeatDelay: 0,
+      defaults: { ease: 'power2.inOut', duration: 1, opacity: 1 }
+    });
+    // Headline
+    let time = '';
+    const textHeadline = document.getElementsByClassName('text-headline-1');
+    if (textHeadline && textHeadline.length) {
+      tl.to(textHeadline, { y: 0, opacity: 1, stagger: 0.09 });
+      time = '-=0.9';
+    }
+    // Text content
+    const textWrapper = document.getElementsByClassName('text-wrapper-1');
+    if (textWrapper && textWrapper.length) {
+      const textLines = textWrapper[0].querySelectorAll('*');
+      tl.to(textLines, { y: 0, opacity: 1, stagger: 0.09 }, time);
+    }
+    // Button
+    if (this.buttonWrapper1 && this.buttonWrapper1.length) {
+      tl.to(this.buttonWrapper1, { y: 0, opacity: 1 }, '-=0.9');
     }
   }
 

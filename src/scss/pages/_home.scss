@@ -40,6 +40,16 @@
   &__action {
     display: none;
 
+    @include desktop-vertical-shot {
+      display: block;
+      margin-top: vh(22px);
+    }
+
+    @include desktop-vertical-supper-shot {
+      display: block;
+      margin-top: 22px;
+    }
+
     @include desktop {
       display: block;
       margin-top: 22px;

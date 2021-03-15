@@ -135,12 +135,12 @@
 
     .btn-register {
       @include desktop-vertical-shot {
-        height: vh(60px);
+        padding: vh(10px);
         font-size: vh(30px);
       }
 
       @include desktop {
-        height: 60px;
+        padding: 10px;
         font-size: 30px;
       }
     }

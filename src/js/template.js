@@ -65,9 +65,10 @@ export class Template {
         },
         onLeave: (origin, destination, direction) => {
           console.log(origin);
-          console.log(destination);
+          // console.log(destination);
           console.log(direction);
           this.toggleHeader(destination);
+          this.toggleDownloadBar(origin, destination, direction);
         }
       });
     }
@@ -219,6 +220,28 @@ export class Template {
     });
   }
 
+  toggleDownloadBar(origin, destination, direction) {
+    if (direction === 'down') {
+      const { item } = destination;
+      if (item && item.classList.contains('js-trigger-download-bar')) {
+        gsap.to(this.downloadBar, {
+          ease: 'easeOut',
+          yPercent: 100,
+          duration: 1,
+        });
+      }
+    } else {
+      const { item } = origin;
+      if (item && item.classList.contains('js-trigger-download-bar')) {
+        gsap.to(this.downloadBar, {
+          ease: 'easeOut',
+          yPercent: 0,
+          duration: 1,
+        });
+      }
+    }
+  }
+
   handleScrollTrigger() {
     gsap.to(this.header, {
       scrollTrigger: {
@@ -245,7 +268,6 @@ export class Template {
           });
         },
         onLeaveBack: () => {
-          console.log('back');
           gsap.to(this.downloadBar, {
             ease: 'easeOut',
             yPercent: 0,

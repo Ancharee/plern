@@ -2053,7 +2053,7 @@ input[type="password"] {
 .section__home1 .btn-register {
   display: none;
   padding: 0; }
-  @media (min-width: 1336px) and (max-height: 599px), (min-width: 1336px) and (min-height: 1080px) {
+  @media (min-width: 1024px) {
     .section__home1 .btn-register {
       margin-top: 26px;
       display: block;

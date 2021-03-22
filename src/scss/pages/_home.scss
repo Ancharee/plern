@@ -135,7 +135,7 @@
       display: none;
       padding: 0;
 
-      @include desktop {
+      @include tablet-landscape {
         margin-top: 26px;
         display: block;
         width: 185px;

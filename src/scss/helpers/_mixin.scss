@@ -22,8 +22,6 @@
   }
 }
 
-
-
 @mixin desktop-md-with-hight {
   @media (min-width: $tablet-landscape) and (max-width: 1200px) {
     @content;
@@ -37,13 +35,13 @@
 }
 
 @mixin desktop-vertical-supper-shot {
-  @media (min-width: $desktop) and (max-height: 599px) {
+  @media (min-width: $tablet-landscape) and (max-height: 599px) {
     @content;
   }
 }
 
 @mixin desktop-vertical-shot {
-  @media (min-width: $desktop) and (min-height: 600px) {
+  @media (min-width: $tablet-landscape) and (min-height: 600px) {
     @content;
   }
 }

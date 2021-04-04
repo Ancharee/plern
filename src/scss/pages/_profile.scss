@@ -8,6 +8,16 @@
         padding-top: calc(60px + 92px);
       }
 
+      @include tablet-landscape {
+        max-width: 1090px;
+        padding-top: 198px;
+      }
+
+      @include desktop-vertical-shot {
+        padding-top: vh(198px);
+        padding-bottom: vh(20px);
+      }
+
       @include desktop {
         max-width: 1090px;
         padding-top: 198px;
@@ -17,7 +27,7 @@
 }
 
 .profile {
-  @include desktop {
+  @include tablet-landscape {
     display: flex;
     align-items: center;
   }
@@ -26,7 +36,15 @@
     margin-bottom: 5px;
     color: $white;
 
-    @include tablet {
+    @include tablet-landscape {
+      margin-bottom: 12px;
+    }
+
+    @include desktop-vertical-shot {
+      margin-bottom: vh(12px);
+    }
+
+    @include desktop {
       margin-bottom: 12px;
     }
   }
@@ -36,7 +54,7 @@
     flex-direction: column;
     align-items: center;
 
-    @include desktop {
+    @include tablet-landscape {
       padding-right: 94px;
     }
   }
@@ -53,6 +71,16 @@
       height: 233px;
     }
 
+    @include tablet-landscape {
+      width: 351px;
+      height: 351px;
+    }
+
+    @include desktop-vertical-shot {
+      width: vh(233px);
+      height: vh(233px);
+    }
+
     @include desktop {
       width: 351px;
       height: 351px;
@@ -64,7 +92,7 @@
     width: 100%;
     max-width: 420px;
 
-    @include desktop {
+    @include tablet-landscape {
       max-width: 644px;
     }
   }
@@ -78,6 +106,14 @@
 
     @include tablet {
       margin: 16px 0 24px;
+    }
+
+    @include tablet-landscape {
+      margin: 30px 0 0;
+    }
+
+    @include desktop-vertical-shot {
+      margin: vh(30px) 0 0;
     }
 
     @include desktop {
@@ -98,7 +134,8 @@
       max-width: 500px;
     }
 
-    @include desktop {
+    @include tablet-landscape {
+      padding: 117px;
       max-width: 1000px;
     }
 
@@ -143,6 +180,20 @@
       width: 218px;
       line-height: 46px;
       font-size: 23px;
+    }
+
+    @include tablet-landscape {
+      margin-top: 25px;
+      width: 328px;
+      line-height: 70px;
+      font-size: 35px;
+    }
+
+    @include desktop-vertical-shot {
+      margin-top: vh(25px);
+      width: 328px;
+      line-height: vh(70px);
+      font-size: vh(35px);
     }
 
     @include desktop {

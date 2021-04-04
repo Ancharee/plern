@@ -48,7 +48,7 @@ export class Template {
         anchors: sections,
         animateAnchor: false,
         lockAnchors: true,
-        responsiveWidth: 1335,
+        responsiveWidth: 1025,
         afterRender: () => {
           this.setAnimationFirstSection();
           this.animationFirstSection();
@@ -248,15 +248,13 @@ export class Template {
       clearTimeout(resizeTimer);
       resizeTimer = setTimeout(() => {
 
-        if (currentWidth < 1336) {
+        if (currentWidth < 1024) {
           currentWidth = window.innerWidth;
         }
 
         if (currentHeight < 600) {
           currentHeight = window.innerHeight;
         }
-
-        console.log(1);
 
         if (this.width < currentWidth || this.height < currentHeight) {
           // location.reload();
@@ -385,7 +383,7 @@ export class Template {
   }
 
   get isTablet() {
-    return this.width < 1336;
+    return this.width < 1042;
   }
 
   get isVerticalShot() {

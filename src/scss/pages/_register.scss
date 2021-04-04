@@ -54,7 +54,12 @@
         margin-bottom: 12px;
       }
 
+      @include desktop-vertical-shot {
+        margin-bottom: vh(12px);
+      }
+
       @include desktop {
+        margin-bottom: 12px;
         padding-left: 29px;
       }
     }

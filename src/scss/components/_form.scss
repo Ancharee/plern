@@ -17,6 +17,10 @@
   &:not(:last-child) {
     padding-bottom: 13px;
 
+    @include desktop-vertical-shot {
+      padding-bottom: vh(12px);
+    }
+
     @include desktop {
       padding-bottom: 20px;
     }
@@ -150,7 +154,7 @@ textarea.form-control {
   justify-content: center;
   padding: 17px 0;
 
-  @include desktop {
+  @include desktop-vertical-shot {
     padding: vh(22px) 0 0;
     justify-content: flex-start;
   }
@@ -204,6 +208,14 @@ textarea.form-control {
 
       &:first-child {
         margin-bottom: 15px;
+
+        @include desktop-vertical-shot {
+          margin-bottom: vh(15px);
+        }
+
+        @include desktop {
+          margin-bottom: 15px;
+        }
       }
 
       @include tablet {
@@ -225,6 +237,10 @@ textarea.form-control {
   @include formPadding();
   display: none;
   color: $warning;
+
+  @include desktop-vertical-shot {
+    font-size: vh(16px);
+  }
 }
 
 .form-warning {
@@ -235,6 +251,14 @@ textarea.form-control {
 
   @include tablet {
     font-size: 13px;
+  }
+
+  @include tablet-landscape {
+    font-size: 16px;
+  }
+
+  @include desktop-vertical-shot {
+    font-size: vh(16px);
   }
 
   @include desktop {

@@ -9,6 +9,10 @@
       margin-bottom: 55px;
     }
 
+    @include tablet-landscape {
+      display: none;
+    }
+
     @include desktop-vertical-shot {
       display: none;
     }
@@ -49,6 +53,7 @@
       max-width: 150px;
       margin-left: auto;
       margin-right: auto;
+      white-space: nowrap;
 
       @include tablet {
         max-width: 100%;
@@ -72,6 +77,13 @@
     margin-bottom: 9px;
     font-size: 23px;
     line-height: 27px;
+    white-space: nowrap;
+
+    @include tablet-landscape {
+      margin-bottom: 9px;
+      font-size: 23px;
+      line-height: 27px;
+    }
 
     @include desktop-vertical-shot {
       margin-bottom: vh(9px);
@@ -89,6 +101,10 @@
   &__mo {
     display: block;
 
+    @include tablet-landscape {
+      display: none;
+    }
+
     @include desktop-vertical-shot {
       display: none;
     }
@@ -101,6 +117,10 @@
   &__des {
     display: none;
 
+    @include tablet-landscape {
+      display: block;
+    }
+
     @include desktop-vertical-shot {
       display: block;
     }
@@ -111,6 +131,12 @@
   }
 
   .btn--small {
+    @include tablet-landscape {
+      width: 145px;
+      line-height: 47px;
+      font-size: 23px;
+    }
+
     @include desktop-vertical-shot {
       width: vh(145px);
       line-height: vh(47px);
@@ -146,6 +172,10 @@
       padding-bottom: 12px;
       font-weight: 600;
 
+      @include tablet-landscape {
+        padding-bottom: 12px;
+      }
+
       @include desktop-vertical-shot {
         padding-bottom: vh(12px);
       }
@@ -163,6 +193,11 @@
       padding-bottom: 30px;
       color: $azure-radian;
       line-height: 1;
+
+      @include tablet-landscape {
+        font-size: 23px;
+        padding-bottom: 30px;
+      }
 
       @include desktop-vertical-shot {
         padding-bottom: vh(23px);

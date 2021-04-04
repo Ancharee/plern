@@ -19,28 +19,18 @@
       height: 60px;
     }
 
-    @include desktop-md-with-hight {
-      padding: 30px 66px 0;
-      height: auto;
-      background-color: transparent;
-    }
-
-     @include desktop-mx {
-      padding: 30px 66px 0;
-      height: auto;
-      background-color: transparent;
-    }
-
-    @include desktop {
+    @include tablet-landscape {
       padding: 63px 66px 0;
       height: auto;
       background-color: transparent;
     }
 
     @include desktop-vertical-shot {
-      padding: vh(63px) 66px 0;
-      height: auto;
-      background-color: transparent;
+      padding: vh(53px) 66px 0;
+    }
+
+    @include desktop {
+      padding: 63px 66px 0;
     }
   }
 
@@ -96,10 +86,6 @@
         line-height: 32px;
         font-size: 16px
       }
-
-      //@include only-desktop {
-      //  display: none;
-      //}
 
       @include tablet-landscape {
         display: none;
@@ -191,27 +177,25 @@
 
   &__item {
     display: block;
-    width: auto;
-    //padding: 0 0 25px;
-    float: left;
+    width: 0;
+    padding: 0 0 25px;
     transition: margin-left 0.5s ease-in;
 
-    @include only-desktop {
-      padding: 0 25px;
+    @include tablet-landscape {
+      padding: 0 5px;
       width: auto;
       transition: none;
     }
 
+    @include only-desktop {
+      padding: 0 25px;
+    }
+
     @for $i from 1 through 4 {
       &:nth-child(1n + #{$i}) {
-        //margin-left: calc(40px * #{$i});
+        margin-left: calc(40px * #{$i});
 
-        @include desktop-md-with-hight {
-          //max-width: 100px;
-          //width: calc(100% / 4);
-        }
-
-        @include only-desktop {
+        @include tablet-landscape {
           margin-left: 0;
         }
       }
@@ -304,6 +288,10 @@
     &__item {
       margin-left: 0;
       width: 100%;
+
+      @include tablet-landscape {
+        margin-bottom: 0;
+      }
     }
 
     &__logo {

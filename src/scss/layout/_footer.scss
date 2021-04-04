@@ -7,12 +7,22 @@
   padding-right: 30px;
   color: $white;
 
+  @include desktop-vertical-shot {
+    padding: 63px 66px 0;
+  }
+
   @include desktop {
     padding: 63px 66px 0;
   }
 
   &__wrapper {
     flex: 1;
+
+    @include desktop-vertical-shot {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
 
     @include desktop {
       display: flex;
@@ -44,6 +54,14 @@
   }
 
   &__list {
+    @include desktop-vertical-shot {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 80%;
+      max-width: calc(1920px - 404px);
+    }
+
     @include desktop {
       display: flex;
       justify-content: space-between;
@@ -57,6 +75,10 @@
     li {
       padding-bottom: 21px;
 
+      @include desktop-vertical-shot {
+        padding-bottom: 14px;
+      }
+
       @include desktop {
         padding-bottom: 14px;
       }
@@ -67,6 +89,11 @@
   &__lang-name {
     font-size: 23px;
     line-height: 27px;
+
+    @include desktop-vertical-shot {
+      font-size: 35px;
+      line-height: 42px;
+    }
 
     @include desktop {
       font-size: 35px;
@@ -100,6 +127,10 @@
 
     @include tablet {
       font-size: 23px;
+    }
+
+    @include desktop-vertical-shot {
+      font-size: 35px;
     }
 
     @include desktop {

@@ -18,6 +18,18 @@
     }
   }
 
+  .btn-primary {
+    padding: 5px;
+
+    @include desktop-vertical-shot {
+      padding: vh(5px);
+    }
+
+    @include desktop {
+      padding: 5px;
+    }
+  }
+
   &__freemium {
     margin-bottom: 40px;
 
@@ -77,6 +89,10 @@
   &__mo {
     display: block;
 
+    @include desktop-vertical-shot {
+      display: none;
+    }
+
     @include desktop {
       display: none;
     }
@@ -84,6 +100,10 @@
 
   &__des {
     display: none;
+
+    @include desktop-vertical-shot {
+      display: block;
+    }
 
     @include desktop {
       display: block;

@@ -256,8 +256,10 @@ export class Template {
           currentHeight = window.innerHeight;
         }
 
+        console.log(1);
+
         if (this.width < currentWidth || this.height < currentHeight) {
-          location.reload();
+          // location.reload();
         }
 
       }, 250);

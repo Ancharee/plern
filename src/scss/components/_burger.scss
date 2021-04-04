@@ -15,7 +15,10 @@
     height: 30px;
   }
 
-  @include only-desktop {
+  //@include only-desktop {
+  //  display: none;
+  //}
+  @include tablet-landscape {
     display: none;
   }
 

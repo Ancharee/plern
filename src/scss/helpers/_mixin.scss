@@ -16,6 +16,26 @@
   }
 }
 
+@mixin tablet-landscape-min-hight {
+  @media (min-width: $tablet-landscape) and (min-height: 600px) {
+    @content;
+  }
+}
+
+
+
+@mixin desktop-md-with-hight {
+  @media (min-width: $tablet-landscape) and (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin desktop-mx {
+  @media (min-width: 1200px) and (max-width: $desktop-mx) {
+    @content;
+  }
+}
+
 @mixin desktop-vertical-supper-shot {
   @media (min-width: $desktop) and (max-height: 599px) {
     @content;

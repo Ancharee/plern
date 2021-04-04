@@ -44,7 +44,10 @@
 
     @include desktop-vertical-shot {
       height: 100%;
-      max-height: vh(56px);
+      //max-height: vh(56px);
+    }
+    @include tablet-landscape {
+
     }
 
     @include desktop {

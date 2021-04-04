@@ -113,7 +113,7 @@
 
       @include desktop-vertical-shot {
         display: block;
-        max-width: vh(520px);
+        max-width: vh(460px);
       }
 
       @include desktop {
@@ -226,7 +226,7 @@
       }
 
       &--3 {
-        border-color: #B9B9B9;
+        border-color: #fff;
       }
     }
   }

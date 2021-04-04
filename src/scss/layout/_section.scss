@@ -45,16 +45,17 @@
 
   article {
     position: relative;
-    max-width: 1130px;
+    width: 100%;
+    max-width: calc(1920px - 808px);
     height: 100%;
     display: flex;
 
-    @include desktop-vertical-shot {
-      max-width: vh(1130px);
+    @include tablet-landscape {
+      width: 80%;
     }
 
-    @include desktop {
-      max-width: 1130px;
+    @include only-desktop {
+      width: 100%;
     }
   }
 
@@ -146,6 +147,7 @@
 
   &.section article {
     max-width: 100%;
+    width: 100%;
   }
 }
 

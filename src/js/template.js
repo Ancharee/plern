@@ -235,21 +235,40 @@ export class Template {
   }
 
   handleWindowResize() {
+    let resizeTimer;
+    let currentWidth = window.innerWidth;
+    let currentHeight = window.innerHeight;
+
     window.addEventListener('resize', () => {
       this.width = window.innerWidth;
       this.height = window.innerHeight;
-      // this.handleParallax();
-      // this.setHeightToBG();
-      setTimeout(() => {
-        location.reload();
-      }, 1000);
+      this.handleParallax();
+      this.setHeightToBG();
+
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+
+        if (currentWidth < 1336) {
+          currentWidth = window.innerWidth;
+        }
+
+        if (currentHeight < 600) {
+          currentHeight = window.innerHeight;
+        }
+
+        if (this.width < currentWidth || this.height < currentHeight) {
+          location.reload();
+        }
+
+      }, 250);
     });
   }
 
   handleParallax() {
-    if (this.isTablet && this.fullPageApi) {
+    if ((this.isTablet || this.isVerticalShot) && this.fullPageApi) {
       this.fullPageApi = this.fullPageApi.destroy('all');
     } else {
+      console.log(!this.fullPageApi);
       if (!this.fullPageApi) {
         this.initFullPage();
       }

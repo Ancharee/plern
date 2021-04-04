@@ -11,7 +11,7 @@
 
       @include desktop-vertical-shot {
         margin: auto;
-        padding: vh(100px) 0 0;
+        padding: vh(200px) 0 0;
         max-width: 1110px;
       }
 
@@ -85,6 +85,10 @@
 
   article {
     padding-top: 20vh;
+
+    @include desktop-vertical-shot {
+      padding-top: 18vh;
+    }
 
     @include desktop {
       padding-top: 18vh;

@@ -113,7 +113,7 @@
 
       @include desktop-vertical-shot {
         display: block;
-        max-width: vh(540px);
+        max-width: vh(520px);
       }
 
       @include desktop {
@@ -216,6 +216,18 @@
           margin-right: 40px;
         }
       }
+
+      &--1 {
+        border-color: #4D4D4D;
+      }
+
+      &--2 {
+        border-color: #B9B9B9;
+      }
+
+      &--3 {
+        border-color: #B9B9B9;
+      }
     }
   }
 
@@ -313,7 +325,7 @@
     margin-top: 27px;
 
     @include desktop-vertical-shot {
-      margin-top: vh(55px);
+      margin-top: vh(27px);
     }
 
     @include desktop {
@@ -345,7 +357,7 @@
     margin-bottom: 16px;
 
     @include desktop-vertical-shot {
-      padding-bottom: vh(16px);
+      margin-bottom: vh(16px);
     }
   }
 

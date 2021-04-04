@@ -25,7 +25,7 @@
       background-color: transparent;
     }
 
-    @include only-desktop {
+    @include desktop {
       padding: 63px 66px 0;
     }
   }

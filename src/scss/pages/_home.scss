@@ -412,9 +412,14 @@
         width: vh(800px);
       }
 
+      @include desktop-vertical-shot {
+        right: 0;
+        width: vh(800px);
+      }
+
       @include desktop {
         right: -100px;
-        width: vh(800px);
+        width: 800px;
       }
     }
   }

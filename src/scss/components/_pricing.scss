@@ -204,9 +204,9 @@
         font-size: vh(30px);
       }
 
-      @include desktop {
-        font-size: 23px;
-        padding-bottom: 30px;
+      @include tablet-landscape-max-height {
+        padding-bottom: vw(23px);
+        font-size: vw(30px);
       }
 
       &:not(:first-child) {

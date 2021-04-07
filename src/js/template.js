@@ -32,54 +32,55 @@ export class Template {
   }
 
   initFullPage() {
-    if (this.container && !this.isTablet && !this.isVerticalShot) {
-      const sections = this.getSections;
-      this.fullPageApi = new fullpage('#fullpage', {
-        licenseKey: '74ED3D42-843248CC-935A616C-ED1D0476',
-        parallaxKey: 'cGxlcm4uY29fM0NLY0dGeVlXeHNZWGc9RUlB',
-        parallax: true,
-        parallaxOptions: {
-          type: 'reveal',
-          percentage: 62,
-          property: 'translate'
-        },
-        scrollingSpeed: 1200,
-        autoScrolling: true,
-        fitToSection: false,
-        anchors: sections,
-        animateAnchor: false,
-        lockAnchors: true,
-        responsiveWidth: this.tablet,
-        afterRender: () => {
-          this.setAnimationFirstSection();
-          this.animationFirstSection();
-        },
-        afterLoad: (origin, destination, direction) => {
-          // this.setTextWrapper1();
-          this.setTextWrapper();
-          console.log(origin);
-          console.log(destination);
-          console.log(direction);
-          const { index } = destination;
-          if (index > 0) {
-            this.animationTextWrapper(index);
-          }
-
-          if (direction && direction === 'down') {
-            this.setTextWrapper1();
-          } else if (direction && direction === 'up' && index === 0) {
-            this.animationTextWrapper1();
-          }
-        },
-        onLeave: (origin, destination, direction) => {
-          // console.log(origin);
-          // console.log(destination);
-          // console.log(direction);
-          this.toggleHeader(destination);
-          this.toggleDownloadBar(origin, destination, direction);
+    // if (this.container && !this.isTablet && !this.isVerticalShot) {
+    const sections = this.getSections;
+    this.fullPageApi = new fullpage('#fullpage', {
+      licenseKey: '74ED3D42-843248CC-935A616C-ED1D0476',
+      parallaxKey: 'cGxlcm4uY29fM0NLY0dGeVlXeHNZWGc9RUlB',
+      // parallax: true,
+      parallaxOptions: {
+        type: 'reveal',
+        percentage: 62,
+        property: 'translate'
+      },
+      scrollingSpeed: 1200,
+      autoScrolling: true,
+      fitToSection: false,
+      anchors: sections,
+      animateAnchor: false,
+      lockAnchors: true,
+      responsiveWidth: 1024,
+      responsiveHeight: 600,
+      afterRender: () => {
+        this.setAnimationFirstSection();
+        this.animationFirstSection();
+      },
+      afterLoad: (origin, destination, direction) => {
+        // this.setTextWrapper1();
+        this.setTextWrapper();
+        console.log(origin);
+        console.log(destination);
+        console.log(direction);
+        const { index } = destination;
+        if (index > 0) {
+          this.animationTextWrapper(index);
         }
-      });
-    }
+
+        if (direction && direction === 'down') {
+          this.setTextWrapper1();
+        } else if (direction && direction === 'up' && index === 0) {
+          this.animationTextWrapper1();
+        }
+      },
+      onLeave: (origin, destination, direction) => {
+        // console.log(origin);
+        // console.log(destination);
+        // console.log(direction);
+        this.toggleHeader(destination);
+        this.toggleDownloadBar(origin, destination, direction);
+      }
+    });
+    // }
   }
 
   hasDownloadBarVisible() {
@@ -236,43 +237,23 @@ export class Template {
   }
 
   handleWindowResize() {
-    let resizeTimer;
-    let currentWidth = window.innerWidth;
-    let currentHeight = window.innerHeight;
-
     window.addEventListener('resize', () => {
-      this.width = window.innerWidth;
-      this.height = window.innerHeight;
-      this.handleParallax();
-      this.setHeightToBG();
+      this.handleWindowChanges();
+    });
 
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(() => {
-
-        if (currentWidth < this.tablet) {
-          currentWidth = window.innerWidth;
-        }
-
-        if (currentHeight < 600) {
-          currentHeight = window.innerHeight;
-        }
-
-        if (this.width < currentWidth || this.height < currentHeight) {
-          // location.reload();
-        }
-
-      }, 250);
+    window.addEventListener('orientationchange', () => {
+      this.handleWindowChanges();
     });
   }
 
-  handleParallax() {
-    if ((this.isTablet || this.isVerticalShot) && this.fullPageApi) {
-      this.fullPageApi = this.fullPageApi.destroy('all');
+  handleWindowChanges() {
+    this.width = window.innerWidth;
+    this.height = window.innerHeight;
+    this.setHeightToBG();
+    if (this.isTablet && !this.isVerticalShot) {
+      this.fullPageApi.parallax = true;
     } else {
-      console.log(!this.fullPageApi);
-      if (!this.fullPageApi) {
-        this.initFullPage();
-      }
+      this.fullPageApi.parallax = false;
     }
   }
 
@@ -376,7 +357,6 @@ export class Template {
 
   setHeightToBG() {
     const bg$ = $('.js-bg');
-    console.log(bg$);
     if (bg$ && bg$.length) {
       const next$ = bg$.next();
       bg$.find('.fp-bg').css('height', next$[0].offsetHeight);

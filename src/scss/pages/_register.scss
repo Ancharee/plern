@@ -3,7 +3,7 @@
     .form-headline {
       color: $white;
 
-      @include desktop {
+      @include tablet-landscape {
         margin-bottom: 16px;
       }
     }
@@ -18,23 +18,30 @@
         max-width: 420px;
       }
 
-      @include desktop {
+      @include tablet-landscape {
         max-width: 664px;
       }
     }
 
     .section__content {
-      padding-top: 20vh;
-      padding-bottom: 20vh;
+      padding-top: 191.59px;
+      padding-bottom: 197.3px;
 
-      @include tablet-landscape-vertical-shot {
-        padding-top: vh(168px);
+      @include tablet {
+        padding-top: 233.56px;
+        padding-bottom: 238.23px;
+      }
+
+      @include tablet-landscape {
         padding-bottom: 0;
       }
 
+      @include tablet-landscape-vertical-shot {
+        padding-top: vh(159.32px);
+      }
+
       @include desktop {
-        padding-top: calc(118px + 50px);
-        padding-bottom: 0;
+        padding-top: 159.32px;
       }
     }
 
@@ -56,11 +63,6 @@
 
       @include tablet-landscape-vertical-shot {
         margin-bottom: vh(12px);
-      }
-
-      @include desktop {
-        margin-bottom: 12px;
-        padding-left: 29px;
       }
     }
   }

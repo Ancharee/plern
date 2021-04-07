@@ -47,9 +47,9 @@ h3 {
     line-height: vh(42px);
   }
 
-  @include desktop {
-    font-size: 35px;
-    line-height: 42px;
+  @include tablet-landscape-max-height {
+    font-size: vw(35px);
+    line-height: vw(42px);
   }
 }
 

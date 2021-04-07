@@ -2,3 +2,12 @@
   $vh: (1080 * 0.01) * 1px;
   @return (($px / $vh) * 1vh);
 }
+
+// @function vw($px, $base-vw: 1920px) {
+//   @return ($px * 100vw) / $base-vw
+// }
+
+@function vw($target) {
+  $vw-context: (1920 * 0.01) * 1px;
+  @return ($target / $vw-context) * 1vw;
+}

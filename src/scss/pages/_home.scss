@@ -1,24 +1,33 @@
 .section {
   &__helper {
-    // max-width: 1475px;
     padding: 35px 32px;
     background-color: $white;
 
     @include tablet {
-      // width: 80%;
       max-width: 570px;
       margin: 0 auto 0;
     }
 
     @include tablet-landscape {
       max-width: 1475px;
-      padding: 188px 20px 102px;
-      width: 100%;
+      width: 80%;
     }
 
     @include tablet-landscape-vertical-shot {
       margin: 0 auto 0;
+      width: 80%;
+    }
+
+    @include desktop-vertical-shot {
       padding: vh(188px) 20px vh(102px);
+    }
+
+    @include desktop-l-vertical-shot {
+      width: 100%;
+    }
+
+    @include desktop-l {
+      padding: 188px 20px 102px;
       width: 100%;
     }
 
@@ -27,10 +36,6 @@
 
       @include tablet-landscape-vertical-shot {
         margin-top: vh(175px);
-      }
-
-      @include desktop {
-        margin-top: 175px;
       }
     }
 
@@ -69,6 +74,10 @@
       width: 185px;
       padding: 3px;
       font-size: 30px;
+
+      @include tablet-landscape-max-height {
+        font-size: vw(30px);
+      }
     }
   }
 
@@ -282,10 +291,10 @@
         line-height: vh(72px);
       }
 
-      @include desktop {
-        padding-bottom: 19px;
-        font-size: 60px;
-        line-height: 72px;
+      @include tablet-landscape-max-height {
+        padding-bottom: vw(19px);
+        font-size: vw(60px);
+        line-height: vw(72px);
       }
     }
 
@@ -312,9 +321,9 @@
         text-align: left;
       }
 
-      @include desktop {
-        font-size: 45px;
-        line-height: 54px;
+      @include tablet-landscape-max-height {
+        font-size: vw(45px);
+        line-height: vw(54px);
         text-align: left;
       }
     }
@@ -376,6 +385,10 @@
       @include tablet-landscape-vertical-shot {
         max-width: vh(493.19px);
       }
+
+      @include tablet-landscape-max-height {
+        max-width: vw(493.19px);
+      }
     }
 
     .section__info-wrapper {
@@ -430,24 +443,24 @@
       @include tablet-landscape {
         position: absolute;
         right: -18px;
-        margin-top: 230px;
+        margin-top: 225px;
         max-width: 398.56px;
       }
 
       @include tablet-landscape-vertical-shot {
-        margin-top: vh(230px);
+        margin-top: vh(225px);
         max-width: vh(398.56px);
         right: 0;
       }
 
       @include desktop-vertical-shot {
-        right: 0;
-        max-width: vh(598.56px);
+        right: 10%;
       }
 
-      @include desktop {
+      @include tablet-landscape-max-height {
         right: -18px;
-        max-width: 598.56px;
+        margin-top: vw(225px);
+        max-width: vw(598.56px);
       }
     }
 
@@ -537,6 +550,11 @@
         font-size: vh(90px);
         line-height: vh(108px);
       }
+
+      @include tablet-landscape-max-height {
+        font-size: vw(90px);
+        line-height: vw(108px);
+      }
     }
   }
 
@@ -591,9 +609,9 @@
         line-height: vh(108px);
       }
 
-      @include desktop {
-        font-size: 90px;
-        line-height: 108px;
+      @include tablet-landscape-max-height {
+        font-size: vw(90px);
+        line-height: vw(108px);
       }
     }
 
@@ -604,7 +622,7 @@
         min-height: 461px;
       }
 
-      @include desktop {
+      @include tablet-landscape {
         min-height: auto;
       }
     }
@@ -639,6 +657,12 @@
           width: vh(185px);
           line-height: vh(60px);
           font-size: vh(30px);
+        }
+
+        @include tablet-landscape-max-height {
+          width: vw(185px);
+          line-height: vw(60px);
+          font-size: vw(30px);
         }
       }
     }

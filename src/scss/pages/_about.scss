@@ -44,8 +44,8 @@
       margin-bottom: vh(80px);
     }
 
-    @include desktop {
-      margin-bottom: 94px;
+    @include tablet-landscape-max-height {
+      margin-bottom: vw(94px);
     }
   }
 
@@ -60,7 +60,7 @@
       line-height: vh(27px);
     }
 
-    @include desktop {
+    @include tablet-landscape-max-height {
       font-size: 23px;
       line-height: 27px;
     }
@@ -72,8 +72,8 @@
         margin-bottom: vh(88px);
       }
 
-      @include desktop {
-        margin-bottom: 88px;
+      @include tablet-landscape-max-height {
+        margin-bottom: vw(88px);
       }
     }
   }

@@ -16,12 +16,6 @@
   }
 }
 
-@mixin tablet-landscape-min-hight {
-  @media (min-width: $tablet-landscape) and (min-height: 600px) {
-    @content;
-  }
-}
-
 @mixin desktop-md-with-hight {
   @media (min-width: $tablet-landscape) and (max-width: 1200px) {
     @content;

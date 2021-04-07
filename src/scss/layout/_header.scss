@@ -20,17 +20,17 @@
     }
 
     @include tablet-landscape {
-      padding: 63px 66px 0;
+      padding: 65.31px 65.87px 0;
       height: auto;
       background-color: transparent;
     }
 
     @include desktop-vertical-shot {
-      padding: vh(53px) 66px 0;
+      padding: vh(65.31px) 65.87px 0;
     }
 
     @include desktop {
-      padding: 63px 66px 0;
+      padding: 65.31px 65.87px 0;
     }
   }
 

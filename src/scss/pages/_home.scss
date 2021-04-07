@@ -1,12 +1,17 @@
 .section {
   &__helper {
-    max-width: 1475px;
+    // max-width: 1475px;
     padding: 35px 32px;
     background-color: $white;
 
     @include tablet {
-      width: 80%;
+      // width: 80%;
+      max-width: 570px;
       margin: 0 auto 0;
+    }
+
+    @include tablet-landscape {
+      max-width: 1475px;
     }
 
     @include desktop-vertical-shot {
@@ -150,13 +155,13 @@
     article {
       margin: auto;
       align-items: flex-end;
-      padding-left: 20px;
-      padding-bottom: calc(69px + 72px);
+      padding-left: 20.41px;
+      padding-bottom: 140.74px;
       color: $white;
 
       @include tablet {
-        padding-left: 88px;
-        padding-bottom: calc(60px + 87px);
+        padding-left: 88.57px;
+        padding-bottom: 164.68px;
       }
 
       @include desktop-vertical-shot {
@@ -332,14 +337,33 @@
 
   &__home3 {
     article {
+      padding-top: 118px;
+
+      @include tablet {
+        padding-top: 86.99px;
+      }
+
       @include desktop {
         padding-top: 133px;
+      }
+    }
+
+    .section__image {
+      margin-bottom: 46.64px;
+
+      @include tablet {
+        margin-bottom: 27.99px;
+        max-width: 391.54px;
       }
     }
   }
 
   &__home4 {
     color: $white;
+
+    article {
+      padding-top: 138px;
+    }
 
     .section__content {
       overflow: visible;
@@ -351,16 +375,16 @@
       }
     }
 
-    // .section__info-wrapper {
-    //   width: 100%;
-    // }
-
     .section__image {
       width: auto;
+      max-width: 296.04px;
       margin-top: 70px;
+      margin-bottom: 129.83px;
 
       @include tablet {
-        margin-top: 68px;
+        max-width: 481.33px;
+        margin-top: 68.71px;
+        margin-bottom: 0;
       }
 
       @include desktop-vertical-supper-shot {
@@ -400,16 +424,35 @@
   }
 
   &__home5 {
+    max-height: 812px;
+
+    @include tablet {
+      max-height: auto;
+      max-height: 1024px;
+    }
+
+    @include only-desktop {
+      max-height: auto;
+    }
+
+    article {
+      padding-top: 138.3px;
+    }
+
+    .section__headline {
+      padding-bottom: 18px;
+    }
+
     .section__image {
       position: absolute;
       bottom: 0;
-      right: -140px;
+      right: -150px;
       width: 640px;
       max-width: inherit;
 
       @include tablet {
         right: 0;
-        width: vh(800px);
+        width: 100vw;
       }
 
       @include desktop-vertical-shot {
@@ -434,8 +477,13 @@
 
     .section__headline,
     .section__sub-headline {
-      font-size: 45px;
-      line-height: 54px;
+      font-size: 35px;
+      line-height: 42px;
+
+      @include tablet {
+        font-size: 45px;
+        line-height: 54px;
+      }
 
       @include desktop-vertical-shot {
         font-size: vh(90px);
@@ -457,6 +505,14 @@
     }
 
     &:not(.fp-section) {
+      padding-top: 155px;
+      padding-bottom: 50px;
+
+      @include tablet {
+        padding-top: 104.51px;
+        padding-bottom: 83.34px;
+      }
+
       article {
         min-height: auto;
       }
@@ -600,27 +656,24 @@
       margin: auto;
       width: 100%;
     }
-  }
 
-  &__home7,
-  &__home8 {
     &:not(.fp-section) {
-      padding-top: calc(51px + 47px);
-      padding-bottom: 50px;
+      padding-bottom: 77.64px;
 
       @include tablet {
-        padding-top: calc(60px + 44px);
-        padding-bottom: 84px;
+        padding-bottom: 160.07px;
       }
 
-      @include desktop {
-        padding-top: 0;
-        padding-bottom: 0;
+      article {
+        @include tablet {
+          min-height: auto;
+        }
       }
+    }
 
-      @include desktop-vertical-supper-shot {
-        padding-top: calc(60px + 44px);
-        padding-bottom: 84px;
+    .section__helper--large {
+      @include tablet {
+        padding-bottom: 55.89px;
       }
     }
   }

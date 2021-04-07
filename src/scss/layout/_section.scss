@@ -19,7 +19,9 @@
 
 .section {
   position: relative;
-  min-height: 100vh;
+  // min-height: 100vh;
+  min-height: 812px;
+  // max-height: 813.27;
   height: 100%;
 
   @include desktop-vertical-supper-shot {
@@ -31,7 +33,8 @@
     top: 0;
     bottom: 0;
     width: 100%;
-    min-height: 100vh;
+    // min-height: 100vh;
+    min-height: 812px;
     height: 100%;
     position: absolute;
     -webkit-backface-visibility: hidden;
@@ -41,13 +44,20 @@
     background-position: center;
     background-size: cover;
     z-index: -1;
+
+    @include tablet {
+      min-height: 1024px;
+    }
+
+    @include only-desktop {
+      min-height: 100vh;
+    }
   }
 
   article {
     position: relative;
     width: 100%;
-    // max-width: calc(1920px - 808px);
-    max-width: 1130px;
+    max-width: calc(1920px - 808px);
     height: 100%;
     display: flex;
 
@@ -62,7 +72,12 @@
 
   &:not(.fp-section) {
     article {
-      min-height: 100vh;
+      // min-height: 100vh;
+      min-height: 812px;
+
+      @include tablet {
+        min-height: 1024px;
+      }
     }
   }
 
@@ -136,8 +151,12 @@
   }
 
   article {
-    align-items: center;
     margin: auto;
+    padding-top: 172.46px;
+
+    @include tablet {
+      padding-top: 153.46px;
+    }
   }
 }
 
@@ -161,12 +180,20 @@
 .section__home7 {
   .fp-bg {
     top: inherit;
-    background-position: bottom;
+    background-position: inherit;
+
+    @include tablet {
+      background-position: 45%;
+    }
   }
 }
 
 .section__home8 {
   .fp-bg {
     background-position: top;
+
+    @include tablet {
+      background-position: 45%;
+    }
   }
 }

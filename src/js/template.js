@@ -16,6 +16,7 @@ export class Template {
     this.buttonWrapper1 = document.getElementsByClassName('button-wrapper-1');
     this.downloadBar = document.getElementsByClassName('js-download-bar');
     this.sectionBackground = document.getElementsByClassName('fp-bg');
+    this.tablet = this.tablet;
   }
 
   init() {
@@ -48,7 +49,7 @@ export class Template {
         anchors: sections,
         animateAnchor: false,
         lockAnchors: true,
-        responsiveWidth: 1025,
+        responsiveWidth: this.tablet,
         afterRender: () => {
           this.setAnimationFirstSection();
           this.animationFirstSection();
@@ -248,7 +249,7 @@ export class Template {
       clearTimeout(resizeTimer);
       resizeTimer = setTimeout(() => {
 
-        if (currentWidth < 1024) {
+        if (currentWidth < this.tablet) {
           currentWidth = window.innerWidth;
         }
 
@@ -383,7 +384,7 @@ export class Template {
   }
 
   get isTablet() {
-    return this.width < 1042;
+    return this.width < 1024;
   }
 
   get isVerticalShot() {

@@ -17,7 +17,7 @@
   &:not(:last-child) {
     padding-bottom: 13px;
 
-    @include desktop-vertical-shot {
+    @include tablet-landscape-vertical-shot {
       padding-bottom: vh(12px);
     }
 
@@ -37,7 +37,7 @@
       padding: 15px 0;
     }
 
-    @include desktop-vertical-shot {
+    @include tablet-landscape-vertical-shot {
       max-width: vh(386px);
     }
 
@@ -61,7 +61,7 @@
     padding: 11px 20px;
   }
 
-  @include desktop-vertical-shot {
+  @include tablet-landscape-vertical-shot {
     padding: vh(18px) vh(29px);
     border-radius: vh(36px);
     font-size: vh(23px);
@@ -91,7 +91,7 @@
       background-size: 37px;
     }
 
-    @include desktop-vertical-shot {
+    @include tablet-landscape-vertical-shot {
       min-width: 500px;
       padding: 18px 53px 18px 22px;
     }
@@ -111,7 +111,7 @@ textarea.form-control {
     border-radius: 21px;
   }
 
-  @include desktop-vertical-shot {
+  @include tablet-landscape-vertical-shot {
     max-height: vh(180px);
     border-radius: vh(36px);
   }
@@ -132,7 +132,7 @@ textarea.form-control {
     padding-left: 20px;
   }
 
-  @include desktop-vertical-shot {
+  @include tablet-landscape-vertical-shot {
     font-size: vh(23px);
     line-height: vh(27px);
     padding-left: vh(29px);
@@ -154,7 +154,7 @@ textarea.form-control {
   justify-content: center;
   padding: 17px 0;
 
-  @include desktop-vertical-shot {
+  @include tablet-landscape-vertical-shot {
     padding: vh(22px) 0 0;
     justify-content: flex-start;
   }
@@ -174,7 +174,7 @@ textarea.form-control {
       line-height: 46px;
     }
 
-    @include desktop-vertical-shot {
+    @include tablet-landscape-vertical-shot {
       width: vh(154px);
       font-size: vh(35px);
       line-height: vh(70px);
@@ -209,7 +209,7 @@ textarea.form-control {
       &:first-child {
         margin-bottom: 15px;
 
-        @include desktop-vertical-shot {
+        @include tablet-landscape-vertical-shot {
           margin-bottom: vh(15px);
         }
 
@@ -222,7 +222,7 @@ textarea.form-control {
         line-height: 47px;
       }
 
-      @include desktop-vertical-shot {
+      @include tablet-landscape-vertical-shot {
         line-height: vh(70px);
       }
 
@@ -238,7 +238,7 @@ textarea.form-control {
   display: none;
   color: $warning;
 
-  @include desktop-vertical-shot {
+  @include tablet-landscape-vertical-shot {
     font-size: vh(16px);
   }
 }
@@ -257,7 +257,7 @@ textarea.form-control {
     font-size: 16px;
   }
 
-  @include desktop-vertical-shot {
+  @include tablet-landscape-vertical-shot {
     font-size: vh(16px);
   }
 

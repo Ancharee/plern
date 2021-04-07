@@ -7,7 +7,7 @@
   padding-right: 30px;
   color: $white;
 
-  @include desktop-vertical-shot {
+  @include tablet-landscape-vertical-shot {
     padding: 63px 66px 0;
   }
 
@@ -18,7 +18,7 @@
   &__wrapper {
     flex: 1;
 
-    @include desktop-vertical-shot {
+    @include tablet-landscape-vertical-shot {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
@@ -42,7 +42,7 @@
       height: 31px;
     }
 
-    @include desktop-vertical-shot {
+    @include tablet-landscape-vertical-shot {
       height: 100%;
       //max-height: vh(56px);
     }
@@ -57,7 +57,7 @@
   }
 
   &__list {
-    @include desktop-vertical-shot {
+    @include tablet-landscape-vertical-shot {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
@@ -78,7 +78,7 @@
     li {
       padding-bottom: 21px;
 
-      @include desktop-vertical-shot {
+      @include tablet-landscape-vertical-shot {
         padding-bottom: 14px;
       }
 
@@ -93,7 +93,7 @@
     font-size: 23px;
     line-height: 27px;
 
-    @include desktop-vertical-shot {
+    @include tablet-landscape-vertical-shot {
       font-size: 35px;
       line-height: 42px;
     }
@@ -132,7 +132,7 @@
       font-size: 23px;
     }
 
-    @include desktop-vertical-shot {
+    @include tablet-landscape-vertical-shot {
       font-size: 35px;
     }
 

@@ -16,7 +16,7 @@
       width: 100%;
     }
 
-    @include desktop-vertical-shot {
+    @include tablet-landscape-vertical-shot {
       margin: 0 auto 0;
       padding: vh(188px) 20px vh(102px);
       width: 100%;
@@ -25,7 +25,7 @@
     .fp-section & {
       margin-top: 175px;
 
-      @include desktop-vertical-shot {
+      @include tablet-landscape-vertical-shot {
         margin-top: vh(175px);
       }
 
@@ -37,7 +37,7 @@
     &--large {
       padding: 31px 26px 45px;
 
-      @include desktop-vertical-shot {
+      @include tablet-landscape-vertical-shot {
         padding: vh(31px) vh(26px) vh(45px);
       }
 
@@ -50,7 +50,7 @@
   &__action {
     display: none;
 
-    @include desktop-vertical-shot {
+    @include tablet-landscape-vertical-shot {
       display: block;
       margin-top: vh(22px);
     }
@@ -169,7 +169,7 @@
         padding-bottom: 164.68px;
       }
 
-      @include desktop-vertical-shot {
+      @include tablet-landscape-vertical-shot {
         padding-left: 0;
         padding-bottom: vh(192px);
       }
@@ -214,7 +214,7 @@
         margin: 0 auto;
       }
 
-      @include desktop-vertical-shot {
+      @include tablet-landscape-vertical-shot {
         justify-content: flex-start;
         padding-top: vh(173px);
         margin: 0 auto;
@@ -237,7 +237,7 @@
         align-items: flex-start;
       }
 
-      @include desktop-vertical-shot {
+      @include tablet-landscape-vertical-shot {
         flex-direction: row;
         align-items: flex-start;
       }
@@ -255,7 +255,7 @@
         text-align: left;
       }
 
-      @include desktop-vertical-shot {
+      @include tablet-landscape-vertical-shot {
         text-align: left;
       }
 
@@ -276,7 +276,7 @@
         line-height: 72px;
       }
 
-      @include desktop-vertical-shot {
+      @include tablet-landscape-vertical-shot {
         padding-bottom: vh(19px);
         font-size: vh(60px);
         line-height: vh(72px);
@@ -306,7 +306,7 @@
         text-align: left;
       }
 
-      @include desktop-vertical-shot {
+      @include tablet-landscape-vertical-shot {
         font-size: vh(45px);
         line-height: vh(54px);
         text-align: left;
@@ -326,7 +326,7 @@
         max-width: 392px;
       }
 
-      @include desktop-vertical-shot {
+      @include tablet-landscape-vertical-shot {
         max-width: vh(450px);
       }
 
@@ -352,7 +352,7 @@
         padding-top: 143.11px;
       }
 
-      @include desktop-vertical-shot {
+      @include tablet-landscape-vertical-shot {
         padding-top: vh(143.11px);
       }
 
@@ -373,7 +373,7 @@
         max-width: 493.19px;
       }
 
-      @include desktop-vertical-shot {
+      @include tablet-landscape-vertical-shot {
         max-width: vh(493.19px);
       }
     }
@@ -396,7 +396,7 @@
         padding-top: 148.32px;
       }
 
-      @include desktop-vertical-shot {
+      @include tablet-landscape-vertical-shot {
         padding-top: vh(148.32px);
       }
 
@@ -431,17 +431,23 @@
         position: absolute;
         right: -18px;
         margin-top: 230px;
-        max-width: 598.56px;
+        max-width: 398.56px;
+      }
+
+      @include tablet-landscape-vertical-shot {
+        margin-top: vh(230px);
+        max-width: vh(398.56px);
+        right: 0;
       }
 
       @include desktop-vertical-shot {
-        margin-top: vh(230px);
+        right: 0;
         max-width: vh(598.56px);
-        right: 25%;
       }
 
       @include desktop {
         right: -18px;
+        max-width: 598.56px;
       }
     }
 
@@ -465,7 +471,7 @@
     article {
       padding-top: 138.3px;
 
-      @include desktop-vertical-shot {
+      @include tablet-landscape-vertical-shot {
         height: 100vh;
       }
     }
@@ -487,17 +493,17 @@
       }
 
       @include tablet-landscape {
-        right: -100px;
+        right: -80px;
         width: 800px;
       }
 
-      @include desktop-vertical-shot {
-        right: 25%;
+      @include tablet-landscape-vertical-shot {
+        right: 0;
         width: vh(800px);
       }
 
       @include desktop {
-        right: -100px;
+        right: -80px;
         left: inherit;
         width: 800px;
       }
@@ -527,7 +533,7 @@
         line-height: 108px;
       }
 
-      @include desktop-vertical-shot {
+      @include tablet-landscape-vertical-shot {
         font-size: vh(90px);
         line-height: vh(108px);
       }
@@ -561,7 +567,7 @@
       min-height: auto;
       width: 100%;
 
-      @include desktop-vertical-shot {
+      @include tablet-landscape-vertical-shot {
         margin: auto;
         text-align: left;
         justify-content: flex-start;
@@ -580,7 +586,7 @@
       font-size: 35px;
       line-height: 44px;
 
-      @include desktop-vertical-shot {
+      @include tablet-landscape-vertical-shot {
         font-size: vh(90px);
         line-height: vh(108px);
       }
@@ -612,7 +618,7 @@
       margin-top: 26px;
       margin-bottom: 24px;
 
-      @include desktop-vertical-shot {
+      @include tablet-landscape-vertical-shot {
         margin-top: vh(26px);
         margin-bottom: vh(24px);
       }
@@ -629,7 +635,7 @@
           font-size: 30px;
         }
 
-        @include desktop-vertical-shot {
+        @include tablet-landscape-vertical-shot {
           width: vh(185px);
           line-height: vh(60px);
           font-size: vh(30px);
@@ -654,7 +660,7 @@
     .section__mobile {
       display: block;
 
-      @include desktop-vertical-shot {
+      @include tablet-landscape-vertical-shot {
         display: none;
       }
 
@@ -666,7 +672,7 @@
     .section__desktop {
       display: none;
 
-      @include desktop-vertical-shot {
+      @include tablet-landscape-vertical-shot {
         display: block;
       }
 
@@ -676,7 +682,7 @@
     }
 
     .section__flex {
-      @include desktop-vertical-shot {
+      @include tablet-landscape-vertical-shot {
         display: flex;
         justify-content: space-between;
       }

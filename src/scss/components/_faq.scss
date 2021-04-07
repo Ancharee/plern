@@ -2,7 +2,7 @@
   padding: 30px;
   color: $white;
 
-  @include desktop-vertical-shot {
+  @include tablet-landscape-vertical-shot {
     padding: vh(30px) 0 0;
   }
 
@@ -19,7 +19,7 @@
       line-height: 62px;
     }
 
-    @include desktop-vertical-shot {
+    @include tablet-landscape-vertical-shot {
       margin-bottom: vh(70px);
       font-size: vh(52px);
       line-height: vh(62px);
@@ -46,7 +46,7 @@
       line-height: 26px;
     }
 
-    @include desktop-vertical-shot {
+    @include tablet-landscape-vertical-shot {
       font-size: vh(35px);
       line-height: vh(35px);
     }
@@ -70,7 +70,7 @@
         margin-bottom: 20px;
       }
 
-      @include desktop-vertical-shot {
+      @include tablet-landscape-vertical-shot {
         margin-bottom: vh(60px);
       }
 
@@ -121,7 +121,7 @@
         margin-bottom: 30px;
       }
 
-      @include desktop-vertical-shot {
+      @include tablet-landscape-vertical-shot {
         margin-bottom: vh(40px);
       }
 

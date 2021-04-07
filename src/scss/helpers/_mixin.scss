@@ -34,8 +34,14 @@
   }
 }
 
-@mixin desktop-vertical-shot {
+@mixin tablet-landscape-vertical-shot {
   @media (min-width: $tablet-landscape) and (min-height: 600px) {
+    @content;
+  }
+}
+
+@mixin desktop-vertical-shot {
+  @media (min-width: $desktop) and (min-height: 600px) {
     @content;
   }
 }

@@ -13,7 +13,7 @@
         padding: 0 40px;
       }
 
-      @include desktop-vertical-shot {
+      @include tablet-landscape-vertical-shot {
         padding: 0;
       }
 
@@ -89,7 +89,7 @@
         padding-top: 200px;
       }
 
-      @include desktop-vertical-shot {
+      @include tablet-landscape-vertical-shot {
         padding-top: vh(250px);
       }
 

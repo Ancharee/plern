@@ -9,7 +9,7 @@
         padding: calc(60px + 40px) 40px 83px;
       }
 
-      @include desktop-vertical-shot {
+      @include tablet-landscape-vertical-shot {
         margin: auto;
         padding: vh(120px) 0 0;
         max-width: 1110px;
@@ -40,7 +40,7 @@
       margin-bottom: 40px;
     }
 
-    @include desktop-vertical-shot {
+    @include tablet-landscape-vertical-shot {
       margin-bottom: vh(80px);
     }
 
@@ -55,7 +55,7 @@
       line-height: 27px;
     }
 
-    @include desktop-vertical-shot {
+    @include tablet-landscape-vertical-shot {
       font-size: vh(23px);
       line-height: vh(27px);
     }
@@ -68,7 +68,7 @@
     &:not(:last-child) {
       margin-bottom: 25px;
 
-      @include desktop-vertical-shot {
+      @include tablet-landscape-vertical-shot {
         margin-bottom: vh(88px);
       }
 
@@ -86,7 +86,7 @@
   article {
     padding-top: 20vh;
 
-    @include desktop-vertical-shot {
+    @include tablet-landscape-vertical-shot {
       padding-top: 18vh;
     }
 
@@ -107,7 +107,7 @@
       font-size: 35px;
     }
 
-    @include desktop-vertical-shot {
+    @include tablet-landscape-vertical-shot {
       margin-bottom: vh(87px);
       font-size: vh(45px);
     }

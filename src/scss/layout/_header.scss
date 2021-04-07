@@ -25,7 +25,7 @@
       background-color: transparent;
     }
 
-    @include desktop-vertical-shot {
+    @include tablet-landscape-vertical-shot {
       padding: vh(65.31px) 65.87px 0;
     }
 

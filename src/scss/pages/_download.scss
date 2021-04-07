@@ -16,7 +16,7 @@
       text-align: left;
     }
 
-    @include desktop-vertical-shot {
+    @include tablet-landscape-vertical-shot {
       margin-bottom: 0;
       padding-bottom: 0;
       padding-top: vh(253px);

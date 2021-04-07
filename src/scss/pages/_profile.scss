@@ -13,7 +13,7 @@
         padding-top: 198px;
       }
 
-      @include desktop-vertical-shot {
+      @include tablet-landscape-vertical-shot {
         padding-top: vh(198px);
         padding-bottom: vh(20px);
       }
@@ -40,7 +40,7 @@
       margin-bottom: 12px;
     }
 
-    @include desktop-vertical-shot {
+    @include tablet-landscape-vertical-shot {
       margin-bottom: vh(12px);
     }
 
@@ -76,7 +76,7 @@
       height: 351px;
     }
 
-    @include desktop-vertical-shot {
+    @include tablet-landscape-vertical-shot {
       width: vh(233px);
       height: vh(233px);
     }
@@ -112,7 +112,7 @@
       margin: 30px 0 0;
     }
 
-    @include desktop-vertical-shot {
+    @include tablet-landscape-vertical-shot {
       margin: vh(30px) 0 0;
     }
 
@@ -189,7 +189,7 @@
       font-size: 35px;
     }
 
-    @include desktop-vertical-shot {
+    @include tablet-landscape-vertical-shot {
       margin-top: vh(25px);
       width: 328px;
       line-height: vh(70px);

@@ -27,7 +27,7 @@ h2 {
     line-height: 54px;
   }
 
-  @include desktop-vertical-shot {
+  @include tablet-landscape-vertical-shot {
     font-size: vh(45px);
     line-height: vh(54px);
   }
@@ -42,7 +42,7 @@ h3 {
   font-size: 35px;
   line-height: 42px;
 
-  @include desktop-vertical-shot {
+  @include tablet-landscape-vertical-shot {
     font-size: vh(35px);
     line-height: vh(42px);
   }
@@ -57,7 +57,7 @@ h4 {
   font-size: 23px;
   line-height: 27px;
 
-  @include desktop-vertical-shot {
+  @include tablet-landscape-vertical-shot {
     font-size: vh(45px);
     line-height: vh(54px);
   }

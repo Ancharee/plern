@@ -28,7 +28,7 @@
   display: none;
   padding: 0;
 
-  @include desktop{
+  @include desktop {
     display: block;
     width: 185px;
     line-height: 60px;
@@ -78,7 +78,6 @@
 .btn-gg {
   background-color: $white;
   color: #4c4c4c;
-  border-radius: 4px;
 
   img {
     max-width: 15px;
@@ -111,11 +110,11 @@ a.btn-text-with-arrow {
   }
 
   &::after {
-    content: '';
+    content: "";
     display: block;
     height: 14px;
     width: 28px;
-    background-image: url('../images/Plern_orange_arrow.svg');
+    background-image: url("../images/Plern_orange_arrow.svg");
     background-repeat: no-repeat;
     background-position: center;
 

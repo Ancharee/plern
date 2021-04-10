@@ -56,7 +56,6 @@ export class Template {
         this.animationFirstSection();
       },
       afterLoad: (origin, destination, direction) => {
-        // this.setTextWrapper1();
         this.setTextWrapper();
         console.log(origin);
         console.log(destination);
@@ -65,19 +64,17 @@ export class Template {
         if (index > 0) {
           this.animationTextWrapper(index);
         }
-
         if (direction && direction === 'down') {
           this.setTextWrapper1();
         } else if (direction && direction === 'up' && index === 0) {
           this.animationTextWrapper1();
         }
+        this.animationImageWrapper(index);
       },
       onLeave: (origin, destination, direction) => {
-        // console.log(origin);
-        // console.log(destination);
-        // console.log(direction);
         this.toggleHeader(destination);
         this.toggleDownloadBar(origin, destination, direction);
+        this.setImageWrapper(origin, destination, direction);
       }
     });
     // }
@@ -352,6 +349,30 @@ export class Template {
           this.fullPageApi.moveTo('page8');
         }
       });
+    }
+  }
+
+  setImageWrapper(origin, destination, direction) {
+    if (direction === 'down') {
+      const { item } = destination;
+      const imageWrapper = item.getElementsByClassName('js-image-wrapper');
+      if (imageWrapper && imageWrapper.length) {
+        gsap.set(imageWrapper, { y: '3.9vh' });
+      }
+    } else {
+      const { item } = destination;
+      const imageWrapper = item.getElementsByClassName('js-image-wrapper');
+      if (imageWrapper && imageWrapper.length) {
+        gsap.set(imageWrapper, { y: '-3.9vh' });
+      }
+    }
+  }
+
+  animationImageWrapper(index) {
+    const section = document.querySelectorAll('section')[index];
+    const imageWrapper = section.getElementsByClassName('js-image-wrapper');
+    if (imageWrapper && imageWrapper.length) {
+      gsap.to(imageWrapper, { ease: 'power2.inOut', duration: 1, y: 0 });
     }
   }
 

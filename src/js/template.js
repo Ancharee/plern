@@ -40,7 +40,7 @@ export class Template {
       parallax: true,
       parallaxOptions: {
         type: 'reveal',
-        percentage: 62,
+        percentage: 80,
         property: 'translate',
       },
       scrollingSpeed: 1200,

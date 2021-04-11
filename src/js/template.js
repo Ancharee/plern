@@ -28,7 +28,7 @@ export class Template {
     this.handleDownloadBar();
     this.handleScrollTop();
     this.handleGoToPricing();
-    this.setHeightToBG();
+    this.handleWindowChanges();
   }
 
   initFullPage() {
@@ -37,11 +37,11 @@ export class Template {
     this.fullPageApi = new fullpage('#fullpage', {
       licenseKey: '74ED3D42-843248CC-935A616C-ED1D0476',
       parallaxKey: 'cGxlcm4uY29fM0NLY0dGeVlXeHNZWGc9RUlB',
-      // parallax: true,
+      parallax: true,
       parallaxOptions: {
         type: 'reveal',
         percentage: 62,
-        property: 'translate'
+        property: 'translate',
       },
       scrollingSpeed: 1200,
       autoScrolling: true,
@@ -247,10 +247,10 @@ export class Template {
     this.width = window.innerWidth;
     this.height = window.innerHeight;
     this.setHeightToBG();
-    if (this.isTablet && !this.isVerticalShot) {
-      this.fullPageApi.parallax = true;
+    if (this.isTablet || this.isVerticalShot) {
+      this.fullPageApi.parallax.destroy();
     } else {
-      this.fullPageApi.parallax = false;
+      this.fullPageApi.parallax.init();
     }
   }
 
